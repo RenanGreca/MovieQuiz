@@ -14,6 +14,7 @@
 		1FAAB2841ABA3297007ABE82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAB2831ABA3297007ABE82 /* Images.xcassets */; };
 		1FAAB2871ABA3297007ABE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAB2851ABA3297007ABE82 /* LaunchScreen.xib */; };
 		1FAAB2931ABA3297007ABE82 /* MovieQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2921ABA3297007ABE82 /* MovieQuizTests.m */; };
+		1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1FAAB28C1ABA3297007ABE82 /* MovieQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAB2911ABA3297007ABE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAAB2921ABA3297007ABE82 /* MovieQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieQuizTests.m; sourceTree = "<group>"; };
+		1FAAB29D1ABA351A007ABE82 /* MovieGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieGrabber.h; sourceTree = "<group>"; };
+		1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieGrabber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		1FAAB2751ABA3297007ABE82 /* MovieQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				1FAAB29C1ABA34DC007ABE82 /* Model */,
 				1FAAB27A1ABA3297007ABE82 /* AppDelegate.h */,
 				1FAAB27B1ABA3297007ABE82 /* AppDelegate.m */,
 				1FAAB27D1ABA3297007ABE82 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				1FAAB2911ABA3297007ABE82 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FAAB29C1ABA34DC007ABE82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FAAB29D1ABA351A007ABE82 /* MovieGrabber.h */,
+				1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				1FAAB27F1ABA3297007ABE82 /* ViewController.m in Sources */,
 				1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */,
+				1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */,
 				1FAAB2791ABA3297007ABE82 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +428,7 @@
 				1FAAB2981ABA3297007ABE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FAAB2991ABA3297007ABE82 /* Build configuration list for PBXNativeTarget "MovieQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +437,7 @@
 				1FAAB29B1ABA3297007ABE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
