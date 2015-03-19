@@ -14,7 +14,7 @@
 
 @implementation MovieGrabber
 
-+ (void) put:(int)limit moviesInList:(NSMutableArray *)list {
++ (BOOL) put:(int)limit moviesInList:(NSMutableArray *)list {
     //MovieList *list = [MovieList sharedInstance];
 
     NSString *apiKey = @"asprbevazhnusm6fjwqnk24d";
@@ -25,7 +25,20 @@
     //NSLog(@"%@", [MovieGrabber getDataFrom:apiUrl]);
     
     NSError *error = nil;
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:0 error:&error];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    
+    NSLog(@"%@", urlData);
+    
+    if (!urlData) {
+        return NO;
+    }
+    
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:urlData options:0 error:&error];
+    
+    if ([data objectForKey:@"error"]) {
+        return NO;
+    }
+    
     NSArray *movies = [data objectForKey:@"movies"];
     //NSLog(@"%@", data);
     //NSLog(@"%@", [[[data objectForKey:@"movies"] objectAtIndex:0] objectForKey:@"title"]);
@@ -42,6 +55,7 @@
     NSLog(@"%@", list);
     Movie *movie = [list objectAtIndex:0];
     NSLog(@"%@", movie.title);
+    return YES;
 }
 
 + (NSString *) getDataFrom:(NSString *)url{

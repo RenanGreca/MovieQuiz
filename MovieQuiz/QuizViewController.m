@@ -34,6 +34,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    NSLog (@"1");
+    if (list.movies.count == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Error aquiring movie list. Check your Internet connection."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [self dismissViewControllerAnimated:NO completion:nil];
+        return;
+    }
     Movie *movie = [list getRandomMovie];
     _txtSynopsis.text = movie.synopsis;
 }
@@ -41,6 +53,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
