@@ -15,6 +15,9 @@
 		1FAAB2871ABA3297007ABE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAB2851ABA3297007ABE82 /* LaunchScreen.xib */; };
 		1FAAB2931ABA3297007ABE82 /* MovieQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2921ABA3297007ABE82 /* MovieQuizTests.m */; };
 		1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */; };
+		1FAAB2A31ABA3CE9007ABE82 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2A21ABA3CE9007ABE82 /* QuizViewController.m */; };
+		1FAAB2A71ABA3D8E007ABE82 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2A61ABA3D8E007ABE82 /* Movie.m */; };
+		1FAAB2AA1ABA3EEF007ABE82 /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2A91ABA3EEF007ABE82 /* MovieList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		1FAAB2921ABA3297007ABE82 /* MovieQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieQuizTests.m; sourceTree = "<group>"; };
 		1FAAB29D1ABA351A007ABE82 /* MovieGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieGrabber.h; sourceTree = "<group>"; };
 		1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieGrabber.m; sourceTree = "<group>"; };
+		1FAAB2A11ABA3CE9007ABE82 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		1FAAB2A21ABA3CE9007ABE82 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		1FAAB2A51ABA3D8E007ABE82 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		1FAAB2A61ABA3D8E007ABE82 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		1FAAB2A81ABA3EEF007ABE82 /* MovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieList.h; sourceTree = "<group>"; };
+		1FAAB2A91ABA3EEF007ABE82 /* MovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,8 @@
 		1FAAB2751ABA3297007ABE82 /* MovieQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				1FAAB2A41ABA3D06007ABE82 /* Assets */,
+				1FAAB2A01ABA3CCB007ABE82 /* View */,
 				1FAAB29C1ABA34DC007ABE82 /* Model */,
 				1FAAB27A1ABA3297007ABE82 /* AppDelegate.h */,
 				1FAAB27B1ABA3297007ABE82 /* AppDelegate.m */,
@@ -126,10 +137,30 @@
 		1FAAB29C1ABA34DC007ABE82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FAAB2A51ABA3D8E007ABE82 /* Movie.h */,
+				1FAAB2A61ABA3D8E007ABE82 /* Movie.m */,
+				1FAAB2A81ABA3EEF007ABE82 /* MovieList.h */,
+				1FAAB2A91ABA3EEF007ABE82 /* MovieList.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1FAAB2A01ABA3CCB007ABE82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FAAB2A11ABA3CE9007ABE82 /* QuizViewController.h */,
+				1FAAB2A21ABA3CE9007ABE82 /* QuizViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1FAAB2A41ABA3D06007ABE82 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				1FAAB29D1ABA351A007ABE82 /* MovieGrabber.h */,
 				1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */,
 			);
-			name = Model;
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAAB2A71ABA3D8E007ABE82 /* Movie.m in Sources */,
 				1FAAB27F1ABA3297007ABE82 /* ViewController.m in Sources */,
+				1FAAB2AA1ABA3EEF007ABE82 /* MovieList.m in Sources */,
+				1FAAB2A31ABA3CE9007ABE82 /* QuizViewController.m in Sources */,
 				1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */,
 				1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */,
 				1FAAB2791ABA3297007ABE82 /* main.m in Sources */,

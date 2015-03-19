@@ -10,4 +10,6 @@
 
 @interface MovieGrabber : NSObject
 
++ (void) put:(int)limit moviesInList:(NSMutableArray *)list;
+
 @end
