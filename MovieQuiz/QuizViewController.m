@@ -7,11 +7,13 @@
 //
 
 #import "QuizViewController.h"
+#import "ResultViewController.h"
 #import "MovieList.h"
 #import "Movie.h"
 
 @interface QuizViewController () {
     MovieList *list;
+    int ans;
 }
 
 @property (weak, nonatomic) IBOutlet UITextView *txtSynopsis;
@@ -30,11 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     list = [MovieList sharedInstance];
+
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog (@"1");
     if (list.movies.count == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                         message:@"Error aquiring movie list. Check your Internet connection."
@@ -46,8 +48,19 @@
         [self dismissViewControllerAnimated:NO completion:nil];
         return;
     }
-    Movie *movie = [list getRandomMovie];
-    _txtSynopsis.text = movie.synopsis;
+    //Movie *movie = [list getRandomMovie];
+    NSArray *movies = [list getRandomMovies:4];
+    
+    ans = arc4random_uniform((unsigned int) movies.count);
+
+    _txtSynopsis.text = ((Movie *)movies[ans]).synopsis;
+    
+    _btn0.titleLabel.text = ((Movie *)movies[0]).title;
+    _btn1.titleLabel.text = ((Movie *)movies[1]).title;
+    _btn2.titleLabel.text = ((Movie *)movies[2]).title;
+    _btn3.titleLabel.text = ((Movie *)movies[3]).title;
+    
+    //NSMutableArray *randomMovies = [list get:3 RandomMoviesThatAreNot:movie];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,14 +72,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ResultViewController *result = [segue destinationViewController];
+    BOOL correct = NO;
+    
+    if ([[segue identifier] isEqualToString:
+                                [NSString stringWithFormat:@"sgMovie%d",ans]]){
+        correct = YES;
+    }
+    result.correct = correct;
 }
-*/
+
 
 @end

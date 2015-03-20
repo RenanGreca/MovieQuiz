@@ -19,6 +19,7 @@
 - (int)count;
 - (Movie *)getMovie:(int)index;
 - (Movie *)getRandomMovie;
-- (Movie *)getRandomMovieThatIsNot:(Movie *)movie;
+- (NSArray *)get:(int)count RandomMoviesThatAreNot:(Movie *)movie;
 
+- (NSArray *)getRandomMovies:(int)count;
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FA315991ABCAAF70032CDC5 /* LoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA315981ABCAAF70032CDC5 /* LoadViewController.m */; };
+		1FA3159C1ABCACFC0032CDC5 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3159B1ABCACFC0032CDC5 /* ResultViewController.m */; };
 		1FAAB2791ABA3297007ABE82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2781ABA3297007ABE82 /* main.m */; };
 		1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB27B1ABA3297007ABE82 /* AppDelegate.m */; };
 		1FAAB27F1ABA3297007ABE82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB27E1ABA3297007ABE82 /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FA315971ABCAAF70032CDC5 /* LoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadViewController.h; sourceTree = "<group>"; };
+		1FA315981ABCAAF70032CDC5 /* LoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadViewController.m; sourceTree = "<group>"; };
+		1FA3159A1ABCACFC0032CDC5 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		1FA3159B1ABCACFC0032CDC5 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		1FAAB2731ABA3297007ABE82 /* MovieQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAB2771ABA3297007ABE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAAB2781ABA3297007ABE82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +156,10 @@
 			children = (
 				1FAAB2A11ABA3CE9007ABE82 /* QuizViewController.h */,
 				1FAAB2A21ABA3CE9007ABE82 /* QuizViewController.m */,
+				1FA315971ABCAAF70032CDC5 /* LoadViewController.h */,
+				1FA315981ABCAAF70032CDC5 /* LoadViewController.m */,
+				1FA3159A1ABCACFC0032CDC5 /* ResultViewController.h */,
+				1FA3159B1ABCACFC0032CDC5 /* ResultViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -269,7 +279,9 @@
 				1FAAB2A31ABA3CE9007ABE82 /* QuizViewController.m in Sources */,
 				1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */,
 				1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */,
+				1FA315991ABCAAF70032CDC5 /* LoadViewController.m in Sources */,
 				1FAAB2791ABA3297007ABE82 /* main.m in Sources */,
+				1FA3159C1ABCACFC0032CDC5 /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

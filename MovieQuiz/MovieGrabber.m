@@ -22,12 +22,8 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=%@&page_limit=%d", apiKey, limit]];
     //NSString *apiUrl = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=%@&page_limit=%d", apiKey, limit];
     
-    //NSLog(@"%@", [MovieGrabber getDataFrom:apiUrl]);
-    
     NSError *error = nil;
     NSData *urlData = [NSData dataWithContentsOfURL:url];
-    
-    NSLog(@"%@", urlData);
     
     if (!urlData) {
         return NO;
@@ -40,21 +36,16 @@
     }
     
     NSArray *movies = [data objectForKey:@"movies"];
-    //NSLog(@"%@", data);
-    //NSLog(@"%@", [[[data objectForKey:@"movies"] objectAtIndex:0] objectForKey:@"title"]);
     
     for (NSDictionary *movie in movies) {
         NSString *title = [movie objectForKey:@"title"];
         NSString *synopsis = [movie objectForKey:@"synopsis"];
         synopsis = [MovieGrabber filter:synopsis with:title];
-        NSLog(@"%@", synopsis);
         NSString *img = [[movie objectForKey:@"posters"] objectForKey:@"detailed"];
         [list addObject:[Movie MovieWithTitle:title andSynopsis:synopsis andImg:img]];
     }
         
-    NSLog(@"%@", list);
-    Movie *movie = [list objectAtIndex:0];
-    NSLog(@"%@", movie.title);
+    //Movie *movie = [list objectAtIndex:0];
     return YES;
 }
 

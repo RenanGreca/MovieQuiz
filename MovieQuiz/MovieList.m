@@ -34,7 +34,7 @@
 
 - (void) populate {
     if (![MovieGrabber put:20 moviesInList:_movies]) {
-        NSLog(@"Error");
+        NSLog(@"Error grabbing movies");
     }
 }
 
@@ -50,13 +50,68 @@
     return [_movies objectAtIndex: arc4random_uniform((unsigned int) [self count])];
 }
 
-- (Movie *)getRandomMovieThatIsNot:(Movie *)movie {
+- (NSArray *)get:(int)count RandomMoviesThatAreNot:(Movie *)movie {
+    NSMutableArray *randomMovies = [[NSMutableArray alloc] init];
     Movie *rMovie;
-    do {
-        rMovie = [_movies objectAtIndex: arc4random_uniform((unsigned int) [self count])];
-    } while ([rMovie.title isEqualToString:movie.title]);
-    return rMovie;
+    int r;
+    BOOL random;
+    if (count >= [self count]) {
+        return nil;
+    }
+
+    for (int i=0; i<count; i++) {
+        if (randomMovies.count >= [self count]) {
+            // All elements were exausted, no more random choices available
+            break;
+        }
+        // Repeat while the random element is already in the random list
+        do {
+            random = YES;
+            r = arc4random_uniform((unsigned int) [self count]);
+            rMovie = [_movies objectAtIndex:r];
+            for (Movie *lMovie in randomMovies) {
+                if ([rMovie.title isEqualToString:lMovie.title]) {
+                    random = NO;
+                    break;
+                }
+            }
+        } while (!random);
+        [randomMovies addObject:rMovie];
+    }
+    return randomMovies;
 }
+
+- (NSArray *)getRandomMovies:(int)count {
+    NSMutableArray *randomMovies = [[NSMutableArray alloc] init];
+    Movie *rMovie;
+    int r;
+    BOOL random;
+    if (count >= [self count]) {
+        return nil;
+    }
+    
+    for (int i=0; i<count; i++) {
+        if (randomMovies.count >= [self count]) {
+            // All elements were exausted, no more random choices available
+            break;
+        }
+        // Repeat while the random element is already in the random list
+        do {
+            random = YES;
+            r = arc4random_uniform((unsigned int) [self count]);
+            rMovie = [_movies objectAtIndex:r];
+            for (Movie *lMovie in randomMovies) {
+                if ([rMovie.title isEqualToString:lMovie.title]) {
+                    random = NO;
+                    break;
+                }
+            }
+        } while (!random);
+        [randomMovies addObject:rMovie];
+    }
+    return randomMovies;
+}
+
 
 
 @end
