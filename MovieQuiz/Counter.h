@@ -13,6 +13,7 @@
 + (id) sharedInstance;
 
 - (int) counter;
+- (NSString *)name;
 
 - (void) add;
 

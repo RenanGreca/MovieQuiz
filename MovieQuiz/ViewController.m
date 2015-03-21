@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblCounter;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
 
 @end
 
@@ -24,7 +25,11 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     counter = [Counter sharedInstance];
     _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
-    // Do any additional setup after loading the view, typically from a nib.
+    if ([counter name]) {
+        _lblName.text = [NSString stringWithFormat:@"Welcome, %@", [counter name]];
+    } else {
+        _lblName.text = @"";
+    }
 }
 
 - (void)didReceiveMemoryWarning {

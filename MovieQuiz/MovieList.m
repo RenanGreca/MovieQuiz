@@ -33,7 +33,7 @@
 }
 
 - (void) populate {
-    if (![MovieGrabber put:20 moviesInList:_movies]) {
+    if (![MovieGrabber put:50 moviesInList:_movies]) {
         NSLog(@"Error grabbing movies");
     }
 }

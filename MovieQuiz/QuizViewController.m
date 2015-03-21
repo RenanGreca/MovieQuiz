@@ -74,9 +74,7 @@
 }
 
 - (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

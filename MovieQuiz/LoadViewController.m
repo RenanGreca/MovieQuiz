@@ -35,6 +35,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    if (!self.isMovingToParentViewController) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+        // we're already on the navigation stack
+        // another controller must have been popped off
+    }
+
+    
     //_viewBlock.hidden = NO;
     list = [MovieList sharedInstance];
     if (list.movies.count == 0) {
@@ -61,9 +68,9 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [_viewBlock setHidden:YES];
+    /*[_viewBlock setHidden:YES];
     //_viewBlock.hidden = YES;
-    [_pkrAge setHidden:NO];
+    [_pkrAge setHidden:NO];*/
 }
 
 #pragma mark - UIPickerDataSource

@@ -142,6 +142,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome, Renan!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-m9-xBR">
+                                <rect key="frame" x="234" y="458" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,6 +160,7 @@
                             <constraint firstAttribute="centerX" secondItem="McX-Sk-ufJ" secondAttribute="centerX" id="RgA-20-nis"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="McX-Sk-ufJ" secondAttribute="bottom" constant="8" id="Rmy-4f-KCb"/>
                             <constraint firstAttribute="centerX" secondItem="KXh-me-5HP" secondAttribute="centerX" id="UJ4-E1-pbw"/>
+                            <constraint firstItem="JZ3-m9-xBR" firstAttribute="top" secondItem="1q0-VM-h4K" secondAttribute="bottom" constant="8" id="Vy7-0c-3DX"/>
                             <constraint firstAttribute="centerX" secondItem="0Qn-3a-iW2" secondAttribute="centerX" id="Wry-Mq-WUO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hyt-Si-GWl" secondAttribute="bottom" constant="16" id="YOV-J0-Qsz"/>
                             <constraint firstItem="3FN-rt-D5Z" firstAttribute="width" secondItem="1q0-VM-h4K" secondAttribute="width" id="dJ4-ym-9py"/>
@@ -164,6 +171,7 @@
                             <constraint firstItem="3FN-rt-D5Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pfN-No-aJU"/>
                             <constraint firstItem="McX-Sk-ufJ" firstAttribute="top" secondItem="KXh-me-5HP" secondAttribute="bottom" constant="2" id="qqC-aF-7W0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3FN-rt-D5Z" secondAttribute="trailing" constant="-16" id="sgP-Wj-XbP"/>
+                            <constraint firstAttribute="centerX" secondItem="JZ3-m9-xBR" secondAttribute="centerX" id="tZB-G1-qfl"/>
                             <constraint firstItem="0Qn-3a-iW2" firstAttribute="top" secondItem="1q0-VM-h4K" secondAttribute="bottom" constant="34" id="vye-gb-YPc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3FN-rt-D5Z" secondAttribute="bottom" constant="150" id="zSt-DG-nPo"/>
                         </constraints>
@@ -175,6 +183,7 @@
                     </view>
                     <connections>
                         <outlet property="lblCounter" destination="KXh-me-5HP" id="C4S-Ve-BGr"/>
+                        <outlet property="lblName" destination="JZ3-m9-xBR" id="zFc-a5-EbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -607,7 +616,7 @@
                     </view>
                     <connections>
                         <outlet property="txtName" destination="fEd-sK-SCi" id="3LO-R4-1ey"/>
-                        <segue destination="zeb-em-H86" kind="presentation" identifier="sgQuiz" id="xmf-rO-Jpe"/>
+                        <segue destination="zeb-em-H86" kind="presentation" identifier="sgQuiz" animates="NO" id="xmf-rO-Jpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXx-wW-Xlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,6 +631,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xpj-zl-Jwo"/>
-        <segue reference="LcK-BJ-EGd"/>
+        <segue reference="xmf-rO-Jpe"/>
     </inferredMetricsTieBreakers>
 </document>

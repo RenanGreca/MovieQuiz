@@ -39,6 +39,9 @@
 -(int) counter {
     return counter;
 }
+-(NSString *)name {
+    return name;
+}
 
 - (void)add {
     counter++;
