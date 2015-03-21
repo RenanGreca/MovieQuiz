@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1FA315991ABCAAF70032CDC5 /* LoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA315981ABCAAF70032CDC5 /* LoadViewController.m */; };
 		1FA3159C1ABCACFC0032CDC5 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3159B1ABCACFC0032CDC5 /* ResultViewController.m */; };
+		1FA4F88E1ABCDDE300B327F3 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4F88D1ABCDDE300B327F3 /* File.m */; };
+		1FA4F8911ABCDE0100B327F3 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4F8901ABCDE0100B327F3 /* Counter.m */; };
 		1FAAB2791ABA3297007ABE82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2781ABA3297007ABE82 /* main.m */; };
 		1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB27B1ABA3297007ABE82 /* AppDelegate.m */; };
 		1FAAB27F1ABA3297007ABE82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB27E1ABA3297007ABE82 /* ViewController.m */; };
@@ -37,6 +39,10 @@
 		1FA315981ABCAAF70032CDC5 /* LoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadViewController.m; sourceTree = "<group>"; };
 		1FA3159A1ABCACFC0032CDC5 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		1FA3159B1ABCACFC0032CDC5 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		1FA4F88C1ABCDDE300B327F3 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		1FA4F88D1ABCDDE300B327F3 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		1FA4F88F1ABCDE0100B327F3 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
+		1FA4F8901ABCDE0100B327F3 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		1FAAB2731ABA3297007ABE82 /* MovieQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAB2771ABA3297007ABE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAAB2781ABA3297007ABE82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 				1FAAB2A61ABA3D8E007ABE82 /* Movie.m */,
 				1FAAB2A81ABA3EEF007ABE82 /* MovieList.h */,
 				1FAAB2A91ABA3EEF007ABE82 /* MovieList.m */,
+				1FA4F88F1ABCDE0100B327F3 /* Counter.h */,
+				1FA4F8901ABCDE0100B327F3 /* Counter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +177,8 @@
 			children = (
 				1FAAB29D1ABA351A007ABE82 /* MovieGrabber.h */,
 				1FAAB29E1ABA351A007ABE82 /* MovieGrabber.m */,
+				1FA4F88C1ABCDDE300B327F3 /* File.h */,
+				1FA4F88D1ABCDDE300B327F3 /* File.m */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -273,11 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA4F8911ABCDE0100B327F3 /* Counter.m in Sources */,
 				1FAAB2A71ABA3D8E007ABE82 /* Movie.m in Sources */,
 				1FAAB27F1ABA3297007ABE82 /* ViewController.m in Sources */,
 				1FAAB2AA1ABA3EEF007ABE82 /* MovieList.m in Sources */,
 				1FAAB2A31ABA3CE9007ABE82 /* QuizViewController.m in Sources */,
 				1FAAB27C1ABA3297007ABE82 /* AppDelegate.m in Sources */,
+				1FA4F88E1ABCDDE300B327F3 /* File.m in Sources */,
 				1FAAB29F1ABA351A007ABE82 /* MovieGrabber.m in Sources */,
 				1FA315991ABCAAF70032CDC5 /* LoadViewController.m in Sources */,
 				1FAAB2791ABA3297007ABE82 /* main.m in Sources */,

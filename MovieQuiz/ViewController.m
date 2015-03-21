@@ -8,16 +8,22 @@
 
 #import "ViewController.h"
 #import "MovieGrabber.h"
+#import "Counter.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblCounter;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    Counter *counter;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    counter = [Counter sharedInstance];
+    _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

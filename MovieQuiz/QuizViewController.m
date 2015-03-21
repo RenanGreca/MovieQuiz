@@ -10,10 +10,14 @@
 #import "ResultViewController.h"
 #import "MovieList.h"
 #import "Movie.h"
+#import "Counter.h"
 
 @interface QuizViewController () {
     MovieList *list;
     int ans;
+    NSArray *movies;
+    
+    Counter *counter;
 }
 
 @property (weak, nonatomic) IBOutlet UITextView *txtSynopsis;
@@ -23,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn2;
 @property (weak, nonatomic) IBOutlet UIButton *btn3;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblCount;
+@property (weak, nonatomic) IBOutlet UILabel *lblCounter;
 
 @end
 
@@ -32,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     list = [MovieList sharedInstance];
-
+    counter = [Counter sharedInstance];
     // Do any additional setup after loading the view.
 }
 
@@ -49,17 +53,18 @@
         return;
     }
     //Movie *movie = [list getRandomMovie];
-    NSArray *movies = [list getRandomMovies:4];
+    movies = [list getRandomMovies:4];
     
     ans = arc4random_uniform((unsigned int) movies.count);
 
     _txtSynopsis.text = ((Movie *)movies[ans]).synopsis;
     
-    _btn0.titleLabel.text = ((Movie *)movies[0]).title;
-    _btn1.titleLabel.text = ((Movie *)movies[1]).title;
-    _btn2.titleLabel.text = ((Movie *)movies[2]).title;
-    _btn3.titleLabel.text = ((Movie *)movies[3]).title;
+    [_btn0 setTitle:((Movie *)movies[0]).title forState:UIControlStateNormal];
+    [_btn1 setTitle:((Movie *)movies[1]).title forState:UIControlStateNormal];
+    [_btn2 setTitle:((Movie *)movies[2]).title forState:UIControlStateNormal];
+    [_btn3 setTitle:((Movie *)movies[3]).title forState:UIControlStateNormal];
     
+    _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
     //NSMutableArray *randomMovies = [list get:3 RandomMoviesThatAreNot:movie];
 }
 
@@ -69,7 +74,9 @@
 }
 
 - (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 
@@ -84,6 +91,7 @@
         correct = YES;
     }
     result.correct = correct;
+    result.movie = (Movie *)movies[ans];
 }
 
 
