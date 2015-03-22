@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UIView *viewBlock;
 @property (weak, nonatomic) IBOutlet UIView *pkrAge;
+@property (weak, nonatomic) IBOutlet UIButton *btnGo;
 
 @end
 
@@ -35,11 +36,11 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if (!self.isMovingToParentViewController) {
+    /*if (!self.isMovingToParentViewController) {
         [self dismissViewControllerAnimated:NO completion:nil];
         // we're already on the navigation stack
         // another controller must have been popped off
-    }
+    }*/
 
     
     //_viewBlock.hidden = NO;
@@ -64,6 +65,9 @@
     if (counter.counter != 0) {
         [self performSegueWithIdentifier:@"sgQuiz" sender:self];
     }
+    
+    [_btnGo setEnabled:NO];
+    [_btnGo setAlpha:0.5];
 
 }
 
@@ -87,7 +91,7 @@
 
 -(NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
-    NSString *title = [NSString stringWithFormat:@"%ld", row];
+    NSString *title = [NSString stringWithFormat:@"%ld", (long)row];
     NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
     return attString;
@@ -104,6 +108,20 @@
     NSLog(@"trigger");
     [textField resignFirstResponder];
     name = [textField text];
+    if ([textField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Please input a name."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [_btnGo setEnabled:NO];
+        [_btnGo setAlpha:0.5];
+    } else {
+        [_btnGo setEnabled:YES];
+        [_btnGo setAlpha:1.0];
+    }
     return YES;
 }
 

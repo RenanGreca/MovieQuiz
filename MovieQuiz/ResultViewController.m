@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblResult;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPoster;
 @property (weak, nonatomic) IBOutlet UILabel *lblCounter;
+@property (weak, nonatomic) IBOutlet UILabel *lblMovie;
 
 @end
 
@@ -42,7 +43,7 @@
     NSURL *imgUrl = [NSURL URLWithString:_movie.img];
     NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
     _imgPoster.image = [UIImage imageWithData:imgData];
-    
+    _lblMovie.text = _movie.title;
     _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
 
 }
