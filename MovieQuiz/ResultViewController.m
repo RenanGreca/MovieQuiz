@@ -42,13 +42,17 @@
     [counter save];
     
     //NSLog(@"%@", _movie.img);
-    NSURL *imgUrl = [NSURL URLWithString:_movie.img];
-    NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
-    _imgPoster.image = [UIImage imageWithData:imgData];
     _lblMovie.text = _movie.title;
     _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
 
 }
+
+-(void)viewDidAppear:(BOOL)animated {
+    NSURL *imgUrl = [NSURL URLWithString:_movie.img];
+    NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
+    _imgPoster.image = [UIImage imageWithData:imgData];
+}
+
 - (IBAction)buyOniTunes:(id)sender {
     NSString *iTunesURL = [MovieGrabber getiTunesURLWithTitle:_movie.title];
     
