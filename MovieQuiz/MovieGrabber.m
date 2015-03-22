@@ -39,9 +39,12 @@
     
     for (NSDictionary *movie in movies) {
         NSString *title = [movie objectForKey:@"title"];
+        
         NSString *synopsis = [movie objectForKey:@"synopsis"];
         synopsis = [MovieGrabber filter:synopsis with:title];
+        
         NSString *img = [[movie objectForKey:@"posters"] objectForKey:@"detailed"];
+        
         [list addObject:[Movie MovieWithTitle:title andSynopsis:synopsis andImg:img]];
     }
         
@@ -67,6 +70,25 @@
     return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
 }
 
++ (NSString *) getiTunesURLWithTitle:(NSString *)title {
+    title = [title stringByReplacingOccurrencesOfString:(NSString *)@" "
+                                            withString:(NSString *)@"+"
+                                            options:NSCaseInsensitiveSearch
+                                            range:NSMakeRange(0, [title length])];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/search?entity=movie&term=%@", title]];
+
+    NSError *error = nil;
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:urlData options:0 error:&error];
+
+    NSString *iTunesURL = [[[data objectForKey:@"results"] objectAtIndex:0] objectForKey:@"trackViewUrl"];
+    
+    NSLog(@"%@", iTunesURL);
+    return iTunesURL;
+}
+
 + (NSString *) filter:(NSString *)text with:(NSString *)title {
     //NSArray *sentences = [text componentsSeparatedByString: @"."];
     //NSArray *words = [text componentsSeparatedByString: @" "];
@@ -80,8 +102,9 @@
             }
         }
     }*/
-    text = [text stringByReplacingOccurrencesOfString:(NSString *)title withString:(NSString *)@"_____"
-                                              options:NSCaseInsensitiveSearch
+    text = [text stringByReplacingOccurrencesOfString:(NSString *)title
+                                            withString:(NSString *)@"_____"
+                                            options:NSCaseInsensitiveSearch
                                             range:NSMakeRange(0, [text length])];
     
     return text;

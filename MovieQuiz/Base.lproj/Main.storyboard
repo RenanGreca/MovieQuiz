@@ -163,8 +163,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-me-5HP">
-                                <rect key="frame" x="293" y="892" width="17" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-me-5HP">
+                                <rect key="frame" x="292" y="892" width="17" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -312,26 +312,6 @@
                                     <segue destination="MDB-Bv-ucO" kind="presentation" identifier="sgMovie2" id="tS5-sE-X4R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGa-jG-oNo">
-                                <rect key="frame" x="16" y="464" width="568" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CwY-B3-LtQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Movie3">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="MDB-Bv-ucO" kind="presentation" identifier="sgMovie3" id="k4O-RI-z3T"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zee-cb-sVc">
                                 <rect key="frame" x="292" y="548" width="17" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -356,6 +336,26 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="MDB-Bv-ucO" kind="presentation" identifier="sgMovie1" id="xpj-zl-Jwo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGa-jG-oNo">
+                                <rect key="frame" x="16" y="464" width="568" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CwY-B3-LtQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Movie3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="MDB-Bv-ucO" kind="presentation" identifier="sgMovie3" id="k4O-RI-z3T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -428,11 +428,11 @@
                         <viewControllerLayoutGuide type="bottom" id="X1M-gB-Tsk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ksc-gp-o1T">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-R1-slu">
-                                <rect key="frame" x="226" y="87" width="150" height="60"/>
+                                <rect key="frame" x="225" y="87" width="150" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -458,6 +458,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MovieQuizLogoH" translatesAutoresizingMaskIntoConstraints="NO" id="QWn-lk-jgc">
                                 <rect key="frame" x="-164" y="28" width="928" height="29"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-M2-d1z">
+                                <rect key="frame" x="292" y="748" width="17" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moviemoviemoviemoviemoviemoviemoviemovie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-R9-yU7">
+                                <rect key="frame" x="16" y="491" width="568" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY2-LR-pDD">
+                                <rect key="frame" x="16" y="523" width="568" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eju-qd-Ih2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Buy or rent on iTunes now!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buyOniTunes:" destination="MDB-Bv-ucO" eventType="touchUpInside" id="uJ3-by-stS"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1X-RP-JUo">
                                 <rect key="frame" x="180" y="163" width="240" height="320"/>
                                 <constraints>
@@ -470,31 +502,24 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-M2-d1z">
-                                <rect key="frame" x="293" y="548" width="17" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-R9-yU7">
-                                <rect key="frame" x="274" y="491" width="54" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U8p-R9-yU7" firstAttribute="leading" secondItem="Ksc-gp-o1T" secondAttribute="leadingMargin" id="1NC-qK-DWK"/>
                             <constraint firstItem="F1X-RP-JUo" firstAttribute="top" secondItem="Bq1-R1-slu" secondAttribute="bottom" constant="16" id="1iE-UJ-2Jx"/>
                             <constraint firstItem="WZX-qb-6Cw" firstAttribute="top" secondItem="BdL-ut-Cgh" secondAttribute="bottom" id="2sA-W4-CVE"/>
                             <constraint firstItem="Bq1-R1-slu" firstAttribute="top" secondItem="WZX-qb-6Cw" secondAttribute="bottom" constant="23" id="6Zj-rc-C02"/>
+                            <constraint firstItem="hY2-LR-pDD" firstAttribute="top" secondItem="U8p-R9-yU7" secondAttribute="bottom" constant="8" id="7LD-8F-EDe"/>
                             <constraint firstAttribute="centerX" secondItem="F1X-RP-JUo" secondAttribute="centerX" id="96Q-Yr-QCk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hY2-LR-pDD" secondAttribute="trailing" id="B1V-c8-cnz"/>
                             <constraint firstAttribute="centerX" secondItem="Bq1-R1-slu" secondAttribute="centerX" id="Dhv-tW-NGY"/>
                             <constraint firstItem="WZX-qb-6Cw" firstAttribute="height" secondItem="QWn-lk-jgc" secondAttribute="height" multiplier="1.5" id="KFV-xI-fG8"/>
+                            <constraint firstItem="U8p-R9-yU7" firstAttribute="trailing" secondItem="Ksc-gp-o1T" secondAttribute="trailingMargin" id="Lfy-t1-GAU"/>
                             <constraint firstAttribute="centerX" secondItem="U8p-R9-yU7" secondAttribute="centerX" id="NQe-DV-onO"/>
                             <constraint firstItem="U8p-R9-yU7" firstAttribute="top" secondItem="F1X-RP-JUo" secondAttribute="bottom" constant="8" id="SSc-6n-tCZ"/>
                             <constraint firstAttribute="width" secondItem="F1X-RP-JUo" secondAttribute="width" multiplier="2.5" id="U8w-Tv-uwi"/>
                             <constraint firstItem="QWn-lk-jgc" firstAttribute="centerX" secondItem="WZX-qb-6Cw" secondAttribute="centerX" id="Uj4-pu-ElY"/>
+                            <constraint firstItem="hY2-LR-pDD" firstAttribute="leading" secondItem="Ksc-gp-o1T" secondAttribute="leadingMargin" id="alA-jt-fdz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WZX-qb-6Cw" secondAttribute="trailing" constant="-16" id="irr-VP-9tm"/>
                             <constraint firstItem="X1M-gB-Tsk" firstAttribute="top" secondItem="e9E-M2-d1z" secondAttribute="bottom" constant="16" id="jpt-m1-0Z8"/>
                             <constraint firstAttribute="centerX" secondItem="WZX-qb-6Cw" secondAttribute="centerX" id="vB4-p2-GSZ"/>
@@ -503,7 +528,10 @@
                             <constraint firstItem="WZX-qb-6Cw" firstAttribute="leading" secondItem="Ksc-gp-o1T" secondAttribute="leadingMargin" constant="-16" id="zgW-TE-nbB"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="btnBuy" destination="hY2-LR-pDD" id="3Qs-xK-7r0"/>
                         <outlet property="imgPoster" destination="F1X-RP-JUo" id="Ex3-7B-bD2"/>
                         <outlet property="lblCounter" destination="e9E-M2-d1z" id="1Kn-Um-sxE"/>
                         <outlet property="lblMovie" destination="U8p-R9-yU7" id="0Pn-Xs-Tj7"/>
@@ -599,7 +627,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="Loading..." id="C3i-Fi-bvn">
+                                    <navigationItem title="Welcome" id="C3i-Fi-bvn">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="SFt-Zn-VQM">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -623,8 +651,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please tell us your name and age." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bt-nM-ace">
-                                <rect key="frame" x="172" y="113" width="259" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tell us your name and age." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bt-nM-ace">
+                                <rect key="frame" x="171" y="113" width="259" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

@@ -9,6 +9,7 @@
 #import "ResultViewController.h"
 #import "Movie.h"
 #import "Counter.h"
+#import "MovieGrabber.h"
 
 @interface ResultViewController() {
     Counter *counter;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgPoster;
 @property (weak, nonatomic) IBOutlet UILabel *lblCounter;
 @property (weak, nonatomic) IBOutlet UILabel *lblMovie;
+@property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 
 @end
 
@@ -46,6 +48,11 @@
     _lblMovie.text = _movie.title;
     _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
 
+}
+- (IBAction)buyOniTunes:(id)sender {
+    NSString *iTunesURL = [MovieGrabber getiTunesURLWithTitle:_movie.title];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesURL]];
 }
 
 - (IBAction)back:(id)sender {

@@ -12,4 +12,6 @@
 
 + (BOOL) put:(int)limit moviesInList:(NSMutableArray *)list;
 
++ (NSString *) getiTunesURLWithTitle:(NSString *)title;
+
 @end

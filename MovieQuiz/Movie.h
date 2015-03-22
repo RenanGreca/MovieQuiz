@@ -13,6 +13,7 @@
 @property NSString *title;
 @property NSString *synopsis;
 @property NSString *img;
+@property NSString *iTunesURL;
 
 + (id) MovieWithTitle:(NSString *)title andSynopsis:(NSString *)synopsis andImg:(NSString *)img;
 - (id) initWithTitle:(NSString *)title andSynopsis:(NSString *)synopsis andImg:(NSString *)img;
