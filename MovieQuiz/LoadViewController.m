@@ -105,7 +105,6 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"trigger");
     [textField resignFirstResponder];
     name = [textField text];
     if ([textField.text length] == 0) {

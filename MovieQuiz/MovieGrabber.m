@@ -85,67 +85,17 @@
 
     NSString *iTunesURL = [[[data objectForKey:@"results"] objectAtIndex:0] objectForKey:@"trackViewUrl"];
     
-    NSLog(@"%@", iTunesURL);
     return iTunesURL;
 }
 
 + (NSString *) filter:(NSString *)text with:(NSString *)title {
-    //NSArray *sentences = [text componentsSeparatedByString: @"."];
-    //NSArray *words = [text componentsSeparatedByString: @" "];
-    //NSArray *titlewords = [title componentsSeparatedByString: @" "];
-    
-    /*for (int i=0; i<words.count; i++) {
-        NSString *word = [words objectAtIndex:i];
-        for (NSString *titleword in titlewords) {
-            if ([word containsString:titleword]) {
-                word = @"???";
-            }
-        }
-    }*/
+
     text = [text stringByReplacingOccurrencesOfString:(NSString *)title
                                             withString:(NSString *)@"_____"
                                             options:NSCaseInsensitiveSearch
                                             range:NSMakeRange(0, [text length])];
     
     return text;
-    //NSLog(@"%@", words);
-    //return [words componentsJoinedByString:@" "];
 }
-
-
-/*+ (NSDictionary *) parseJSON:(NSData *)json {
-    NSDictionary *ret;
-    
-    if(NSClassFromString(@"NSJSONSerialization"))
-    {
-        NSError *error = nil;
-        id object = [NSJSONSerialization
-                     JSONObjectWithData:json
-                     options:0
-                     error:&error];
-        
-        if(error) {  }
-        
-        // the originating poster wants to deal with dictionaries;
-        // assuming you do too then something like this is the first
-        // validation step:
-        if([object isKindOfClass:[NSDictionary class]])
-        {
-            NSDictionary *ret = object;
-        }
-        else
-        {
-        }
-    }
-    else
-    {
-        // the user is using iOS 4; we'll need to use a third-party solution.
-        // If you don't intend to support iOS 4 then get rid of this entire
-        // conditional and just jump straight to
-        // NSError *error = nil;
-        // [NSJSONSerialization JSONObjectWithData:...
-    }
-
-}*/
 
 @end

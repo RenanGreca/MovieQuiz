@@ -16,16 +16,12 @@
     NSURL *docDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSString *path = [docDir.path
                       stringByAppendingPathComponent:file];
-    NSLog(@"Save path: %@", path);
-    
     return path;
 }
 
 + (NSString *)getLoadPath:(NSString *)file ofType:(NSString *)type {
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *path = [bundle pathForResource:file ofType:type];
-    
-    NSLog(@"Load path: %@", path);
 
     return path;
 }

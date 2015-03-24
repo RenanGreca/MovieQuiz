@@ -41,7 +41,6 @@
 
     [counter save];
     
-    //NSLog(@"%@", _movie.img);
     _lblMovie.text = _movie.title;
     _lblCounter.text = [NSString stringWithFormat:@"%d", [counter counter]];
 

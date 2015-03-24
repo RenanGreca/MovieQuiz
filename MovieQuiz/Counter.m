@@ -87,7 +87,6 @@
     [counterInfos addObject:[NSString stringWithFormat:@"%d", age]];
     
     NSString *infos = [counterInfos componentsJoinedByString:@"\n"];
-    NSLog(@"%@", infos);
     [infos writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
     NSLog(@"Error saving data: %@",error);
 
