@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MovieQuiz-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieQuiz.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieQuizTests-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovieQuizTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5BD3C7BEF3058AAB96A4F628</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A8C78D686AEF639399FD01C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2ABD8480971677942CEF688</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F62A601CDB090ED690823BF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
