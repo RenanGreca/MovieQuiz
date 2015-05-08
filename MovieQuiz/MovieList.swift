@@ -10,6 +10,7 @@ import Foundation
 
 class MovieList {
     var _movies: Array<Movie> = []
+    var _seenMovies: Array<Movie> = []
     
     struct Static {
         static let instance = MovieList()
@@ -19,6 +20,11 @@ class MovieList {
         _movies = fetchMovies(50)
         if _movies.count == 0 {
             return false
+        }
+        _movies.
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            
         }
         return true
     }
@@ -44,21 +50,23 @@ class MovieList {
         for(var i=0; i<count; i++) {
             if (movies.count >= _movies.count) {
                 // All elements were exausted, no more random choices available
-                break;
+                break
             }
             // Repeat while the random element is already in the random list
             do {
-                random = true;
+                random = true
                 r = Int(arc4random_uniform(UInt32(_movies.count)))
-                movie = _movies[r];
-                for lMovie in movies {
-                    if movie._title == lMovie._title {
-                        random = false;
-                        break;
-                    }
+                movie = _movies[r]
+                
+                let lMovies = movies.filter( { return $0._title == movie._title } )
+                let sMovies = _seenMovies.filter( { return $0._title == movie._title } )
+                
+                if lMovies.count > 0 || sMovies.count > 0 {
+                    random = false
                 }
-            } while (!random);
-            movies.append(movie);
+            } while (!random)
+            movies.append(movie)
+            _seenMovies.append(movie)
         }
         
         return movies

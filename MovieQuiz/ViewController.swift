@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let movieList = MovieList.Static.instance
+    let counter = Counter.Static.instance
     let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
 
     
@@ -24,6 +25,13 @@ class ViewController: UIViewController {
         if !movieList.populate() {
             alert.show()
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        counter.reset()
+        movieList._seenMovies = []
     }
 
     @IBAction func start(sender: AnyObject) {

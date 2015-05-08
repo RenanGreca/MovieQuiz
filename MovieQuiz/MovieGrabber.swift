@@ -53,6 +53,13 @@ func fetchMovies(limit: Int) -> Array<Movie> {
     return returnMovies
 }
 
+func getURLsAndImages(movies: Array<Movie>) {
+    for movie in movies {
+        movie._itunesURL = getStoreURL(movie._title)
+        movie._img = getImageFromURL(movie._imgURL)
+    }
+}
+
 func getStoreURL(title: String) -> String {
     let cleanTitle = title.replaceAll(" ", with: "+")
     let url = NSURL(string: "https://itunes.apple.com/search?entity=movie&term=\(cleanTitle)")
@@ -71,6 +78,15 @@ func getStoreURL(title: String) -> String {
     
     return ""
     //    NSString *iTunesURL = [[[data objectForKey:@"results"] objectAtIndex:0] objectForKey:@"trackViewUrl"];
+}
+
+func getImageFromURL(url: String) -> UIImage {
+    let url = NSURL(string: url)
+    let data = NSData(contentsOfURL: url!)
+    if let img = UIImage(data: data!) {
+        return img
+    }
+    return UIImage(named: "MovieQuizLogo")!
 }
 
 

@@ -11,7 +11,7 @@ import UIKit
 class ResultController: UIViewController {
     
     @IBOutlet weak var lblMovie: UILabel!
-    @IBOutlet weak var lblCorrect: UILabel!
+    @IBOutlet weak var imgCheckX: UIImageView!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imgPoster: UIImageView!
     var movie: Movie!
@@ -20,15 +20,15 @@ class ResultController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
         imgPoster.image = movie._img
         lblMovie.text = movie._title
         if correct {
-            lblCorrect.text = ""
             navItem.title = "Correct!"
+            imgCheckX.image = UIImage(named: "icon-check")
         } else {
-            lblCorrect.text = ""
             navItem.title = "Wrong..."
+            imgCheckX.image = UIImage(named: "icon-x")
         }
     }
     

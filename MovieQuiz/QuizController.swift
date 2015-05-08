@@ -35,6 +35,7 @@ class QuizController: UIViewController {
         buttons.append(btn1)
         buttons.append(btn2)
         buttons.append(btn3)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -62,22 +63,24 @@ class QuizController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        let url = NSURL(string: movies[ans]._imgURL)
-        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        if let img = UIImage(data: data!) {
-            movies[ans]._img = img
+        if (movies[ans]._img == UIImage(named: "MovieQuizLogo")) {
+            let url = NSURL(string: movies[ans]._imgURL)
+            let data = NSData(contentsOfURL: url!)
+            if let img = UIImage(data: data!) {
+                movies[ans]._img = img
+            }
         }
     }
     
     @IBAction func tappedAnswer(sender: UIButton) {
-        if sender == buttons[ans] {
-            correct = true
-            counter.right()
-        } else {
-            correct = false
-            counter.wrong()
-        }
         if !loading {
+            if sender == buttons[ans] {
+                correct = true
+                counter.right()
+            } else {
+                correct = false
+                counter.wrong()
+            }
             performSegueWithIdentifier("sgAnswer", sender: self)
             loading = true
         }
