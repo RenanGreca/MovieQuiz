@@ -11,9 +11,9 @@ import UIKit
 class OverController: UIViewController {
 
     @IBOutlet weak var lblCount: UILabel!
-    var count:Int!
+    var counter = Counter.Static.instance
     
     override func viewDidLoad() {
-        lblCount.text = "\(count)"
+        lblCount.text = "\(counter.👍)"
     }
 }
