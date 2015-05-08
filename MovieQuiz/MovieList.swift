@@ -11,6 +11,7 @@ import Foundation
 class MovieList {
     var _movies: Array<Movie> = []
     var _seenMovies: Array<Movie> = []
+    var index = 0
     
     struct Static {
         static let instance = MovieList()
@@ -21,12 +22,29 @@ class MovieList {
         if _movies.count == 0 {
             return false
         }
-        _movies.
+        _movies.shuffle()
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            
+            getURLsAndImages(self._movies)
         }
         return true
+    }
+    
+    func reset() {
+        _seenMovies = []
+        _movies.shuffle()
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            getURLsAndImages(self._movies)
+        }
+        index = 0
+    }
+    
+    func next() -> Movie {
+        if index >= _movies.count {
+            index = 0
+        }
+        return _movies[index++]
     }
     
     func getMovie(index: Int) -> Movie {
@@ -37,7 +55,7 @@ class MovieList {
         return _movies[0]
     }
     
-    func getRandomMovies(count: Int) -> Array<Movie> {
+    func getRandomMovies(count: Int, not:Movie) -> Array<Movie> {
         if count > _movies.count {
             return _movies
         }
@@ -61,7 +79,7 @@ class MovieList {
                 let lMovies = movies.filter( { return $0._title == movie._title } )
                 let sMovies = _seenMovies.filter( { return $0._title == movie._title } )
                 
-                if lMovies.count > 0 || sMovies.count > 0 {
+                if lMovies.count > 0 || sMovies.count > 0 || movie._title == not._title {
                     random = false
                 }
             } while (!random)

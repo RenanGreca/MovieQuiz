@@ -9,15 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-extension String{
-    func exclude(find:String) -> String {
-        return stringByReplacingOccurrencesOfString(find, withString: "", options: .LiteralSearch, range: nil)
-    }
-    func replaceAll(find:String, with:String) -> String {
-        return stringByReplacingOccurrencesOfString(find, withString: with, options: .CaseInsensitiveSearch, range: nil)
-    }
-}
-
 func fetchMovies(limit: Int) -> Array<Movie> {
     let apikey = "asprbevazhnusm6fjwqnk24d"
     
@@ -54,39 +45,40 @@ func fetchMovies(limit: Int) -> Array<Movie> {
 }
 
 func getURLsAndImages(movies: Array<Movie>) {
-    for movie in movies {
-        movie._itunesURL = getStoreURL(movie._title)
-        movie._img = getImageFromURL(movie._imgURL)
+    for (var i=0; i<10; ++i) {
+        let movie = movies[i]
+        getStoreURL(movie)
+        getImageFromURL(movie)
     }
 }
 
-func getStoreURL(title: String) -> String {
-    let cleanTitle = title.replaceAll(" ", with: "+")
-    let url = NSURL(string: "https://itunes.apple.com/search?entity=movie&term=\(cleanTitle)")
-    let data = NSData(contentsOfURL: url!)
-    
-    if data == nil {
-        println("iTunes 💩")
+func getStoreURL(movie: Movie) {
+    if movie._itunesURL == "" {
+        let cleanTitle = movie._title.replaceAll(" ", with: "+")
+        let url = NSURL(string: "https://itunes.apple.com/search?entity=movie&term=\(cleanTitle)")
+        let data = NSData(contentsOfURL: url!)
+        
+        if data == nil {
+            println("iTunes 💩")
+        }
+        
+        var error: NSErrorPointer
+        let json = JSON(data: data!)
+        
+        if let trackUrl = json["results"][0]["trackViewUrl"].stringValue as? String {
+            movie._itunesURL = trackUrl
+        }
     }
-    
-    var error: NSErrorPointer
-    let json = JSON(data: data!)
-    
-    if let trackUrl = json["results"][0]["trackViewUrl"].stringValue as? String {
-        return trackUrl
-    }
-    
-    return ""
-    //    NSString *iTunesURL = [[[data objectForKey:@"results"] objectAtIndex:0] objectForKey:@"trackViewUrl"];
 }
 
-func getImageFromURL(url: String) -> UIImage {
-    let url = NSURL(string: url)
-    let data = NSData(contentsOfURL: url!)
-    if let img = UIImage(data: data!) {
-        return img
+func getImageFromURL(movie: Movie) {
+    if (movie._img == UIImage(named: "MovieQuizLogo")) {
+        let url = NSURL(string: movie._imgURL)
+        let data = NSData(contentsOfURL: url!)
+        if let img = UIImage(data: data!) {
+            movie._img = img
+        }
     }
-    return UIImage(named: "MovieQuizLogo")!
 }
 
 

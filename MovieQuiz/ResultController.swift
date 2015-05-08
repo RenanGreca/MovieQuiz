@@ -45,9 +45,7 @@ class ResultController: UIViewController {
     }
     
     @IBAction func iTunes(sender: AnyObject) {
-        if movie._itunesURL == "" {
-            movie._itunesURL = getStoreURL(movie._title)
-        }
+        getStoreURL(movie)
         UIApplication.sharedApplication().openURL(NSURL(string: movie._itunesURL)!)
     }
     

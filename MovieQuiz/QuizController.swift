@@ -14,6 +14,7 @@ class QuizController: UIViewController {
     let movieList = MovieList.Static.instance
     let counter = Counter.Static.instance
     var movies = Array<Movie>()
+    var movie: Movie!
     var buttons = Array<UIButton>()
     var ans = 0
     var correct: Bool?
@@ -41,10 +42,21 @@ class QuizController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         
-        movies = movieList.getRandomMovies(4)
-        ans = Int(arc4random_uniform(UInt32(movies.count)))
+        movie = movieList.next()
+        movies = [movie]
+        movies += movieList.getRandomMovies(3, not:movie)
+        movies.shuffle()
         
-        txtSynopsis.text = movies[ans]._synopsis
+        for (var i=0; i<movies.count; ++i) {
+            if movies[i]._title == movie._title {
+                ans = i
+                break
+            }
+        }
+        
+        //ans = Int(arc4random_uniform(UInt32(movies.count)))
+        
+        txtSynopsis.text = movie._synopsis
         
         btn0.setTitle(movies[0]._title, forState: UIControlState.Normal)
         btn1.setTitle(movies[1]._title, forState: UIControlState.Normal)
@@ -63,13 +75,7 @@ class QuizController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if (movies[ans]._img == UIImage(named: "MovieQuizLogo")) {
-            let url = NSURL(string: movies[ans]._imgURL)
-            let data = NSData(contentsOfURL: url!)
-            if let img = UIImage(data: data!) {
-                movies[ans]._img = img
-            }
-        }
+        getImageFromURL(movie)
     }
     
     @IBAction func tappedAnswer(sender: UIButton) {

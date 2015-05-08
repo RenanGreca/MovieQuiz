@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         counter.reset()
-        movieList._seenMovies = []
+        movieList.reset()
     }
 
     @IBAction func start(sender: AnyObject) {
