@@ -10,14 +10,26 @@ import UIKit
 
 class ResultController: UIViewController {
     
+    @IBOutlet weak var lblMovie: UILabel!
+    @IBOutlet weak var lblCorrect: UILabel!
+    @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imgPoster: UIImageView!
+    var movie: Movie!
+    var correct: Bool = false
+    var counter = Counter.Static.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        self.navigationController!.navigationBar.topItem!.titleView = UIImageView(image: UIImage(named:"MovieQuizLogoHS"))
-        
-        imgPoster.image = UIImage()
+            
+        imgPoster.image = movie._img
+        lblMovie.text = movie._title
+        if correct {
+            lblCorrect.text = ""
+            navItem.title = "Correct!"
+        } else {
+            lblCorrect.text = ""
+            navItem.title = "Wrong..."
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -25,10 +37,18 @@ class ResultController: UIViewController {
     }
     
     @IBAction func next(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        if counter.total() >= 10 {
+            self.performSegueWithIdentifier("sgOver", sender: self);
+        } else {
+            navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     @IBAction func iTunes(sender: AnyObject) {
+        if movie._itunesURL == "" {
+            movie._itunesURL = getStoreURL(movie._title)
+        }
+        UIApplication.sharedApplication().openURL(NSURL(string: movie._itunesURL)!)
     }
     
     override func didReceiveMemoryWarning() {

@@ -20,6 +20,7 @@
 		1FE1D3FC1AFAA0A2008C2EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1D3FA1AFAA0A2008C2EB8 /* Main.storyboard */; };
 		1FE1D4341AFACF6D008C2EB8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE1D4331AFACF6D008C2EB8 /* SwiftyJSON.framework */; };
 		1FE1D4361AFAE9C6008C2EB8 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1D4351AFAE9C6008C2EB8 /* ResultController.swift */; };
+		1FE1D4381AFC30F2008C2EB8 /* OverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1D4371AFC30F2008C2EB8 /* OverController.swift */; };
 		2B391444517C821D4159F6A6 /* Pods_MovieQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A01FCD6EAC3522645ED7D6C /* Pods_MovieQuiz.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		33C07B2B6B5CFD3C34DE0887 /* Pods_MovieQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BD4917DA271C93E759F323 /* Pods_MovieQuizTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		1FE1D4311AFACF2E008C2EB8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-MovieQuiz/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		1FE1D4331AFACF6D008C2EB8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-MovieQuiz/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		1FE1D4351AFAE9C6008C2EB8 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		1FE1D4371AFC30F2008C2EB8 /* OverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverController.swift; sourceTree = "<group>"; };
 		43A6BB52ECB9B6E253B604B7 /* Pods-MovieQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieQuiz/Pods-MovieQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		6A01FCD6EAC3522645ED7D6C /* Pods_MovieQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FB8CD4F04C75E4FC937A47 /* Pods-MovieQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				1F40AE391AF9813F00CAEA48 /* ViewController.swift */,
 				1FE1D3EE1AFA88F6008C2EB8 /* QuizController.swift */,
 				1FE1D4351AFAE9C6008C2EB8 /* ResultController.swift */,
+				1FE1D4371AFC30F2008C2EB8 /* OverController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				1FE1D3F71AFA8B65008C2EB8 /* Movie.swift in Sources */,
 				1FE1D3F41AFA8A7C008C2EB8 /* MovieGrabber.swift in Sources */,
 				1FE1D4361AFAE9C6008C2EB8 /* ResultController.swift in Sources */,
+				1FE1D4381AFC30F2008C2EB8 /* OverController.swift in Sources */,
 				1F40AE381AF9813F00CAEA48 /* AppDelegate.swift in Sources */,
 				1FE1D3ED1AFA88A4008C2EB8 /* Counter.swift in Sources */,
 				1FE1D3F91AFA9B1F008C2EB8 /* MovieList.swift in Sources */,

@@ -28,4 +28,8 @@ class Counter {
     func wrong() {
         👎++
     }
+    
+    func total() -> Int {
+        return 👍+👎
+    }
 }
