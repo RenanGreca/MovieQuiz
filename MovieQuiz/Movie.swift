@@ -14,6 +14,7 @@ class Movie {
     var _synopsis: String
     var _imgURL: String
     var _itunesURL: String = ""
+    var _itimgURL: String = ""
     var _img: UIImage = UIImage(named: "MovieQuizLogo")!
     
     init(title: String, synopsis: String, imgURL: String) {

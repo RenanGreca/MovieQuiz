@@ -27,11 +27,26 @@ class OverController: UIViewController {
         navigationController?.popToRootViewControllerAnimated(true);
     }
     
+    @IBAction func fbBtn(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            
+            fbShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
+            
+            self.presentViewController(fbShare, animated: true, completion: nil)
+            
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
     @IBAction func tweetBtn(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
             var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz! https://appstore.com/MovieQuiz")
+            tweetShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
             
             self.presentViewController(tweetShare, animated: true, completion: nil)
             

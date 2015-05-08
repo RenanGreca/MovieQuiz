@@ -68,15 +68,28 @@ func getStoreURL(movie: Movie) {
         if let trackUrl = json["results"][0]["trackViewUrl"].stringValue as? String {
             movie._itunesURL = trackUrl
         }
+        if let imgUrl = json["results"][0]["artworkUrl100"].stringValue as? String {
+            movie._itimgURL = imgUrl
+        }
     }
 }
 
 func getImageFromURL(movie: Movie) {
     if (movie._img == UIImage(named: "MovieQuizLogo")) {
-        let url = NSURL(string: movie._imgURL)
+        let url = NSURL(string: movie._itimgURL)
         let data = NSData(contentsOfURL: url!)
-        if let img = UIImage(data: data!) {
-            movie._img = img
+        if data != nil {
+            if let img = UIImage(data: data!) {
+                movie._img = img
+            }
+        } else {
+            let url = NSURL(string: movie._imgURL)
+            let data = NSData(contentsOfURL: url!)
+            if data != nil {
+                if let img = UIImage(data: data!) {
+                    movie._img = img
+                }
+            }
         }
     }
 }

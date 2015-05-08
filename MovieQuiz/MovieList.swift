@@ -23,21 +23,22 @@ class MovieList {
             return false
         }
         _movies.shuffle()
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            getURLsAndImages(self._movies)
-        }
+        fetch()
         return true
     }
     
     func reset() {
         _seenMovies = []
         _movies.shuffle()
+        fetch()
+        index = 0
+    }
+    
+    func fetch() {
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             getURLsAndImages(self._movies)
         }
-        index = 0
     }
     
     func next() -> Movie {
