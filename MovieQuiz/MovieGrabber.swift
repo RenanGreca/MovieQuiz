@@ -31,12 +31,16 @@ func fetchMovies(limit: Int) -> Array<Movie> {
         for movie in movies {
             let title = movie["title"] as! String
             let synopsis = movie["synopsis"] as! String
+            let year = movie["year"] as! Int
             let cleanSynopsis = synopsis.replaceAll(title, with: "_____")
             if let posters = movie["posters"] as? NSDictionary {
                 let imgURL = posters["original"] as! String
-                
-                var m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL)
-                returnMovies.append(m)
+                if let ids = movie["alternate_ids"] as? NSDictionary {
+                    let imdbID = ids["imdb"] as! String
+                    
+                    let m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL, imdbID: imdbID)
+                    returnMovies.append(m)
+                }
             }
         }
     }
@@ -48,6 +52,7 @@ func getURLsAndImages(movies: Array<Movie>) {
     for (var i=0; i<10; ++i) {
         let movie = movies[i]
         getStoreURL(movie)
+        getOMDbImg(movie)
         getImageFromURL(movie)
     }
 }
@@ -70,6 +75,33 @@ func getStoreURL(movie: Movie) {
         }
         if let imgUrl = json["results"][0]["artworkUrl100"].stringValue as? String {
             movie._itimgURL = imgUrl
+        }
+    }
+}
+
+func getOMDbImg(movie: Movie) {
+    if (movie._img == UIImage(named: "MovieQuizLogo")) {
+        let url = NSURL(string: "http://www.omdbapi.com/?i=\(movie._imdbID)&plot=short&r=json")
+        let data = NSData(contentsOfURL: url!)
+        
+        if data == nil {
+            println("OMDb 💩")
+            return
+        }
+        
+        var error: NSErrorPointer
+        let json = JSON(data: data!)
+        
+        if let posterURL = json["Poster"].stringValue as? String {
+            movie._imgURL = posterURL
+        }
+        
+        let imgurl = NSURL(string: movie._imgURL)
+        let imgdata = NSData(contentsOfURL: imgurl!)
+        if imgdata != nil {
+            if let img = UIImage(data: imgdata!) {
+                movie._img = img
+            }
         }
     }
 }

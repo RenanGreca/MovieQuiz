@@ -15,12 +15,14 @@ class Movie {
     var _imgURL: String
     var _itunesURL: String = ""
     var _itimgURL: String = ""
+    var _imdbID: String
     var _img: UIImage = UIImage(named: "MovieQuizLogo")!
     
-    init(title: String, synopsis: String, imgURL: String) {
+    init(title: String, synopsis: String, imgURL: String, imdbID: String) {
         _title = title
         _synopsis = synopsis
         _imgURL = imgURL
+        _imdbID = "tt\(imdbID)"
     }
     
     func print() {

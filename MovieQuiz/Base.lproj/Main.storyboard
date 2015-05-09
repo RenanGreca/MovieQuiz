@@ -259,13 +259,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gK7-2M-geG">
-                                <rect key="frame" x="109" y="20" width="103" height="125"/>
+                                <rect key="frame" x="92" y="20" width="137" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gK7-2M-geG" secondAttribute="height" multiplier="197:237" id="tIP-aT-Z2i"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="moviemoviemoviemoviemoviemoviemoviemovie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-Wn-Ryk">
-                                <rect key="frame" x="0.0" y="153" width="320" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moviemoviemoviemoviemoviemoviemoviemovie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-Wn-Ryk">
+                                <rect key="frame" x="0.0" y="194" width="320" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -285,8 +285,8 @@
                                     <action selector="next:" destination="ym9-Jg-rf6" eventType="touchUpInside" id="ZxN-np-Pp8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-x" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-Zj-9eE">
-                                <rect key="frame" x="0.0" y="189" width="320" height="92"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="icon-x" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-Zj-9eE">
+                                <rect key="frame" x="0.0" y="230" width="320" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="3FO-fn-gi6"/>
                                 </constraints>
@@ -315,7 +315,7 @@
                             <constraint firstItem="v2l-Wn-Ryk" firstAttribute="width" secondItem="MRo-F2-4yK" secondAttribute="width" id="cn6-d4-UCC"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="width" secondItem="MRo-F2-4yK" secondAttribute="width" id="erS-4O-g1h"/>
                             <constraint firstItem="Avg-Rn-ErR" firstAttribute="top" secondItem="RtQ-Zj-9eE" secondAttribute="bottom" constant="15" id="ffF-Tf-Vjo"/>
-                            <constraint firstItem="gK7-2M-geG" firstAttribute="height" secondItem="MRo-F2-4yK" secondAttribute="height" multiplier="0.3" id="fwA-Kq-lIu"/>
+                            <constraint firstItem="gK7-2M-geG" firstAttribute="height" secondItem="MRo-F2-4yK" secondAttribute="height" multiplier="0.4" id="fwA-Kq-lIu"/>
                             <constraint firstAttribute="centerX" secondItem="v2l-Wn-Ryk" secondAttribute="centerX" id="i4T-Qj-QeC"/>
                             <constraint firstItem="v2l-Wn-Ryk" firstAttribute="top" secondItem="gK7-2M-geG" secondAttribute="bottom" constant="8" id="iHb-To-pAd"/>
                             <constraint firstItem="bYx-5i-VBo" firstAttribute="centerX" secondItem="Avg-Rn-ErR" secondAttribute="centerX" id="kb3-53-jqX"/>
@@ -524,9 +524,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-oa-QQZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.  MovieQuiz acquires movie data from the Rotten Tomatoes API and the iTunes Store API. Therefore, an Internet connection is required to play it.
+                                <string key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.  MovieQuiz acquires movie data from the Rotten Tomatoes API, the iTunes Store API, and the Open Movie Database API. Therefore, an Internet connection is required to play it.
 
-iTunes Store link might not work depending on item availability in user's country. Movie poster quality is reliant on Rotten Tomatoes poster availability.</string>
+iTunes Store link might not work depending on item availability in user's country. Movie poster quality is reliant on OMDb poster availability.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

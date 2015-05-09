@@ -75,6 +75,7 @@ class QuizController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getOMDbImg(movie)
         getImageFromURL(movie)
     }
     
