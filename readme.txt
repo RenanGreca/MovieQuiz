@@ -2,6 +2,30 @@ MovieQuiz
 
 Quiz app about movies. MovieQuiz shows the synopsis for a movie and the player has to guess the movie's title.
 
-This app was sent to Apple for review on 2015-05-08.
+------
+
+This version is fully functional in a small scope of its intended purpose.
+
+- It fetches movie data from Rotten Tomatoes and iTunes Store APIs.
+- Shows movies in a random order for users to guess from the synopsis.
+
+------
+
+Improvements over the original version, made in Objective-C:
+
+v1.0
+- The storyboard was completely remade to comply with iOS navigation standards and improve UI
+- Fetching of web data is now made in background, so there is very little waiting time for the user.
+- The name and date input was removed since those were only added because of BEPiD requirements.
+- Instead of continuing endlessly, each session has only 10 questions.
+- At the end of the play session, a results screen appears showing how many points were made and with Facebook and Twitter share buttons.
+
+
+v1.1
+- Along with the Rotten Tomatoes and iTunes APIs, the Open Movie Database API is used to fetch higher-quality movie posters.
+
+------
+
+v1.0 of this app was sent to Apple for review on 2015-05-08.
 
 ©2015 Renan Greca
