@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class Movie {
-    var _title: String
-    var _synopsis: String
+    let _title: String
+    let _synopsis: String
     var _imgURL: String
     var _itunesURL: String = ""
     var _itimgURL: String = ""
-    var _imdbID: String
+    let _imdbID: String
     var _img: UIImage = UIImage(named: "MovieQuizLogo")!
     
     init(title: String, synopsis: String, imgURL: String, imdbID: String) {

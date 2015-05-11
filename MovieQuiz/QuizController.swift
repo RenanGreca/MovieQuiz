@@ -65,7 +65,7 @@ class QuizController: UIViewController {
         
         loading = false
         
-        var s: String
+        let s: String
         if counter.👍==1 {
             s = ""
         } else {
