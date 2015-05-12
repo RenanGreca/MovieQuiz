@@ -23,6 +23,7 @@ v1.0
 
 v1.1
 - Along with the Rotten Tomatoes and iTunes APIs, the Open Movie Database API is used to fetch higher-quality movie posters.
+- Fixed bug in which app would crash if there was no internet connection, or it was unable to fetch data from an API.
 
 ------
 

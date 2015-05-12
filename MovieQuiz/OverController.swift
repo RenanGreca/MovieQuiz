@@ -32,9 +32,7 @@ class OverController: UIViewController {
             var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
             fbShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
-            
             self.presentViewController(fbShare, animated: true, completion: nil)
-            
         } else {
             var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -47,7 +45,6 @@ class OverController: UIViewController {
             
             var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             tweetShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
-            
             self.presentViewController(tweetShare, animated: true, completion: nil)
             
         } else {
@@ -55,7 +52,6 @@ class OverController: UIViewController {
             var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }

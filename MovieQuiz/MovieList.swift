@@ -29,8 +29,10 @@ class MovieList {
     
     func reset() {
         _seenMovies = []
-        _movies.shuffle()
-        fetch()
+        if _movies.count > 0 {
+            _movies.shuffle()
+            fetch()
+        }
         index = 0
     }
     

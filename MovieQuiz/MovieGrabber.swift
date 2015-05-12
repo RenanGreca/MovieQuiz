@@ -65,6 +65,7 @@ func getStoreURL(movie: Movie) {
         
         if data == nil {
             println("iTunes 💩")
+            return;
         }
         
         var error: NSErrorPointer
@@ -108,20 +109,16 @@ func getOMDbImg(movie: Movie) {
 
 func getImageFromURL(movie: Movie) {
     if (movie._img == UIImage(named: "MovieQuizLogo")) {
-        let url = NSURL(string: movie._itimgURL)
+        let url = NSURL(string: movie._imgURL)
         let data = NSData(contentsOfURL: url!)
-        if data != nil {
-            if let img = UIImage(data: data!) {
-                movie._img = img
-            }
-        } else {
-            let url = NSURL(string: movie._imgURL)
-            let data = NSData(contentsOfURL: url!)
-            if data != nil {
-                if let img = UIImage(data: data!) {
-                    movie._img = img
-                }
-            }
+        
+        if data == nil {
+            println("RT img 💩")
+            return
+        }
+        
+        if let img = UIImage(data: data!) {
+            movie._img = img
         }
     }
 }
