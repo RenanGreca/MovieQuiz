@@ -10,6 +10,8 @@ import UIKit
 
 class ResultController: UIViewController {
     
+    @IBOutlet weak var imgFresh: UIImageView!
+    @IBOutlet weak var lblRating: UILabel!
     @IBOutlet weak var lblMovie: UILabel!
     @IBOutlet weak var imgCheckX: UIImageView!
     @IBOutlet weak var navItem: UINavigationItem!
@@ -23,6 +25,12 @@ class ResultController: UIViewController {
         
         imgPoster.image = movie._img
         lblMovie.text = movie._title
+        lblRating.text = movie._rating
+        if movie._rating == "Rotten" {
+            imgFresh.image = UIImage(named: "rotten")
+        } else {
+            imgFresh.image = UIImage(named: "fresh")
+        }
         if correct {
             navItem.title = "Correct!"
             imgCheckX.image = UIImage(named: "icon-check")

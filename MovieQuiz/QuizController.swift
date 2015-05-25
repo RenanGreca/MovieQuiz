@@ -13,6 +13,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     let movieList = MovieList.Static.instance
     let counter = Counter.Static.instance
+    var timer = Timer()
     var movies = Array<Movie>()
     var movie: Movie!
     var buttons = Array<UIButton>()
@@ -36,12 +37,12 @@ class QuizController: UIViewController {
         buttons.append(btn1)
         buttons.append(btn2)
         buttons.append(btn3)
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        
+        self.timer.start(self.lblRW)
+
         movie = movieList.next()
         movies = [movie]
         movies += movieList.getRandomMovies(3, not:movie)
@@ -65,13 +66,13 @@ class QuizController: UIViewController {
         
         loading = false
         
-        let s: String
+        /*let s: String
         if counter.👍==1 {
             s = ""
         } else {
             s = "s"
         }
-        lblRW.text = "\(counter.👍) out of \(counter.total()) correct answer\(s)"
+        lblRW.text = "\(counter.👍) out of \(counter.total()) correct answer\(s)"*/
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -98,6 +99,7 @@ class QuizController: UIViewController {
             var rC = segue.destinationViewController as! ResultController
             rC.movie = movies[ans]
             rC.correct = correct!
+            self.timer.pause()
         }
     }
     

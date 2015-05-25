@@ -33,12 +33,18 @@ func fetchMovies(limit: Int) -> Array<Movie> {
             let synopsis = movie["synopsis"] as! String
             let year = movie["year"] as! Int
             let cleanSynopsis = synopsis.replaceAll(title, with: "_____")
+            
+            var rating = "unknown"
+            if let ratings = movie["ratings"] as? NSDictionary {
+                rating = ratings["critics_rating"] as! String
+            }
+            
             if let posters = movie["posters"] as? NSDictionary {
                 let imgURL = posters["original"] as! String
                 if let ids = movie["alternate_ids"] as? NSDictionary {
                     let imdbID = ids["imdb"] as! String
                     
-                    let m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL, imdbID: imdbID)
+                    let m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL, imdbID: imdbID, rating: rating)
                     returnMovies.append(m)
                 }
             }

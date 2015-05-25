@@ -148,8 +148,8 @@
                                     <action selector="tappedAnswer:" destination="EXm-lc-30X" eventType="touchUpInside" id="fYe-a5-zS4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍 5 - 👎 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtQ-o7-m11">
-                                <rect key="frame" x="116" y="387" width="89" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtQ-o7-m11">
+                                <rect key="frame" x="139" y="387" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -240,11 +240,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itunesblack" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-5i-VBo">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itunesblack" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-5i-VBo">
                                 <rect key="frame" x="0.0" y="296" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avg-Rn-ErR">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avg-Rn-ErR">
                                 <rect key="frame" x="0.0" y="296" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -266,11 +266,11 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moviemoviemoviemoviemoviemoviemoviemovie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-Wn-Ryk">
                                 <rect key="frame" x="0.0" y="194" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjP-0d-E3z">
@@ -286,7 +286,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="icon-x" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-Zj-9eE">
-                                <rect key="frame" x="0.0" y="230" width="320" height="51"/>
+                                <rect key="frame" x="0.0" y="268" width="320" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="3FO-fn-gi6"/>
                                 </constraints>
@@ -296,6 +296,68 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-C4-PYb">
+                                <rect key="frame" x="0.0" y="223" width="320" height="30"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftt-QG-ye8">
+                                        <rect key="frame" x="158" y="0.0" width="5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="5" id="HCw-Vy-TG9"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certified Fresh" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRI-OJ-9jp">
+                                        <rect key="frame" x="40" y="0.0" width="113" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fresh" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-ra-mRQ">
+                                        <rect key="frame" x="168" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="bzR-No-COs"/>
+                                            <constraint firstAttribute="width" constant="30" id="iZ3-le-YTl"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bzR-No-COs"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="height" secondItem="RbI-C4-PYb" secondAttribute="height" id="0MB-sF-iug"/>
+                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="Ftt-QG-ye8" secondAttribute="trailing" constant="5" id="75I-65-ipo"/>
+                                    <constraint firstAttribute="centerY" secondItem="fRI-OJ-9jp" secondAttribute="centerY" id="8Hm-nh-bXi"/>
+                                    <constraint firstAttribute="width" secondItem="fRI-OJ-9jp" secondAttribute="width" id="8xT-cA-qyj"/>
+                                    <constraint firstAttribute="centerX" secondItem="fRI-OJ-9jp" secondAttribute="centerX" id="9ii-GE-TuE"/>
+                                    <constraint firstAttribute="trailing" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="160" id="CCb-0c-ENy"/>
+                                    <constraint firstAttribute="centerY" secondItem="6T9-ra-mRQ" secondAttribute="centerY" id="EZt-r4-p0d"/>
+                                    <constraint firstAttribute="centerX" secondItem="6T9-ra-mRQ" secondAttribute="centerX" id="GRt-l0-gY4"/>
+                                    <constraint firstAttribute="centerX" secondItem="Ftt-QG-ye8" secondAttribute="centerX" id="KnN-ay-UVI"/>
+                                    <constraint firstAttribute="trailing" secondItem="6T9-ra-mRQ" secondAttribute="trailing" constant="8" id="bx4-gq-4eS"/>
+                                    <constraint firstAttribute="height" secondItem="Ftt-QG-ye8" secondAttribute="height" id="eqM-34-lG3"/>
+                                    <constraint firstItem="fRI-OJ-9jp" firstAttribute="leading" secondItem="RbI-C4-PYb" secondAttribute="leading" constant="8" id="foS-Sb-Pwg"/>
+                                    <constraint firstAttribute="height" constant="30" id="iXk-R3-9ZA"/>
+                                    <constraint firstAttribute="height" secondItem="fRI-OJ-9jp" secondAttribute="height" id="lB0-FK-FZ6"/>
+                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="RbI-C4-PYb" secondAttribute="leading" constant="160" id="lE7-mX-jgD"/>
+                                    <constraint firstItem="Ftt-QG-ye8" firstAttribute="leading" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="5" id="lGG-Cw-UDW"/>
+                                    <constraint firstAttribute="centerY" secondItem="Ftt-QG-ye8" secondAttribute="centerY" id="uts-9V-zzV"/>
+                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="20" id="wAU-25-WOo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8xT-cA-qyj"/>
+                                        <exclude reference="9ii-GE-TuE"/>
+                                        <exclude reference="CCb-0c-ENy"/>
+                                        <exclude reference="foS-Sb-Pwg"/>
+                                        <exclude reference="GRt-l0-gY4"/>
+                                        <exclude reference="bx4-gq-4eS"/>
+                                        <exclude reference="lE7-mX-jgD"/>
+                                        <exclude reference="wAU-25-WOo"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -304,6 +366,7 @@
                             <constraint firstItem="RtQ-Zj-9eE" firstAttribute="top" secondItem="v2l-Wn-Ryk" secondAttribute="bottom" constant="15" id="8fm-z6-L5z"/>
                             <constraint firstAttribute="height" secondItem="RtQ-Zj-9eE" secondAttribute="height" id="AG5-NP-0nd"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="top" secondItem="Avg-Rn-ErR" secondAttribute="bottom" constant="10" id="B7G-gP-tWu"/>
+                            <constraint firstItem="RbI-C4-PYb" firstAttribute="width" secondItem="MRo-F2-4yK" secondAttribute="width" id="BbM-1K-hTJ"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="height" secondItem="Avg-Rn-ErR" secondAttribute="height" id="Cjk-n3-Zve"/>
                             <constraint firstAttribute="centerX" secondItem="QjP-0d-E3z" secondAttribute="centerX" id="Ckw-5X-vxM"/>
                             <constraint firstAttribute="width" secondItem="Avg-Rn-ErR" secondAttribute="width" id="S5r-Rz-KHf"/>
@@ -313,12 +376,16 @@
                             <constraint firstAttribute="centerX" secondItem="Avg-Rn-ErR" secondAttribute="centerX" id="YJ7-gT-aGW"/>
                             <constraint firstAttribute="width" secondItem="RtQ-Zj-9eE" secondAttribute="width" id="bPz-k4-hee"/>
                             <constraint firstItem="v2l-Wn-Ryk" firstAttribute="width" secondItem="MRo-F2-4yK" secondAttribute="width" id="cn6-d4-UCC"/>
+                            <constraint firstAttribute="centerX" secondItem="RbI-C4-PYb" secondAttribute="centerX" id="dZz-oQ-Ma4"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="width" secondItem="MRo-F2-4yK" secondAttribute="width" id="erS-4O-g1h"/>
                             <constraint firstItem="Avg-Rn-ErR" firstAttribute="top" secondItem="RtQ-Zj-9eE" secondAttribute="bottom" constant="15" id="ffF-Tf-Vjo"/>
                             <constraint firstItem="gK7-2M-geG" firstAttribute="height" secondItem="MRo-F2-4yK" secondAttribute="height" multiplier="0.4" id="fwA-Kq-lIu"/>
+                            <constraint firstItem="RtQ-Zj-9eE" firstAttribute="top" secondItem="RbI-C4-PYb" secondAttribute="bottom" constant="15" id="hMC-pN-ucv"/>
                             <constraint firstAttribute="centerX" secondItem="v2l-Wn-Ryk" secondAttribute="centerX" id="i4T-Qj-QeC"/>
                             <constraint firstItem="v2l-Wn-Ryk" firstAttribute="top" secondItem="gK7-2M-geG" secondAttribute="bottom" constant="8" id="iHb-To-pAd"/>
                             <constraint firstItem="bYx-5i-VBo" firstAttribute="centerX" secondItem="Avg-Rn-ErR" secondAttribute="centerX" id="kb3-53-jqX"/>
+                            <constraint firstItem="QjP-0d-E3z" firstAttribute="top" secondItem="RtQ-Zj-9eE" secondAttribute="bottom" constant="15" id="nyg-7v-nsl"/>
+                            <constraint firstItem="RbI-C4-PYb" firstAttribute="top" secondItem="v2l-Wn-Ryk" secondAttribute="bottom" constant="8" id="qOZ-tL-zSw"/>
                             <constraint firstItem="bYx-5i-VBo" firstAttribute="width" secondItem="Avg-Rn-ErR" secondAttribute="width" id="raW-OM-4nW"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="height" secondItem="RtQ-Zj-9eE" secondAttribute="height" id="tow-aT-W2m"/>
                             <constraint firstItem="8jF-L3-gZA" firstAttribute="top" secondItem="QjP-0d-E3z" secondAttribute="bottom" constant="10" id="v7X-YS-3Y0"/>
@@ -327,8 +394,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8fm-z6-L5z"/>
                                 <exclude reference="AG5-NP-0nd"/>
                                 <exclude reference="ffF-Tf-Vjo"/>
+                                <exclude reference="xyX-gl-B9g"/>
                                 <exclude reference="tow-aT-W2m"/>
                                 <exclude reference="SSR-rz-f4T"/>
                             </mask>
@@ -337,8 +406,10 @@
                     <navigationItem key="navigationItem" title="Right/Wrong" id="r88-Z9-rQn"/>
                     <connections>
                         <outlet property="imgCheckX" destination="RtQ-Zj-9eE" id="ZCy-R2-H3H"/>
+                        <outlet property="imgFresh" destination="6T9-ra-mRQ" id="reG-pD-fcE"/>
                         <outlet property="imgPoster" destination="gK7-2M-geG" id="WIw-52-fV4"/>
                         <outlet property="lblMovie" destination="v2l-Wn-Ryk" id="NI7-rb-1MD"/>
+                        <outlet property="lblRating" destination="fRI-OJ-9jp" id="c78-qo-Df1"/>
                         <outlet property="navItem" destination="r88-Z9-rQn" id="2Yd-Rq-cV7"/>
                         <segue destination="DZ1-Ab-gKC" kind="show" identifier="sgOver" id="CZj-I8-4io"/>
                     </connections>
@@ -524,13 +595,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-oa-QQZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
+                                <string key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
 
 MovieQuiz acquires movie data from the Rotten Tomatoes AP, the iTunes Store API, and the Open Movie Database API. Therefore, an Internet connection is required to play it.
 
 iTunes Store link might not work depending on item availability in user's country. Movie poster quality is reliant on OMDb poster availability.
 
-MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</mutableString>
+MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -609,6 +680,7 @@ MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, plea
         <image name="MovieQuizLogo" width="224" height="248"/>
         <image name="bepid_transparent white small" width="230" height="100"/>
         <image name="facebook" width="170" height="170"/>
+        <image name="fresh" width="103" height="109"/>
         <image name="icon-x" width="256" height="256"/>
         <image name="iconeSobre" width="22" height="22"/>
         <image name="itunesblack" width="166" height="61"/>
