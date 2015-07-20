@@ -25,8 +25,16 @@ v1.1
 - Along with the Rotten Tomatoes and iTunes APIs, the Open Movie Database API is used to fetch higher-quality movie posters.
 - Fixed bug in which app would crash if there was no internet connection, or it was unable to fetch data from an API.
 
+v1.2
+- The game’s score is now based on elapsed time until 10 correct answers are reached, not number of correct answers out of 10.
+- Game Center integration has been implemented and the above elapsed time is used in a leaderboard.
+
 ------
 
 v1.0 of this app was sent to Apple for review on 2015-05-08.
+
+v1.1 of this app was sent to Apple for review on 2015-05-12.
+
+v1.2 of this app was sent to Apple for review on 2015-07-20.
 
 ©2015 Renan Greca

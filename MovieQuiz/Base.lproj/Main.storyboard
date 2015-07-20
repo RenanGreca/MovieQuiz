@@ -63,7 +63,7 @@
                                 <segue destination="6z2-vG-jcF" kind="show" id="U7S-Sf-lOn"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="High Scores" id="bD3-Nq-y3F">
+                        <barButtonItem key="rightBarButtonItem" image="Leaderboard" id="bD3-Nq-y3F">
                             <connections>
                                 <action selector="leaderboardTouched:" destination="BYZ-38-t0r" id="Szs-55-Lkn"/>
                             </connections>
@@ -593,13 +593,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-oa-QQZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
+                                <string key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
 
 MovieQuiz acquires movie data from the Rotten Tomatoes API, the iTunes Store API, and the Open Movie Database API. Therefore, an Internet connection is required to play it.
 
 iTunes Store link might not work depending on item availability in user's country. Movie poster quality is reliant on OMDb poster availability.
 
-MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</mutableString>
+MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -675,6 +675,7 @@ MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, plea
     </scenes>
     <resources>
         <image name="FilmReel" width="419" height="113"/>
+        <image name="Leaderboard" width="33" height="33"/>
         <image name="MovieQuizLogo" width="224" height="248"/>
         <image name="bepid_transparent white small" width="230" height="100"/>
         <image name="facebook" width="170" height="170"/>

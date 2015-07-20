@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import GameKit
 
 class OverController: UIViewController {
 
@@ -19,6 +20,8 @@ class OverController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.timer.updateTime()
         lblCount.text = "\(self.timer.label.text!)"
+        
+        reportScore()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -33,10 +36,10 @@ class OverController: UIViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
-            fbShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
+            fbShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
             self.presentViewController(fbShare, animated: true, completion: nil)
         } else {
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            var alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -46,15 +49,31 @@ class OverController: UIViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
             var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetShare.setInitialText("I got \(counter.👍) out of 10 correct answers in #MovieQuiz!")
+            
+            tweetShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
             self.presentViewController(tweetShare, animated: true, completion: nil)
             
         } else {
             
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            var alert = UIAlertController(title: "Accounts", message: "Please log into a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func reportScore() {
+        if GKLocalPlayer.localPlayer().authenticated {
+            let gkScore = GKScore(leaderboardIdentifier: "besttimes")
+            gkScore.value = Int64(self.timer.timeElapsed)
+            GKScore.reportScores([gkScore], withCompletionHandler: { (error: NSError!) -> Void in
+                if (error != nil) {
+                    // handle error
+                    println("Error: " + error.localizedDescription);
+                } else {
+                    println("Score reported: \(gkScore.value)")
+                }
+            })
         }
     }
 }
