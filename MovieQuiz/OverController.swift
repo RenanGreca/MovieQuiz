@@ -13,10 +13,12 @@ class OverController: UIViewController {
 
     @IBOutlet weak var lblCount: UILabel!
     var counter = Counter.Static.instance
+    let timer = Timer.Static.instance
     
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true
-        lblCount.text = "\(counter.👍)"
+        self.timer.updateTime()
+        lblCount.text = "\(self.timer.label.text!)"
     }
     
     override func viewWillDisappear(animated: Bool) {

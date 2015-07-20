@@ -13,7 +13,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     let movieList = MovieList.Static.instance
     let counter = Counter.Static.instance
-    var timer = Timer()
+    var timer = Timer.Static.instance
     var movies = Array<Movie>()
     var movie: Movie!
     var buttons = Array<UIButton>()

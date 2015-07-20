@@ -7,308 +7,290 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C8D29E87615CB56C9F59FB8 /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BFBD056DAFA36298F95A3D0 /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38BF08E6E217BEB703F1524E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58938E8EB8CA83B85D88D272 /* Foundation.framework */; };
-		5A01B1510E78C7C803822758 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593604EABEE46071AEEB295 /* SwiftyJSON.swift */; };
-		5BB3443B5C6000837508B6D2 /* Pods-MovieQuizTests-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAA822EA3942C610F94F1F /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */; };
-		7307D0D228821F21D6EF94C7 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D83370ECC97C7A3ED37291E4 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F4816BC36B483016A79EC22 /* Pods-MovieQuizTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A240E812D4B44CDFE903381A /* Pods-MovieQuizTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F543F54810F77F2F866645A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58938E8EB8CA83B85D88D272 /* Foundation.framework */; };
-		87860775A9A40249DCDBF798 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593604EABEE46071AEEB295 /* SwiftyJSON.swift */; };
-		B9E014E4165D8F4D9AB7C607 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58938E8EB8CA83B85D88D272 /* Foundation.framework */; };
-		C8774181868D9E4393A1ED8C /* Pods-MovieQuizTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D15533FE2003CB2415295123 /* Pods-MovieQuizTests-dummy.m */; };
-		CB878C14219ABD21D1A75B7E /* Pods-MovieQuiz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF79C9E1A9DF357429C36A4 /* Pods-MovieQuiz-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E48609FFBF0C877C3A6E8752 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58938E8EB8CA83B85D88D272 /* Foundation.framework */; };
-		E542DD4E1494FAD4DBC6BB61 /* Pods-MovieQuiz-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9A25CE615C8B1F9CA036BF /* Pods-MovieQuiz-SwiftyJSON-dummy.m */; };
-		E84087799F2FC3D0D426FFDA /* Pods-MovieQuiz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 674C07941DA5AAD3D4252A59 /* Pods-MovieQuiz-dummy.m */; };
+		1FE72785A01D09C79C04A58D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222B3E42BB1F6A81AC3F4563 /* Foundation.framework */; };
+		2244803222AB12513D6FBB45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222B3E42BB1F6A81AC3F4563 /* Foundation.framework */; };
+		4267DA60F7682112E78257B7 /* Pods-MovieQuizTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD98FCBA2A0F46FCA2C6167C /* Pods-MovieQuizTests-dummy.m */; };
+		4A028F684D1C5CE68071C2C9 /* Pods-MovieQuizTests-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 999E52D877A81697ADF27DED /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */; };
+		65C9A8663C4DE8EAF5453462 /* Pods-MovieQuiz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF13847E32E4C2D66DE57DC /* Pods-MovieQuiz-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71B60347BF93125F87C98AA6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87700D9F46CA79BB3001F7 /* SwiftyJSON.swift */; };
+		7CCC1C8E634208507C7CA6C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222B3E42BB1F6A81AC3F4563 /* Foundation.framework */; };
+		821A174D32C5B3372D03F7BB /* Pods-MovieQuiz-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32326A81E26A30CFED53D792 /* Pods-MovieQuiz-SwiftyJSON-dummy.m */; };
+		921B4011CE07CACFF4BCF34A /* Pods-MovieQuizTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68CA4D785DC78172BB212D8F /* Pods-MovieQuizTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AED27324274C3EF128EE83DB /* Pods-MovieQuiz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50121921805DDB145C5CBCE5 /* Pods-MovieQuiz-dummy.m */; };
+		B3539968723ADC92E7A0C6AD /* Pods-MovieQuiz-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C576C905193A7DD5DE3C635 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5DF6F136AAD05BFB7307D1A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87700D9F46CA79BB3001F7 /* SwiftyJSON.swift */; };
+		B8383426365A502010E7188C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222B3E42BB1F6A81AC3F4563 /* Foundation.framework */; };
+		CAC55B4A939BD563802A88AE /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C444D70A46A8CB81A86199CC /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A691790C85DB2CFF6C15C64C /* PBXContainerItemProxy */ = {
+		5CE2806ED76B5F4A3C102AB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 258FCD6A51D33768DFE3A31D /* Project object */;
+			containerPortal = FCACAD9933EAE51E04B0307F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A2ABD8480971677942CEF688;
+			remoteGlobalIDString = A9FB5859AE3F9D40A903F6C9;
 			remoteInfo = "Pods-MovieQuiz-SwiftyJSON";
 		};
-		F539B360988827678FA7B940 /* PBXContainerItemProxy */ = {
+		74CE8759A3D70C31E43FCDEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 258FCD6A51D33768DFE3A31D /* Project object */;
+			containerPortal = FCACAD9933EAE51E04B0307F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A8C78D686AEF639399FD01C;
+			remoteGlobalIDString = 02599349B43FA69C530E7FB2;
 			remoteInfo = "Pods-MovieQuizTests-SwiftyJSON";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		081D762CA800D4FC4DB46B37 /* Pods-MovieQuizTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieQuizTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		269CD1EEC2E93966DE154368 /* Pods-MovieQuiz-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		2BDAA822EA3942C610F94F1F /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-MovieQuizTests-SwiftyJSON-dummy.m"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		2EC02EC600B1FFFB6E4454A0 /* Pods_MovieQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CF79C9E1A9DF357429C36A4 /* Pods-MovieQuiz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-umbrella.h"; sourceTree = "<group>"; };
-		45D5768F1B9FC7904D26D3FD /* Pods-MovieQuizTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuizTests-environment.h"; sourceTree = "<group>"; };
-		466D12094BA52163542F9BDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4757357BAC6A7BF3F3F4F328 /* Pods-MovieQuizTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuizTests.modulemap"; sourceTree = "<group>"; };
-		48A72FB03B7FF9CA5FE34368 /* Pods-MovieQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuizTests.release.xcconfig"; sourceTree = "<group>"; };
-		4A3B8A7BD997488AB8C810D0 /* Pods-MovieQuiz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuiz-resources.sh"; sourceTree = "<group>"; };
-		507FFDE16EE3C2725ACB7CF4 /* Pods-MovieQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz.debug.xcconfig"; sourceTree = "<group>"; };
-		5593604EABEE46071AEEB295 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		5847D418EA731E070EA00CF5 /* Pods-MovieQuiz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieQuiz-acknowledgements.markdown"; sourceTree = "<group>"; };
-		58938E8EB8CA83B85D88D272 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5B46A628F8274DBEFF355D82 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		674C07941DA5AAD3D4252A59 /* Pods-MovieQuiz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuiz-dummy.m"; sourceTree = "<group>"; };
-		68CE748EB142A1D26793A6A1 /* Pods-MovieQuizTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuizTests-frameworks.sh"; sourceTree = "<group>"; };
-		6F81188075443926AC50EEE3 /* Pods-MovieQuizTests-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests-SwiftyJSON.xcconfig"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		7BFBD056DAFA36298F95A3D0 /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-MovieQuizTests-SwiftyJSON-umbrella.h"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		7E26187921374ABA1A2DD6A6 /* Pods-MovieQuiz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuiz.modulemap"; sourceTree = "<group>"; };
-		81E6555BD46C70B2CED27ECE /* Pods-MovieQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz.release.xcconfig"; sourceTree = "<group>"; };
-		82D3A2D73875A898F6356AE1 /* Pods-MovieQuiz-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-environment.h"; sourceTree = "<group>"; };
-		833F59A971EC859DD40B701D /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		8D245528DCF2D336AE57E008 /* Pods-MovieQuizTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieQuizTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9B87CBC3319D1A0D40853D06 /* Pods-MovieQuizTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuizTests-resources.sh"; sourceTree = "<group>"; };
-		A240E812D4B44CDFE903381A /* Pods-MovieQuizTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuizTests-umbrella.h"; sourceTree = "<group>"; };
-		A613A368E4D61094283FBB59 /* Pods-MovieQuizTests-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-MovieQuizTests-SwiftyJSON-prefix.pch"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		AD8290258D1B76B3F35A7F70 /* Pods_MovieQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE9A25CE615C8B1F9CA036BF /* Pods-MovieQuiz-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuiz-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		B113E407BE5953424C5738BF /* Pods-MovieQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB6CE9AC467F66EF069CD3E2 /* Pods-MovieQuizTests-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-MovieQuizTests-SwiftyJSON.modulemap"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		BFD64BA2735BF4819EBADA10 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		C96C212FA538632B4F46663F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-MovieQuizTests-SwiftyJSON/Info.plist"; sourceTree = "<group>"; };
-		D15533FE2003CB2415295123 /* Pods-MovieQuizTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuizTests-dummy.m"; sourceTree = "<group>"; };
-		D327485D9BEF1DA3E1178814 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D441EF42BD0E0F4D575AB22D /* Pods-MovieQuiz-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		D83370ECC97C7A3ED37291E4 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		DC9981C7205E434FE1603A9E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFDAE065167FC749C0E9F6C1 /* Pods-MovieQuiz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieQuiz-acknowledgements.plist"; sourceTree = "<group>"; };
-		E06BDF232813353C70FE3084 /* Pods-MovieQuiz-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuiz-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		E57A4792F98C847146C76CDF /* Pods-MovieQuiz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuiz-frameworks.sh"; sourceTree = "<group>"; };
-		EB4A44D7CC27E63E785394F8 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F1C6DDEB657D03A70491FE3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0194A1FAAE999DAF6E450924 /* Pods-MovieQuizTests-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-MovieQuizTests-SwiftyJSON.modulemap"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		07DB85E89DE21682C3B2EA22 /* Pods-MovieQuizTests-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests-SwiftyJSON.xcconfig"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		0C576C905193A7DD5DE3C635 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		12546C839833D17708922AE8 /* Pods-MovieQuizTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieQuizTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1449BE88757888778A8DA5C9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		17FB65C0E62610771C273E8A /* Pods-MovieQuiz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuiz.modulemap"; sourceTree = "<group>"; };
+		1F603D2148A14B1EF78462A6 /* Pods-MovieQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		222B3E42BB1F6A81AC3F4563 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		227E73460F6A03C0B6C7EB75 /* Pods-MovieQuiz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuiz-resources.sh"; sourceTree = "<group>"; };
+		25440C0F2CE40C517836DA71 /* Pods-MovieQuizTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuizTests-environment.h"; sourceTree = "<group>"; };
+		2B7F4D4909F3132C8E5E382D /* Pods-MovieQuiz-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-environment.h"; sourceTree = "<group>"; };
+		32326A81E26A30CFED53D792 /* Pods-MovieQuiz-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuiz-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		35C800B4BA987FDA6E834CFC /* Pods-MovieQuiz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieQuiz-acknowledgements.plist"; sourceTree = "<group>"; };
+		36F6E126B61DB553B5DDC36A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427B0F4AE93C9994DD3F219D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4800657A7F7BD21E3585466B /* Pods-MovieQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BF3C19D5DC066D05645ABEA /* Pods-MovieQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		4C6DF4A507DD6CE3AEC9AF9E /* Pods-MovieQuiz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieQuiz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50121921805DDB145C5CBCE5 /* Pods-MovieQuiz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuiz-dummy.m"; sourceTree = "<group>"; };
+		54D865A7240EE8DFB6166B12 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68CA4D785DC78172BB212D8F /* Pods-MovieQuizTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuizTests-umbrella.h"; sourceTree = "<group>"; };
+		78392517B7868F28A9476007 /* Pods-MovieQuiz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuiz-frameworks.sh"; sourceTree = "<group>"; };
+		8AB44052D71D234AE7DA8AE4 /* Pods-MovieQuizTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuizTests.modulemap"; sourceTree = "<group>"; };
+		8C3ACEC2ACD20D737D673E52 /* Pods-MovieQuizTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuizTests-resources.sh"; sourceTree = "<group>"; };
+		8DAF2C8F44639185900A6634 /* Pods_MovieQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9011E337B6B63C1ED74498D3 /* Pods-MovieQuizTests-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-MovieQuizTests-SwiftyJSON-prefix.pch"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		91A7357C6B3660AF1C779465 /* Pods-MovieQuiz-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		975CC935F2BA4752A9243FA9 /* Pods-MovieQuiz-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		999E52D877A81697ADF27DED /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-MovieQuizTests-SwiftyJSON-dummy.m"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		AE87700D9F46CA79BB3001F7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		BBF13847E32E4C2D66DE57DC /* Pods-MovieQuiz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieQuiz-umbrella.h"; sourceTree = "<group>"; };
+		BE0BFA193F3C01ABFE12E8F4 /* Pods-MovieQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		C0F2981470BFBA26F79E8351 /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		C1D30D520E43E0DCEFC52A8A /* Pods-MovieQuizTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieQuizTests-frameworks.sh"; sourceTree = "<group>"; };
+		C444D70A46A8CB81A86199CC /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-MovieQuizTests-SwiftyJSON-umbrella.h"; path = "../Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		D0B7A5119135CBCD14785473 /* Pods-MovieQuizTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieQuizTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D2DD3518579CDBAA7ADD505F /* Pods_MovieQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD98FCBA2A0F46FCA2C6167C /* Pods-MovieQuizTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieQuizTests-dummy.m"; sourceTree = "<group>"; };
+		DF4DEDB50BA3B339FFE5D018 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5B96FF25DFAA2B64C199E4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F921120572E7809593F0EFF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-MovieQuizTests-SwiftyJSON/Info.plist"; sourceTree = "<group>"; };
+		FAC31C71BC42E87826833CC6 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieQuiz-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		FFE8D352B94B064A6900B014 /* Pods-MovieQuiz-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MovieQuiz-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F1BA89587C886481482E769 /* Frameworks */ = {
+		483036FEC626A72A0509FD93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E48609FFBF0C877C3A6E8752 /* Foundation.framework in Frameworks */,
+				7CCC1C8E634208507C7CA6C9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F013170E1A7D0FD9644A88E /* Frameworks */ = {
+		9A39D93B46815EB8052A9A02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BF08E6E217BEB703F1524E /* Foundation.framework in Frameworks */,
+				1FE72785A01D09C79C04A58D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		717BCECBA5CC0AEBF7662728 /* Frameworks */ = {
+		C20A511D5BEC67ABA07678D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E014E4165D8F4D9AB7C607 /* Foundation.framework in Frameworks */,
+				2244803222AB12513D6FBB45 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0318CA908C6A5F37E5F6076 /* Frameworks */ = {
+		F0E857D38160DC503B552873 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F543F54810F77F2F866645A /* Foundation.framework in Frameworks */,
+				B8383426365A502010E7188C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A9393DA34E5CAC2FC23B598 /* Products */ = {
+		0C94F63A89F5A956B04E2563 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AD8290258D1B76B3F35A7F70 /* Pods_MovieQuiz.framework */,
-				2EC02EC600B1FFFB6E4454A0 /* Pods_MovieQuizTests.framework */,
-				DC9981C7205E434FE1603A9E /* SwiftyJSON.framework */,
-				5B46A628F8274DBEFF355D82 /* SwiftyJSON.framework */,
+				222B3E42BB1F6A81AC3F4563 /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		2F17F8AE563777FB13D7454A /* Frameworks */ = {
+		23D736FCDB26392844F83004 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9076E18D4F6428B6609A5C1 /* iOS */,
+				507FF594155667D78F56C762 /* Pods-MovieQuiz */,
+				CF32EB44F6ABCCEBD162AB3E /* Pods-MovieQuizTests */,
 			);
-			name = Frameworks;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		52F0771854923C1A4A4D9EB8 /* Support Files */ = {
+		507FF594155667D78F56C762 /* Pods-MovieQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				466D12094BA52163542F9BDA /* Info.plist */,
-				C96C212FA538632B4F46663F /* Info.plist */,
-				E06BDF232813353C70FE3084 /* Pods-MovieQuiz-SwiftyJSON.modulemap */,
-				D441EF42BD0E0F4D575AB22D /* Pods-MovieQuiz-SwiftyJSON.xcconfig */,
-				BFD64BA2735BF4819EBADA10 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */,
-				AE9A25CE615C8B1F9CA036BF /* Pods-MovieQuiz-SwiftyJSON-dummy.m */,
-				269CD1EEC2E93966DE154368 /* Pods-MovieQuiz-SwiftyJSON-prefix.pch */,
-				D83370ECC97C7A3ED37291E4 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */,
-				BB6CE9AC467F66EF069CD3E2 /* Pods-MovieQuizTests-SwiftyJSON.modulemap */,
-				6F81188075443926AC50EEE3 /* Pods-MovieQuizTests-SwiftyJSON.xcconfig */,
-				833F59A971EC859DD40B701D /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */,
-				2BDAA822EA3942C610F94F1F /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */,
-				A613A368E4D61094283FBB59 /* Pods-MovieQuizTests-SwiftyJSON-prefix.pch */,
-				7BFBD056DAFA36298F95A3D0 /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MovieQuiz-SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		589CA684958FC1568BACEA0F /* Pods-MovieQuizTests */ = {
-			isa = PBXGroup;
-			children = (
-				F1C6DDEB657D03A70491FE3C /* Info.plist */,
-				4757357BAC6A7BF3F3F4F328 /* Pods-MovieQuizTests.modulemap */,
-				8D245528DCF2D336AE57E008 /* Pods-MovieQuizTests-acknowledgements.markdown */,
-				081D762CA800D4FC4DB46B37 /* Pods-MovieQuizTests-acknowledgements.plist */,
-				D15533FE2003CB2415295123 /* Pods-MovieQuizTests-dummy.m */,
-				45D5768F1B9FC7904D26D3FD /* Pods-MovieQuizTests-environment.h */,
-				68CE748EB142A1D26793A6A1 /* Pods-MovieQuizTests-frameworks.sh */,
-				9B87CBC3319D1A0D40853D06 /* Pods-MovieQuizTests-resources.sh */,
-				A240E812D4B44CDFE903381A /* Pods-MovieQuizTests-umbrella.h */,
-				B113E407BE5953424C5738BF /* Pods-MovieQuizTests.debug.xcconfig */,
-				48A72FB03B7FF9CA5FE34368 /* Pods-MovieQuizTests.release.xcconfig */,
-			);
-			name = "Pods-MovieQuizTests";
-			path = "Target Support Files/Pods-MovieQuizTests";
-			sourceTree = "<group>";
-		};
-		7487B11238085B2872A05C39 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				5593604EABEE46071AEEB295 /* SwiftyJSON.swift */,
-				52F0771854923C1A4A4D9EB8 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		789F13329E64529AD7EBE1AF /* Pods-MovieQuiz */ = {
-			isa = PBXGroup;
-			children = (
-				D327485D9BEF1DA3E1178814 /* Info.plist */,
-				7E26187921374ABA1A2DD6A6 /* Pods-MovieQuiz.modulemap */,
-				5847D418EA731E070EA00CF5 /* Pods-MovieQuiz-acknowledgements.markdown */,
-				DFDAE065167FC749C0E9F6C1 /* Pods-MovieQuiz-acknowledgements.plist */,
-				674C07941DA5AAD3D4252A59 /* Pods-MovieQuiz-dummy.m */,
-				82D3A2D73875A898F6356AE1 /* Pods-MovieQuiz-environment.h */,
-				E57A4792F98C847146C76CDF /* Pods-MovieQuiz-frameworks.sh */,
-				4A3B8A7BD997488AB8C810D0 /* Pods-MovieQuiz-resources.sh */,
-				3CF79C9E1A9DF357429C36A4 /* Pods-MovieQuiz-umbrella.h */,
-				507FFDE16EE3C2725ACB7CF4 /* Pods-MovieQuiz.debug.xcconfig */,
-				81E6555BD46C70B2CED27ECE /* Pods-MovieQuiz.release.xcconfig */,
+				427B0F4AE93C9994DD3F219D /* Info.plist */,
+				17FB65C0E62610771C273E8A /* Pods-MovieQuiz.modulemap */,
+				4C6DF4A507DD6CE3AEC9AF9E /* Pods-MovieQuiz-acknowledgements.markdown */,
+				35C800B4BA987FDA6E834CFC /* Pods-MovieQuiz-acknowledgements.plist */,
+				50121921805DDB145C5CBCE5 /* Pods-MovieQuiz-dummy.m */,
+				2B7F4D4909F3132C8E5E382D /* Pods-MovieQuiz-environment.h */,
+				78392517B7868F28A9476007 /* Pods-MovieQuiz-frameworks.sh */,
+				227E73460F6A03C0B6C7EB75 /* Pods-MovieQuiz-resources.sh */,
+				BBF13847E32E4C2D66DE57DC /* Pods-MovieQuiz-umbrella.h */,
+				BE0BFA193F3C01ABFE12E8F4 /* Pods-MovieQuiz.debug.xcconfig */,
+				4BF3C19D5DC066D05645ABEA /* Pods-MovieQuiz.release.xcconfig */,
 			);
 			name = "Pods-MovieQuiz";
 			path = "Target Support Files/Pods-MovieQuiz";
 			sourceTree = "<group>";
 		};
-		798745C8C8C18E0D84734C5C /* Targets Support Files */ = {
+		6356E0A6D88D9827EA3F0FDC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				789F13329E64529AD7EBE1AF /* Pods-MovieQuiz */,
-				589CA684958FC1568BACEA0F /* Pods-MovieQuizTests */,
+				36F6E126B61DB553B5DDC36A /* Info.plist */,
+				F921120572E7809593F0EFF2 /* Info.plist */,
+				FFE8D352B94B064A6900B014 /* Pods-MovieQuiz-SwiftyJSON.modulemap */,
+				91A7357C6B3660AF1C779465 /* Pods-MovieQuiz-SwiftyJSON.xcconfig */,
+				FAC31C71BC42E87826833CC6 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */,
+				32326A81E26A30CFED53D792 /* Pods-MovieQuiz-SwiftyJSON-dummy.m */,
+				975CC935F2BA4752A9243FA9 /* Pods-MovieQuiz-SwiftyJSON-prefix.pch */,
+				0C576C905193A7DD5DE3C635 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h */,
+				0194A1FAAE999DAF6E450924 /* Pods-MovieQuizTests-SwiftyJSON.modulemap */,
+				07DB85E89DE21682C3B2EA22 /* Pods-MovieQuizTests-SwiftyJSON.xcconfig */,
+				C0F2981470BFBA26F79E8351 /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */,
+				999E52D877A81697ADF27DED /* Pods-MovieQuizTests-SwiftyJSON-dummy.m */,
+				9011E337B6B63C1ED74498D3 /* Pods-MovieQuizTests-SwiftyJSON-prefix.pch */,
+				C444D70A46A8CB81A86199CC /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MovieQuiz-SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		A7655CCEFEF9B95E34A3B762 /* Pods */ = {
+		91A6ADEF6967D246C31F53C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7487B11238085B2872A05C39 /* SwiftyJSON */,
+				0C94F63A89F5A956B04E2563 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9691B114DE10C747F5338DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF2C8F44639185900A6634 /* Pods_MovieQuiz.framework */,
+				D2DD3518579CDBAA7ADD505F /* Pods_MovieQuizTests.framework */,
+				DF4DEDB50BA3B339FFE5D018 /* SwiftyJSON.framework */,
+				EA5B96FF25DFAA2B64C199E4 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B33D3205DBAF0FAC7F954B19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7049D724F50F4BCD51049E3 /* SwiftyJSON */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B9076E18D4F6428B6609A5C1 /* iOS */ = {
+		C7049D724F50F4BCD51049E3 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				58938E8EB8CA83B85D88D272 /* Foundation.framework */,
+				AE87700D9F46CA79BB3001F7 /* SwiftyJSON.swift */,
+				6356E0A6D88D9827EA3F0FDC /* Support Files */,
 			);
-			name = iOS;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		C7CA91F47F2AE9F1E0D2B39E = {
+		CF32EB44F6ABCCEBD162AB3E /* Pods-MovieQuizTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB4A44D7CC27E63E785394F8 /* Podfile */,
-				2F17F8AE563777FB13D7454A /* Frameworks */,
-				A7655CCEFEF9B95E34A3B762 /* Pods */,
-				2A9393DA34E5CAC2FC23B598 /* Products */,
-				798745C8C8C18E0D84734C5C /* Targets Support Files */,
+				54D865A7240EE8DFB6166B12 /* Info.plist */,
+				8AB44052D71D234AE7DA8AE4 /* Pods-MovieQuizTests.modulemap */,
+				D0B7A5119135CBCD14785473 /* Pods-MovieQuizTests-acknowledgements.markdown */,
+				12546C839833D17708922AE8 /* Pods-MovieQuizTests-acknowledgements.plist */,
+				DD98FCBA2A0F46FCA2C6167C /* Pods-MovieQuizTests-dummy.m */,
+				25440C0F2CE40C517836DA71 /* Pods-MovieQuizTests-environment.h */,
+				C1D30D520E43E0DCEFC52A8A /* Pods-MovieQuizTests-frameworks.sh */,
+				8C3ACEC2ACD20D737D673E52 /* Pods-MovieQuizTests-resources.sh */,
+				68CA4D785DC78172BB212D8F /* Pods-MovieQuizTests-umbrella.h */,
+				4800657A7F7BD21E3585466B /* Pods-MovieQuizTests.debug.xcconfig */,
+				1F603D2148A14B1EF78462A6 /* Pods-MovieQuizTests.release.xcconfig */,
+			);
+			name = "Pods-MovieQuizTests";
+			path = "Target Support Files/Pods-MovieQuizTests";
+			sourceTree = "<group>";
+		};
+		DB1E90C34C15FF1014C3C6A1 = {
+			isa = PBXGroup;
+			children = (
+				1449BE88757888778A8DA5C9 /* Podfile */,
+				91A6ADEF6967D246C31F53C2 /* Frameworks */,
+				B33D3205DBAF0FAC7F954B19 /* Pods */,
+				A9691B114DE10C747F5338DC /* Products */,
+				23D736FCDB26392844F83004 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		28F4DAB9D91F9678DAAF8AA8 /* Headers */ = {
+		236AAFF08545C63CC490A852 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7307D0D228821F21D6EF94C7 /* Pods-MovieQuiz-SwiftyJSON-umbrella.h in Headers */,
+				65C9A8663C4DE8EAF5453462 /* Pods-MovieQuiz-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6109BFDBE13C382D4DEC1C8E /* Headers */ = {
+		51CA2598B0392B7F8D931ECD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C8D29E87615CB56C9F59FB8 /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h in Headers */,
+				921B4011CE07CACFF4BCF34A /* Pods-MovieQuizTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9120C2253192F37AE7BB495 /* Headers */ = {
+		64E6EC8622DDFA4C83206398 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F4816BC36B483016A79EC22 /* Pods-MovieQuizTests-umbrella.h in Headers */,
+				B3539968723ADC92E7A0C6AD /* Pods-MovieQuiz-SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED4840EAB80596E4715D7E7D /* Headers */ = {
+		66A7C89FF350049706D0C314 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB878C14219ABD21D1A75B7E /* Pods-MovieQuiz-umbrella.h in Headers */,
+				CAC55B4A939BD563802A88AE /* Pods-MovieQuizTests-SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5BD3C7BEF3058AAB96A4F628 /* Pods-MovieQuizTests */ = {
+		02599349B43FA69C530E7FB2 /* Pods-MovieQuizTests-SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25886E19FA87B4A19820F5B3 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests" */;
+			buildConfigurationList = 52B75C8080168200AF982D55 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests-SwiftyJSON" */;
 			buildPhases = (
-				2B0C9BBEDB979F327078DFD5 /* Sources */,
-				717BCECBA5CC0AEBF7662728 /* Frameworks */,
-				B9120C2253192F37AE7BB495 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1D831F7F5F83516D74C864E /* PBXTargetDependency */,
-			);
-			name = "Pods-MovieQuizTests";
-			productName = "Pods-MovieQuizTests";
-			productReference = 2EC02EC600B1FFFB6E4454A0 /* Pods_MovieQuizTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6A8C78D686AEF639399FD01C /* Pods-MovieQuizTests-SwiftyJSON */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04CE6806947335176DB826A6 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests-SwiftyJSON" */;
-			buildPhases = (
-				8F21DC4686699C723DC77FFF /* Sources */,
-				A0318CA908C6A5F37E5F6076 /* Frameworks */,
-				6109BFDBE13C382D4DEC1C8E /* Headers */,
+				8973F6B2E24FC4373E3E466A /* Sources */,
+				9A39D93B46815EB8052A9A02 /* Frameworks */,
+				66A7C89FF350049706D0C314 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -316,16 +298,34 @@
 			);
 			name = "Pods-MovieQuizTests-SwiftyJSON";
 			productName = "Pods-MovieQuizTests-SwiftyJSON";
-			productReference = DC9981C7205E434FE1603A9E /* SwiftyJSON.framework */;
+			productReference = DF4DEDB50BA3B339FFE5D018 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A2ABD8480971677942CEF688 /* Pods-MovieQuiz-SwiftyJSON */ = {
+		1622F1455FDAD8E2E4A76AB2 /* Pods-MovieQuiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1A053E9A7864188CA8A28F0 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz-SwiftyJSON" */;
+			buildConfigurationList = 5DAF512AB8FAFE794876C3CE /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz" */;
 			buildPhases = (
-				9DC287AF1985A922FD1E5F93 /* Sources */,
-				3F013170E1A7D0FD9644A88E /* Frameworks */,
-				28F4DAB9D91F9678DAAF8AA8 /* Headers */,
+				9364CB877EDC3B6B791E3BA9 /* Sources */,
+				483036FEC626A72A0509FD93 /* Frameworks */,
+				236AAFF08545C63CC490A852 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				467174D09F3CFDCC4FF9BCC2 /* PBXTargetDependency */,
+			);
+			name = "Pods-MovieQuiz";
+			productName = "Pods-MovieQuiz";
+			productReference = 8DAF2C8F44639185900A6634 /* Pods_MovieQuiz.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A9FB5859AE3F9D40A903F6C9 /* Pods-MovieQuiz-SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBACEE7C52515FC3C7E80A0 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz-SwiftyJSON" */;
+			buildPhases = (
+				BF02F053CCA4587D45E19AD9 /* Sources */,
+				C20A511D5BEC67ABA07678D9 /* Frameworks */,
+				64E6EC8622DDFA4C83206398 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -333,168 +333,110 @@
 			);
 			name = "Pods-MovieQuiz-SwiftyJSON";
 			productName = "Pods-MovieQuiz-SwiftyJSON";
-			productReference = 5B46A628F8274DBEFF355D82 /* SwiftyJSON.framework */;
+			productReference = EA5B96FF25DFAA2B64C199E4 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F62A601CDB090ED690823BF4 /* Pods-MovieQuiz */ = {
+		C150A0F45E68347A8849DCAC /* Pods-MovieQuizTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 150DEF16BF123C5ACF1DCC32 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz" */;
+			buildConfigurationList = F1D1FC4ED912FAE80585C911 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests" */;
 			buildPhases = (
-				02329D7F7D620C326CAFAF1E /* Sources */,
-				2F1BA89587C886481482E769 /* Frameworks */,
-				ED4840EAB80596E4715D7E7D /* Headers */,
+				1FEB06C12E769D496F93E6B6 /* Sources */,
+				F0E857D38160DC503B552873 /* Frameworks */,
+				51CA2598B0392B7F8D931ECD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				06A4924F729ED0855DF35B37 /* PBXTargetDependency */,
+				152A2643D87759BC2FB0AA68 /* PBXTargetDependency */,
 			);
-			name = "Pods-MovieQuiz";
-			productName = "Pods-MovieQuiz";
-			productReference = AD8290258D1B76B3F35A7F70 /* Pods_MovieQuiz.framework */;
+			name = "Pods-MovieQuizTests";
+			productName = "Pods-MovieQuizTests";
+			productReference = D2DD3518579CDBAA7ADD505F /* Pods_MovieQuizTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		258FCD6A51D33768DFE3A31D /* Project object */ = {
+		FCACAD9933EAE51E04B0307F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = E4ECA4D7A242BADC98F44D22 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = BEBA5BB08E3BDEA2C3148BA2 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C7CA91F47F2AE9F1E0D2B39E;
-			productRefGroup = 2A9393DA34E5CAC2FC23B598 /* Products */;
+			mainGroup = DB1E90C34C15FF1014C3C6A1;
+			productRefGroup = A9691B114DE10C747F5338DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F62A601CDB090ED690823BF4 /* Pods-MovieQuiz */,
-				A2ABD8480971677942CEF688 /* Pods-MovieQuiz-SwiftyJSON */,
-				5BD3C7BEF3058AAB96A4F628 /* Pods-MovieQuizTests */,
-				6A8C78D686AEF639399FD01C /* Pods-MovieQuizTests-SwiftyJSON */,
+				1622F1455FDAD8E2E4A76AB2 /* Pods-MovieQuiz */,
+				A9FB5859AE3F9D40A903F6C9 /* Pods-MovieQuiz-SwiftyJSON */,
+				C150A0F45E68347A8849DCAC /* Pods-MovieQuizTests */,
+				02599349B43FA69C530E7FB2 /* Pods-MovieQuizTests-SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		02329D7F7D620C326CAFAF1E /* Sources */ = {
+		1FEB06C12E769D496F93E6B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84087799F2FC3D0D426FFDA /* Pods-MovieQuiz-dummy.m in Sources */,
+				4267DA60F7682112E78257B7 /* Pods-MovieQuizTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B0C9BBEDB979F327078DFD5 /* Sources */ = {
+		8973F6B2E24FC4373E3E466A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8774181868D9E4393A1ED8C /* Pods-MovieQuizTests-dummy.m in Sources */,
+				4A028F684D1C5CE68071C2C9 /* Pods-MovieQuizTests-SwiftyJSON-dummy.m in Sources */,
+				B5DF6F136AAD05BFB7307D1A /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F21DC4686699C723DC77FFF /* Sources */ = {
+		9364CB877EDC3B6B791E3BA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB3443B5C6000837508B6D2 /* Pods-MovieQuizTests-SwiftyJSON-dummy.m in Sources */,
-				87860775A9A40249DCDBF798 /* SwiftyJSON.swift in Sources */,
+				AED27324274C3EF128EE83DB /* Pods-MovieQuiz-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DC287AF1985A922FD1E5F93 /* Sources */ = {
+		BF02F053CCA4587D45E19AD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E542DD4E1494FAD4DBC6BB61 /* Pods-MovieQuiz-SwiftyJSON-dummy.m in Sources */,
-				5A01B1510E78C7C803822758 /* SwiftyJSON.swift in Sources */,
+				821A174D32C5B3372D03F7BB /* Pods-MovieQuiz-SwiftyJSON-dummy.m in Sources */,
+				71B60347BF93125F87C98AA6 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06A4924F729ED0855DF35B37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-MovieQuiz-SwiftyJSON";
-			target = A2ABD8480971677942CEF688 /* Pods-MovieQuiz-SwiftyJSON */;
-			targetProxy = A691790C85DB2CFF6C15C64C /* PBXContainerItemProxy */;
-		};
-		E1D831F7F5F83516D74C864E /* PBXTargetDependency */ = {
+		152A2643D87759BC2FB0AA68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MovieQuizTests-SwiftyJSON";
-			target = 6A8C78D686AEF639399FD01C /* Pods-MovieQuizTests-SwiftyJSON */;
-			targetProxy = F539B360988827678FA7B940 /* PBXContainerItemProxy */;
+			target = 02599349B43FA69C530E7FB2 /* Pods-MovieQuizTests-SwiftyJSON */;
+			targetProxy = 74CE8759A3D70C31E43FCDEF /* PBXContainerItemProxy */;
+		};
+		467174D09F3CFDCC4FF9BCC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MovieQuiz-SwiftyJSON";
+			target = A9FB5859AE3F9D40A903F6C9 /* Pods-MovieQuiz-SwiftyJSON */;
+			targetProxy = 5CE2806ED76B5F4A3C102AB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		003C35032DE97DC882E8E641 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B113E407BE5953424C5738BF /* Pods-MovieQuizTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MovieQuizTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0242F3BAC78BFE25EF23441B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48A72FB03B7FF9CA5FE34368 /* Pods-MovieQuizTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MovieQuizTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		041B56D54092ABD80E9D0757 /* Debug */ = {
+		0BD6DA57CA90C28512B440A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -533,9 +475,151 @@
 			};
 			name = Debug;
 		};
-		0D2CCC18DB691B096483E222 /* Debug */ = {
+		1581C004A243AF75F7FFA764 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 507FFDE16EE3C2725ACB7CF4 /* Pods-MovieQuiz.debug.xcconfig */;
+			baseConfigurationReference = 1F603D2148A14B1EF78462A6 /* Pods-MovieQuizTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MovieQuizTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E093E9BCEF47B98F808A694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F2981470BFBA26F79E8351 /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62825BE81FD222E8C6BFCD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F2981470BFBA26F79E8351 /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D9A0B033354224973174538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC31C71BC42E87826833CC6 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		957B0372BFF9FC9C77D3056D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4800657A7F7BD21E3585466B /* Pods-MovieQuizTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MovieQuizTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99C0CDA3433BBD89279FF94A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0BFA193F3C01ABFE12E8F4 /* Pods-MovieQuiz.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -563,7 +647,34 @@
 			};
 			name = Debug;
 		};
-		1A633656600946BA29740B79 /* Release */ = {
+		9C7799523A05A78A6F64F924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC31C71BC42E87826833CC6 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D451607C984E30B753AB6805 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -597,9 +708,9 @@
 			};
 			name = Release;
 		};
-		20713F95102C94254594F40D /* Release */ = {
+		EB4B7E7C0A220287BA154727 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81E6555BD46C70B2CED27ECE /* Pods-MovieQuiz.release.xcconfig */;
+			baseConfigurationReference = 4BF3C19D5DC066D05645ABEA /* Pods-MovieQuiz.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -626,165 +737,55 @@
 			};
 			name = Release;
 		};
-		7C1F51E9F910F2BF352BF270 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833F59A971EC859DD40B701D /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8C6F8F837871FDCEB61A9D00 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFD64BA2735BF4819EBADA10 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		921F1A123716EC9ECD256A28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFD64BA2735BF4819EBADA10 /* Pods-MovieQuiz-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuiz-SwiftyJSON/Pods-MovieQuiz-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F110667904D69F7326A15525 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833F59A971EC859DD40B701D /* Pods-MovieQuizTests-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieQuizTests-SwiftyJSON/Pods-MovieQuizTests-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04CE6806947335176DB826A6 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests-SwiftyJSON" */ = {
+		2CBACEE7C52515FC3C7E80A0 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F110667904D69F7326A15525 /* Debug */,
-				7C1F51E9F910F2BF352BF270 /* Release */,
+				7D9A0B033354224973174538 /* Debug */,
+				9C7799523A05A78A6F64F924 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		150DEF16BF123C5ACF1DCC32 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz" */ = {
+		52B75C8080168200AF982D55 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D2CCC18DB691B096483E222 /* Debug */,
-				20713F95102C94254594F40D /* Release */,
+				4E093E9BCEF47B98F808A694 /* Debug */,
+				62825BE81FD222E8C6BFCD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25886E19FA87B4A19820F5B3 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests" */ = {
+		5DAF512AB8FAFE794876C3CE /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				003C35032DE97DC882E8E641 /* Debug */,
-				0242F3BAC78BFE25EF23441B /* Release */,
+				99C0CDA3433BBD89279FF94A /* Debug */,
+				EB4B7E7C0A220287BA154727 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1A053E9A7864188CA8A28F0 /* Build configuration list for PBXNativeTarget "Pods-MovieQuiz-SwiftyJSON" */ = {
+		BEBA5BB08E3BDEA2C3148BA2 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C6F8F837871FDCEB61A9D00 /* Debug */,
-				921F1A123716EC9ECD256A28 /* Release */,
+				0BD6DA57CA90C28512B440A0 /* Debug */,
+				D451607C984E30B753AB6805 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4ECA4D7A242BADC98F44D22 /* Build configuration list for PBXProject "Pods" */ = {
+		F1D1FC4ED912FAE80585C911 /* Build configuration list for PBXNativeTarget "Pods-MovieQuizTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				041B56D54092ABD80E9D0757 /* Debug */,
-				1A633656600946BA29740B79 /* Release */,
+				957B0372BFF9FC9C77D3056D /* Debug */,
+				1581C004A243AF75F7FFA764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 258FCD6A51D33768DFE3A31D /* Project object */;
+	rootObject = FCACAD9933EAE51E04B0307F /* Project object */;
 }

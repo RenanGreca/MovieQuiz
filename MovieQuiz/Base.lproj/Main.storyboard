@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBz-Lg-wsp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBz-Lg-wsp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avs-AA-2aH">
@@ -63,6 +63,11 @@
                                 <segue destination="6z2-vG-jcF" kind="show" id="U7S-Sf-lOn"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="High Scores" id="bD3-Nq-y3F">
+                            <connections>
+                                <action selector="leaderboardTouched:" destination="BYZ-38-t0r" id="Szs-55-Lkn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnStart" destination="avs-AA-2aH" id="dyV-6P-IYo"/>
@@ -82,7 +87,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hxH-bp-Zi8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BPd-js-3l1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uug-p7-Q6v">
@@ -237,7 +242,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8jF-L3-gZA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MRo-F2-4yK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itunesblack" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-5i-VBo">
@@ -306,14 +311,14 @@
                                             <constraint firstAttribute="width" constant="5" id="HCw-Vy-TG9"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certified Fresh" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRI-OJ-9jp">
-                                        <rect key="frame" x="40" y="0.0" width="113" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certified Fresh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRI-OJ-9jp">
+                                        <rect key="frame" x="168" y="0.0" width="113" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fresh" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-ra-mRQ">
-                                        <rect key="frame" x="168" y="0.0" width="30" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fresh" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-ra-mRQ">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="bzR-No-COs"/>
                                             <constraint firstAttribute="width" constant="30" id="iZ3-le-YTl"/>
@@ -326,35 +331,28 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="height" secondItem="RbI-C4-PYb" secondAttribute="height" id="0MB-sF-iug"/>
-                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="Ftt-QG-ye8" secondAttribute="trailing" constant="5" id="75I-65-ipo"/>
                                     <constraint firstAttribute="centerY" secondItem="fRI-OJ-9jp" secondAttribute="centerY" id="8Hm-nh-bXi"/>
                                     <constraint firstAttribute="width" secondItem="fRI-OJ-9jp" secondAttribute="width" id="8xT-cA-qyj"/>
                                     <constraint firstAttribute="centerX" secondItem="fRI-OJ-9jp" secondAttribute="centerX" id="9ii-GE-TuE"/>
                                     <constraint firstAttribute="trailing" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="160" id="CCb-0c-ENy"/>
-                                    <constraint firstAttribute="centerY" secondItem="6T9-ra-mRQ" secondAttribute="centerY" id="EZt-r4-p0d"/>
-                                    <constraint firstAttribute="centerX" secondItem="6T9-ra-mRQ" secondAttribute="centerX" id="GRt-l0-gY4"/>
+                                    <constraint firstItem="fRI-OJ-9jp" firstAttribute="leading" secondItem="Ftt-QG-ye8" secondAttribute="trailing" constant="5" id="Gb1-u4-pcG"/>
                                     <constraint firstAttribute="centerX" secondItem="Ftt-QG-ye8" secondAttribute="centerX" id="KnN-ay-UVI"/>
-                                    <constraint firstAttribute="trailing" secondItem="6T9-ra-mRQ" secondAttribute="trailing" constant="8" id="bx4-gq-4eS"/>
+                                    <constraint firstAttribute="centerY" secondItem="6T9-ra-mRQ" secondAttribute="centerY" id="NNe-bo-PRM"/>
+                                    <constraint firstItem="Ftt-QG-ye8" firstAttribute="leading" secondItem="6T9-ra-mRQ" secondAttribute="trailing" constant="5" id="Snn-d1-TTQ"/>
                                     <constraint firstAttribute="height" secondItem="Ftt-QG-ye8" secondAttribute="height" id="eqM-34-lG3"/>
                                     <constraint firstItem="fRI-OJ-9jp" firstAttribute="leading" secondItem="RbI-C4-PYb" secondAttribute="leading" constant="8" id="foS-Sb-Pwg"/>
                                     <constraint firstAttribute="height" constant="30" id="iXk-R3-9ZA"/>
                                     <constraint firstAttribute="height" secondItem="fRI-OJ-9jp" secondAttribute="height" id="lB0-FK-FZ6"/>
-                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="RbI-C4-PYb" secondAttribute="leading" constant="160" id="lE7-mX-jgD"/>
                                     <constraint firstItem="Ftt-QG-ye8" firstAttribute="leading" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="5" id="lGG-Cw-UDW"/>
                                     <constraint firstAttribute="centerY" secondItem="Ftt-QG-ye8" secondAttribute="centerY" id="uts-9V-zzV"/>
-                                    <constraint firstItem="6T9-ra-mRQ" firstAttribute="leading" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="20" id="wAU-25-WOo"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="lGG-Cw-UDW"/>
                                         <exclude reference="8xT-cA-qyj"/>
                                         <exclude reference="9ii-GE-TuE"/>
                                         <exclude reference="CCb-0c-ENy"/>
                                         <exclude reference="foS-Sb-Pwg"/>
-                                        <exclude reference="GRt-l0-gY4"/>
-                                        <exclude reference="bx4-gq-4eS"/>
-                                        <exclude reference="lE7-mX-jgD"/>
-                                        <exclude reference="wAU-25-WOo"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -427,23 +425,23 @@
                         <viewControllerLayoutGuide type="bottom" id="toO-Jr-Dur"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RPE-lw-JDk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tV-ix-2Lt">
-                                <rect key="frame" x="131" y="20" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You took" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tV-ix-2Lt">
+                                <rect key="frame" x="126" y="20" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-yl-cXQ">
-                                <rect key="frame" x="133" y="49" width="55" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-yl-cXQ">
+                                <rect key="frame" x="38" y="48" width="245" height="120"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="correct answers!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-lK-ynS">
-                                <rect key="frame" x="97" y="177" width="127" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to get 10 correct answers!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-lK-ynS">
+                                <rect key="frame" x="60" y="176" width="201" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -556,22 +554,22 @@
                         <viewControllerLayoutGuide type="bottom" id="dNR-QE-zws"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ias-Yg-qf6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App developed by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Ss-0ud">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="App developed by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Ss-0ud">
                                 <rect key="frame" x="88" y="205" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Hl-YXh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Hl-YXh">
                                 <rect key="frame" x="103" y="231" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-HM-KVg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Design by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-HM-KVg">
                                 <rect key="frame" x="119" y="265" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -592,16 +590,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-oa-QQZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-oa-QQZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
+                                <mutableString key="text">Test your knowledge of popular movies! MovieQuiz shows the synopsis of a recent movie and you have to figure out what movie it is.
 
-MovieQuiz acquires movie data from the Rotten Tomatoes AP, the iTunes Store API, and the Open Movie Database API. Therefore, an Internet connection is required to play it.
+MovieQuiz acquires movie data from the Rotten Tomatoes API, the iTunes Store API, and the Open Movie Database API. Therefore, an Internet connection is required to play it.
 
 iTunes Store link might not work depending on item availability in user's country. Movie poster quality is reliant on OMDb poster availability.
 
-MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</string>
+MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, please send them to @RenanGreca on Twitter. :)</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

@@ -15,6 +15,10 @@ class Timer {
     var label = UILabel()
     var timeElapsed = NSTimeInterval()
     
+    struct Static {
+        static let instance = Timer()
+    }
+    
     func start(label: UILabel) {
         if (!timer.valid) {
             self.label = label
@@ -28,6 +32,14 @@ class Timer {
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         self.timeElapsed += currentTime - startTime
         self.timer.invalidate()
+    }
+    
+    func add(seconds:Int) {
+        self.timeElapsed += NSTimeInterval(seconds)
+    }
+    
+    func reset() {
+        self.timeElapsed = NSTimeInterval()
     }
     
     @objc func updateTime() {

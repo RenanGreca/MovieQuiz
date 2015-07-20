@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F348A7C1B5D393B00E3E09E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F348A7B1B5D393B00E3E09E /* GameKit.framework */; };
 		1F40AE381AF9813F00CAEA48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40AE371AF9813F00CAEA48 /* AppDelegate.swift */; };
 		1F40AE3A1AF9813F00CAEA48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40AE391AF9813F00CAEA48 /* ViewController.swift */; };
 		1F40AE3F1AF9813F00CAEA48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F40AE3E1AF9813F00CAEA48 /* Images.xcassets */; };
@@ -23,6 +24,7 @@
 		1FE1D4341AFACF6D008C2EB8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE1D4331AFACF6D008C2EB8 /* SwiftyJSON.framework */; };
 		1FE1D4361AFAE9C6008C2EB8 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1D4351AFAE9C6008C2EB8 /* ResultController.swift */; };
 		1FE1D4381AFC30F2008C2EB8 /* OverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1D4371AFC30F2008C2EB8 /* OverController.swift */; };
+		1FF563A91B2A5E05003219B9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1FF563A81B2A5E05003219B9 /* Podfile */; };
 		2B391444517C821D4159F6A6 /* Pods_MovieQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A01FCD6EAC3522645ED7D6C /* Pods_MovieQuiz.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		33C07B2B6B5CFD3C34DE0887 /* Pods_MovieQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BD4917DA271C93E759F323 /* Pods_MovieQuizTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -40,6 +42,7 @@
 /* Begin PBXFileReference section */
 		08BD4917DA271C93E759F323 /* Pods_MovieQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1159C0A5F26C58656890B73F /* Pods-MovieQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F348A7B1B5D393B00E3E09E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		1F40AE321AF9813F00CAEA48 /* MovieQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F40AE361AF9813F00CAEA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F40AE371AF9813F00CAEA48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		1FE1D4331AFACF6D008C2EB8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-MovieQuiz/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		1FE1D4351AFAE9C6008C2EB8 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		1FE1D4371AFC30F2008C2EB8 /* OverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverController.swift; sourceTree = "<group>"; };
+		1FF563A81B2A5E05003219B9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		43A6BB52ECB9B6E253B604B7 /* Pods-MovieQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieQuiz/Pods-MovieQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		6A01FCD6EAC3522645ED7D6C /* Pods_MovieQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FB8CD4F04C75E4FC937A47 /* Pods-MovieQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieQuizTests/Pods-MovieQuizTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F348A7C1B5D393B00E3E09E /* GameKit.framework in Frameworks */,
 				1FE1D4341AFACF6D008C2EB8 /* SwiftyJSON.framework in Frameworks */,
 				2B391444517C821D4159F6A6 /* Pods_MovieQuiz.framework in Frameworks */,
 			);
@@ -126,6 +131,7 @@
 		1F40AE351AF9813F00CAEA48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1FF563A81B2A5E05003219B9 /* Podfile */,
 				1F40AE361AF9813F00CAEA48 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -202,6 +208,7 @@
 		FB8F83456B8DBC15E04EFAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F348A7B1B5D393B00E3E09E /* GameKit.framework */,
 				1FE1D4331AFACF6D008C2EB8 /* SwiftyJSON.framework */,
 				1FE1D4311AFACF2E008C2EB8 /* SwiftyJSON.framework */,
 				1FE1D42F1AFACDE1008C2EB8 /* SwiftyJSON.framework */,
@@ -261,12 +268,18 @@
 		1F40AE2A1AF9813F00CAEA48 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = renangreca;
 				TargetAttributes = {
 					1F40AE311AF9813F00CAEA48 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 6E3MXG6BSH;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					1F40AE461AF9813F00CAEA48 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -300,6 +313,7 @@
 			files = (
 				1FE1D3FC1AFAA0A2008C2EB8 /* Main.storyboard in Resources */,
 				1F40AE421AF9813F00CAEA48 /* LaunchScreen.xib in Resources */,
+				1FF563A91B2A5E05003219B9 /* Podfile in Resources */,
 				1F40AE3F1AF9813F00CAEA48 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-MovieQuiz",
@@ -560,6 +575,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -569,6 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-MovieQuiz",
@@ -577,6 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
