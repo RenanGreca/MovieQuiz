@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MovieQuiz-SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MovieQuiz.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MovieQuizTests-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +14,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02599349B43FA69C530E7FB2</key>
+		<key>47C038C5C760D96C7F0790B1AD01C216</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1622F1455FDAD8E2E4A76AB2</key>
+		<key>9AE366576778BE3F8767891FC57C42BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9FB5859AE3F9D40A903F6C9</key>
+		<key>A5FA9F8AA797C04E17B9ECE9E318F4F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C150A0F45E68347A8849DCAC</key>
+		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
 		<dict>
 			<key>primary</key>
 			<true/>

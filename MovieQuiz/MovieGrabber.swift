@@ -77,12 +77,8 @@ func getStoreURL(movie: Movie) {
         var error: NSErrorPointer
         let json = JSON(data: data!)
         
-        if let trackUrl = json["results"][0]["trackViewUrl"].stringValue as? String {
-            movie._itunesURL = trackUrl
-        }
-        if let imgUrl = json["results"][0]["artworkUrl100"].stringValue as? String {
-            movie._itimgURL = imgUrl
-        }
+        movie._itunesURL = json["results"][0]["trackViewUrl"].stringValue
+        movie._itimgURL = json["results"][0]["artworkUrl100"].stringValue
     }
 }
 
@@ -99,12 +95,9 @@ func getOMDbImg(movie: Movie) {
         var error: NSErrorPointer
         let json = JSON(data: data!)
         
-        if let posterURL = json["Poster"].stringValue as? String {
-            movie._imgURL = posterURL
-        }
+        movie._imgURL = json["Poster"].stringValue
         
-        let imgurl = NSURL(string: movie._imgURL)
-        let imgdata = NSData(contentsOfURL: imgurl!)
+        let imgdata = NSData(contentsOfURL: NSURL(string: movie._imgURL)!)
         if imgdata != nil {
             if let img = UIImage(data: imgdata!) {
                 movie._img = img
