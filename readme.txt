@@ -29,6 +29,10 @@ v1.2
 - The game’s score is now based on elapsed time until 10 correct answers are reached, not number of correct answers out of 10.
 - Game Center integration has been implemented and the above elapsed time is used in a leaderboard.
 
+v1.3
+- Fixed a bug that would make the app crash if the user got too many wrong answers
+- Updated all code to Swift 2.0 and the app is now compatible with iOS 9.
+
 ------
 
 v1.0 of this app was sent to Apple for review on 2015-05-08.
@@ -36,5 +40,7 @@ v1.0 of this app was sent to Apple for review on 2015-05-08.
 v1.1 of this app was sent to Apple for review on 2015-05-12.
 
 v1.2 of this app was sent to Apple for review on 2015-07-20.
+
+v1.3 of this app was sent to Apple for review on 2015-10-22.
 
 ©2015 Renan Greca
