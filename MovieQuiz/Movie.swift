@@ -28,6 +28,6 @@ class Movie {
     }
     
     func print() {
-        println("\(_title)\n\(_synopsis)\n\(_imgURL)\n\(_itunesURL)")
+        Swift.print("\(_title)\n\(_synopsis)\n\(_imgURL)\n\(_itunesURL)")
     }
 }

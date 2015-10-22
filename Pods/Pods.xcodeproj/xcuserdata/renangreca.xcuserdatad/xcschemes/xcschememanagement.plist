@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MovieQuiz.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MovieQuizTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftHTTP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>47C038C5C760D96C7F0790B1AD01C216</key>
+		<key>25DA2B1ED489CC84B3D0749D9467EF0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AE366576778BE3F8767891FC57C42BB</key>
+		<key>DA4A193D6DFA3720952672400BB6559C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5FA9F8AA797C04E17B9ECE9E318F4F7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<key>F8DFC69BA92A2E70FE47B363ECA3C063</key>
 		<dict>
 			<key>primary</key>
 			<true/>

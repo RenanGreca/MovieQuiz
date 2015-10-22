@@ -52,15 +52,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     func authenticateLocalPlayer() {
         self.localPlayer.authenticateHandler = {(viewController, error) -> Void in
             if (viewController != nil) {
-                self.presentViewController(viewController, animated: true, completion:nil)
+                self.presentViewController(viewController!, animated: true, completion:nil)
             } else {
                 if (self.localPlayer.authenticated) {
                     self.gameCenterEnabled = true
-                    self.localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifier : String!, error : NSError!) -> Void in
+                    self.localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifier : String?, error : NSError?) -> Void in
                         if error != nil {
-                            println(error.localizedDescription)
+                            print(error!.localizedDescription)
                         } else {
-                            self.leaderboardIdentifier = leaderboardIdentifier
+                            self.leaderboardIdentifier = leaderboardIdentifier!
                         }
                     })
                 } else {
@@ -68,8 +68,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 }
             }
         }
-        println(self.localPlayer)
-        println(leaderboardIdentifier)
+        print(self.localPlayer)
+        print(leaderboardIdentifier)
     }
     
     func showLeaderboard() {
@@ -88,7 +88,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         
     }
 
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 

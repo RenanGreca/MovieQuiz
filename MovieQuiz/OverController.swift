@@ -34,12 +34,12 @@ class OverController: UIViewController {
     
     @IBAction func fbBtn(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
             fbShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
             self.presentViewController(fbShare, animated: true, completion: nil)
         } else {
-            var alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -48,14 +48,14 @@ class OverController: UIViewController {
     @IBAction func tweetBtn(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
-            var tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             
             tweetShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
             self.presentViewController(tweetShare, animated: true, completion: nil)
             
         } else {
             
-            var alert = UIAlertController(title: "Accounts", message: "Please log into a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Accounts", message: "Please log into a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -66,12 +66,12 @@ class OverController: UIViewController {
         if GKLocalPlayer.localPlayer().authenticated {
             let gkScore = GKScore(leaderboardIdentifier: "besttimes")
             gkScore.value = Int64(self.timer.timeElapsed)
-            GKScore.reportScores([gkScore], withCompletionHandler: { (error: NSError!) -> Void in
+            GKScore.reportScores([gkScore], withCompletionHandler: { (error: NSError?) -> Void in
                 if (error != nil) {
                     // handle error
-                    println("Error: " + error.localizedDescription);
+                    print("Error: " + error!.localizedDescription);
                 } else {
-                    println("Score reported: \(gkScore.value)")
+                    print("Score reported: \(gkScore.value)")
                 }
             })
         }
