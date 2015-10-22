@@ -7,6 +7,7 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "scale" : "2x",
       "filename" : "MovieQuizLogo@2x.png"
     },
@@ -14,6 +15,13 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "MovieQuizLogo@3x.png"
+=======
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+>>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
     }
   ],
   "info" : {

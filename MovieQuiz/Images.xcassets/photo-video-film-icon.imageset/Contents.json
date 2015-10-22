@@ -3,25 +3,15 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "FilmReel.png"
+      "filename" : "photo-video-film-icon.png"
     },
     {
       "idiom" : "universal",
-<<<<<<< HEAD
-      "scale" : "2x",
-      "filename" : "FilmReel@2x.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "FilmReel@3x.png"
-=======
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x"
->>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
     }
   ],
   "info" : {
