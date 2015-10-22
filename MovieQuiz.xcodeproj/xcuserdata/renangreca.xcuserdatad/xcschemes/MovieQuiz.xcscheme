@@ -2,10 +2,14 @@
 <Scheme
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    LastUpgradeVersion = "0710"
 =======
    LastUpgradeVersion = "0620"
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+   LastUpgradeVersion = "0630"
+>>>>>>> parent of 1530393... Version 1.3
 =======
    LastUpgradeVersion = "0630"
 >>>>>>> parent of 1530393... Version 1.3
@@ -55,6 +59,7 @@
    <TestAction
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
@@ -65,6 +70,12 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+>>>>>>> parent of 1530393... Version 1.3
 =======
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
@@ -102,6 +113,7 @@
       </MacroExpansion>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -115,10 +127,15 @@
    </TestAction>
    <LaunchAction
 >>>>>>> parent of 1530393... Version 1.3
+=======
+   </TestAction>
+   <LaunchAction
+>>>>>>> parent of 1530393... Version 1.3
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       ignoresPersistentStateOnLaunch = "NO"
@@ -129,6 +146,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+>>>>>>> parent of 1530393... Version 1.3
 =======
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
@@ -155,6 +177,7 @@
    <ProfileAction
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
@@ -165,6 +188,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+>>>>>>> parent of 1530393... Version 1.3
 =======
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""

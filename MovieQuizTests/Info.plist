@@ -9,10 +9,14 @@
 	<key>CFBundleIdentifier</key>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 =======
 	<string>br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)</string>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+	<string>br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)</string>
+>>>>>>> parent of 1530393... Version 1.3
 =======
 	<string>br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)</string>
 >>>>>>> parent of 1530393... Version 1.3

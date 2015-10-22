@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBz-Lg-wsp">
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,6 +11,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBz-Lg-wsp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+>>>>>>> parent of 1530393... Version 1.3
 =======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBz-Lg-wsp">
     <dependencies>
@@ -170,6 +176,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtQ-o7-m11">
                                 <rect key="frame" x="139" y="387" width="43" height="21"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <animations/>
 =======
         <scene sceneID="mNJ-ud-6uJ">
@@ -324,6 +331,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Renan!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-m9-xBR">
                                 <rect key="frame" x="233" y="808" width="134" height="20.5"/>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+>>>>>>> parent of 1530393... Version 1.3
 =======
 >>>>>>> parent of 1530393... Version 1.3
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -731,6 +740,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="App developed by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Ss-0ud">
                                 <rect key="frame" x="88" y="205" width="145" height="21"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <animations/>
 =======
@@ -1284,13 +1294,19 @@ iTunes Store link might not work depending on item availability in user's countr
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
 =======
 >>>>>>> parent of 1530393... Version 1.3
+=======
+>>>>>>> parent of 1530393... Version 1.3
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Hl-YXh">
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Hl-YXh">
+>>>>>>> parent of 1530393... Version 1.3
 =======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Hl-YXh">
 >>>>>>> parent of 1530393... Version 1.3
@@ -1302,11 +1318,14 @@ iTunes Store link might not work depending on item availability in user's countr
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Design by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIo-HM-KVg">
                                 <rect key="frame" x="119" y="265" width="82" height="21"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <animations/>
 =======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tell us your name and age." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bt-nM-ace">
                                 <rect key="frame" x="171" y="112.5" width="258.5" height="20.5"/>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+>>>>>>> parent of 1530393... Version 1.3
 =======
 >>>>>>> parent of 1530393... Version 1.3
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1315,7 +1334,11 @@ iTunes Store link might not work depending on item availability in user's countr
                             </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Felipe Wenski &amp; Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK0-HZ-Mvf">
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felipe Wenski &amp; Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK0-HZ-Mvf">
+>>>>>>> parent of 1530393... Version 1.3
 =======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felipe Wenski &amp; Renan Greca" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK0-HZ-Mvf">
 >>>>>>> parent of 1530393... Version 1.3

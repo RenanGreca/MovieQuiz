@@ -399,6 +399,7 @@
 				2C79042B3A5CDE4152A1A04B /* Embed Pods Frameworks */,
 				0AEC4CF7B0C3A09B9282AE21 /* Copy Pods Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				1F060C801BD9147C003C25C3 /* ShellScript */,
 =======
 		1FAAB2721ABA3297007ABE82 /* MovieQuiz */ = {
@@ -409,6 +410,8 @@
 				1FAAB2701ABA3297007ABE82 /* Frameworks */,
 				1FAAB2711ABA3297007ABE82 /* Resources */,
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+>>>>>>> parent of 1530393... Version 1.3
 =======
 >>>>>>> parent of 1530393... Version 1.3
 			);
@@ -431,6 +434,7 @@
 				1F40AE441AF9813F00CAEA48 /* Frameworks */,
 				1F40AE451AF9813F00CAEA48 /* Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 			productReference = 1FAAB2731ABA3297007ABE82 /* MovieQuiz.app */;
 			productType = "com.apple.product-type.application";
@@ -443,6 +447,10 @@
 				1FAAB2891ABA3297007ABE82 /* Frameworks */,
 				1FAAB28A1ABA3297007ABE82 /* Resources */,
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+				510968B1208EB00EBA1B8786 /* Embed Pods Frameworks */,
+				B2D87E2FD3FC0BC5706903BE /* Copy Pods Resources */,
+>>>>>>> parent of 1530393... Version 1.3
 =======
 				510968B1208EB00EBA1B8786 /* Embed Pods Frameworks */,
 				B2D87E2FD3FC0BC5706903BE /* Copy Pods Resources */,
@@ -970,10 +978,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)";
 =======
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+>>>>>>> parent of 1530393... Version 1.3
 =======
 >>>>>>> parent of 1530393... Version 1.3
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -999,10 +1010,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)";
 =======
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+>>>>>>> parent of 1530393... Version 1.3
 =======
 >>>>>>> parent of 1530393... Version 1.3
 				PRODUCT_NAME = "$(TARGET_NAME)";
