@@ -1,21 +1,10 @@
 PODS:
-  - Crashlytics (3.3.4)
-  - Fabric (1.5.5):
-    - Fabric/Base (= 1.5.5)
-  - Fabric/Base (1.5.5)
-  - SwiftHTTP (1.0.2)
-  - SwiftyJSON (2.3.0)
+  - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
-  - Crashlytics
-  - Fabric
-  - SwiftHTTP
-  - SwiftyJSON
+  - SwiftyJSON (= 2.2.0)
 
 SPEC CHECKSUMS:
-  Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
-  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
-  SwiftHTTP: 6d8ca031a9ce613a01e8f18b497503887b0b50c0
-  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2

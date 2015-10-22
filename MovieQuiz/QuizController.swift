@@ -41,9 +41,6 @@ class QuizController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        
-        print(self.lblRW.text)
-        
         self.timer.start(self.lblRW)
 
         movie = movieList.next()
@@ -99,7 +96,7 @@ class QuizController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "sgAnswer") {
-            let rC = segue.destinationViewController as! ResultController
+            var rC = segue.destinationViewController as! ResultController
             rC.movie = movies[ans]
             rC.correct = correct!
             self.timer.pause()

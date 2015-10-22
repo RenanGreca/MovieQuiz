@@ -14,37 +14,41 @@ func fetchMovies(limit: Int) -> Array<Movie> {
     
     // create the request
     let url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=\(apikey)&page_limit=\(limit)")
+    let data = NSData(contentsOfURL: url!)
+    
+    if data == nil {
+        println("Rotten Tomatoes 💩")
+        return []
+    }
+    
+    var error: NSErrorPointer
+    let json = NSJSONSerialization.JSONObjectWithData(data!,
+      options: NSJSONReadingOptions.MutableContainers, error: nil) as! [String:AnyObject]
     
     var returnMovies: Array<Movie> = []
-
-    if let data = NSData(contentsOfURL: url!) {
-        var json = JSON(data:data)
-        
-        if let movies = json["movies"].array {
-            for movie in movies {
-                let title = movie["title"].string!
-                let synopsis = movie["synopsis"].string!
-                let _ = movie["year"].int!
-                let cleanSynopsis = synopsis.replaceAll(title, with: "_____")
-                
-                var rating = "unknown"
-                if let ratings = movie["ratings"].dictionary {
-                    rating = ratings["critics_rating"]!.string!
-                }
-                
-                if let posters = movie["posters"].dictionary {
-                    let imgURL = posters["original"]!.string!
-                    if let ids = movie["alternate_ids"].dictionary {
-                        let imdbID = ids["imdb"]!.string!
-                        
-                        let m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL, imdbID: imdbID, rating: rating)
-                        returnMovies.append(m)
-                    }
+    
+    if let movies = json["movies"] as? NSArray {
+        for movie in movies {
+            let title = movie["title"] as! String
+            let synopsis = movie["synopsis"] as! String
+            let year = movie["year"] as! Int
+            let cleanSynopsis = synopsis.replaceAll(title, with: "_____")
+            
+            var rating = "unknown"
+            if let ratings = movie["ratings"] as? NSDictionary {
+                rating = ratings["critics_rating"] as! String
+            }
+            
+            if let posters = movie["posters"] as? NSDictionary {
+                let imgURL = posters["original"] as! String
+                if let ids = movie["alternate_ids"] as? NSDictionary {
+                    let imdbID = ids["imdb"] as! String
+                    
+                    let m = Movie(title: title, synopsis: cleanSynopsis, imgURL: imgURL, imdbID: imdbID, rating: rating)
+                    returnMovies.append(m)
                 }
             }
         }
-    } else {
-        print("Rotten Tomatoes 💩")
     }
     
     return returnMovies
@@ -66,10 +70,11 @@ func getStoreURL(movie: Movie) {
         let data = NSData(contentsOfURL: url!)
         
         if data == nil {
-            print("iTunes 💩")
+            println("iTunes 💩")
             return;
         }
         
+        var error: NSErrorPointer
         let json = JSON(data: data!)
         
         movie._itunesURL = json["results"][0]["trackViewUrl"].stringValue
@@ -83,10 +88,11 @@ func getOMDbImg(movie: Movie) {
         let data = NSData(contentsOfURL: url!)
         
         if data == nil {
-            print("OMDb 💩")
+            println("OMDb 💩")
             return
         }
         
+        var error: NSErrorPointer
         let json = JSON(data: data!)
         
         movie._imgURL = json["Poster"].stringValue
@@ -106,7 +112,7 @@ func getImageFromURL(movie: Movie) {
         let data = NSData(contentsOfURL: url!)
         
         if data == nil {
-            print("RT img 💩")
+            println("RT img 💩")
             return
         }
         

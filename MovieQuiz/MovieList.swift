@@ -74,25 +74,22 @@ class MovieList {
                 break
             }
             // Repeat while the random element is already in the random list
-            repeat {
+            do {
                 random = true
                 r = Int(arc4random_uniform(UInt32(_movies.count)))
                 movie = _movies[r]
                 
                 let lMovies = movies.filter( { return $0._title == movie._title } )
-                
-                /*print(_seenMovies.count)
                 let sMovies = _seenMovies.filter( { return $0._title == movie._title } )
-                print(sMovies.count)*/
                 
-                if lMovies.count > 0 || /*sMovies.count > 0 ||*/ movie._title == not._title {
+                if lMovies.count > 0 || sMovies.count > 0 || movie._title == not._title {
                     random = false
                 }
             } while (!random)
             movies.append(movie)
+            _seenMovies.append(movie)
         }
         
-        //_seenMovies.append(not)
         return movies
     }
 }

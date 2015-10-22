@@ -29,7 +29,7 @@ class Timer {
     }
     
     func pause() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
         self.timeElapsed += currentTime - startTime
         self.timer.invalidate()
     }
@@ -43,7 +43,7 @@ class Timer {
     }
     
     @objc func updateTime() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
         
         //Find the difference between current time and start time.
         var elapsedTime: NSTimeInterval = currentTime - startTime + self.timeElapsed

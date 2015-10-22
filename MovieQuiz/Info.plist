@@ -8,10 +8,14 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 =======
 	<string>br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)</string>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+	<string>br.com.renangreca.$(PRODUCT_NAME:rfc1034identifier)</string>
+>>>>>>> parent of 1530393... Version 1.3
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -20,14 +24,19 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<string>1.3</string>
 =======
 	<string>1.0</string>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+	<string>1.2</string>
+>>>>>>> parent of 1530393... Version 1.3
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	<key>Fabric</key>
 	<dict>
@@ -54,6 +63,10 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 >>>>>>> c5f555117e9a8f1c4a1eb344b5b4622968a94acd
+=======
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+>>>>>>> parent of 1530393... Version 1.3
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

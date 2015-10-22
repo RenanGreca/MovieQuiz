@@ -47,7 +47,6 @@ class ResultController: UIViewController {
     }
     
     @IBAction func next(sender: AnyObject) {
-        print(counter.👍)
         if counter.👍 >= 10 {
             self.performSegueWithIdentifier("sgOver", sender: self);
         } else {
