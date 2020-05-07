@@ -38,26 +38,26 @@ class ResultController: UIViewController {
         } else {
             navItem.title = "Wrong..."
             imgCheckX.image = UIImage(named: "icon-x")
-            self.timer.add(30)
+            self.timer.add(seconds: 30)
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     @IBAction func next(sender: AnyObject) {
         print(counter.👍)
         if counter.👍 >= 10 {
-            self.performSegueWithIdentifier("sgOver", sender: self);
+            self.performSegue(withIdentifier: "sgOver", sender: self);
         } else {
-            navigationController?.popViewControllerAnimated(true)
+            navigationController?.popViewController(animated: true)
         }
     }
     
     @IBAction func iTunes(sender: AnyObject) {
-        getStoreURL(movie)
-        UIApplication.sharedApplication().openURL(NSURL(string: movie._itunesURL)!)
+        getStoreURL(movie: movie)
+        UIApplication.shared.openURL(URL(string: movie._itunesURL)!)
     }
     
     override func didReceiveMemoryWarning() {

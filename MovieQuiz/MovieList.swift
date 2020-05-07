@@ -18,7 +18,7 @@ class MovieList {
     }
     
     func populate() -> Bool {
-        _movies = fetchMovies(50)
+        _movies = fetchMovies(limit: 50)
         if _movies.count == 0 {
             return false
         }
@@ -37,9 +37,8 @@ class MovieList {
     }
     
     func fetch() {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            getURLsAndImages(self._movies)
+        DispatchQueue.main.async {
+            getURLsAndImages(movies: self._movies)
         }
     }
     
@@ -47,7 +46,8 @@ class MovieList {
         if index >= _movies.count {
             index = 0
         }
-        return _movies[index++]
+        index += 1
+        return _movies[index]
     }
     
     func getMovie(index: Int) -> Movie {
@@ -68,7 +68,7 @@ class MovieList {
         var random: Bool
         var r: Int
         
-        for(var i=0; i<count; i++) {
+        for _ in 0..<count {
             if (movies.count >= _movies.count) {
                 // All elements were exausted, no more random choices available
                 break

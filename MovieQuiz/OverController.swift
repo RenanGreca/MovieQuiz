@@ -24,49 +24,49 @@ class OverController: UIViewController {
         reportScore()
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        navigationController?.popToRootViewControllerAnimated(true);
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.popToRootViewController(animated: true);
     }
     
     @IBAction func `return`(sender: AnyObject) {
-        navigationController?.popToRootViewControllerAnimated(true);
+        navigationController?.popToRootViewController(animated: true);
     }
     
     @IBAction func fbBtn(sender: AnyObject) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
             fbShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
-            self.presentViewController(fbShare, animated: true, completion: nil)
+            self.present(fbShare, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     @IBAction func tweetBtn(sender: AnyObject) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             
             tweetShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
-            self.presentViewController(tweetShare, animated: true, completion: nil)
+            self.present(tweetShare, animated: true, completion: nil)
             
         } else {
             
-            let alert = UIAlertController(title: "Accounts", message: "Please log into a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Accounts", message: "Please log into a Twitter account to tweet.", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     func reportScore() {
-        if GKLocalPlayer.localPlayer().authenticated {
+        if GKLocalPlayer.local.isAuthenticated {
             let gkScore = GKScore(leaderboardIdentifier: "besttimes")
             gkScore.value = Int64(self.timer.timeElapsed)
-            GKScore.reportScores([gkScore], withCompletionHandler: { (error: NSError?) -> Void in
+            GKScore.report([gkScore], withCompletionHandler: {error in
                 if (error != nil) {
                     // handle error
                     print("Error: " + error!.localizedDescription);

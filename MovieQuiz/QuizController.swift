@@ -39,19 +39,19 @@ class QuizController: UIViewController {
         buttons.append(btn3)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
         print(self.lblRW.text)
         
-        self.timer.start(self.lblRW)
+        self.timer.start(label: self.lblRW)
 
         movie = movieList.next()
         movies = [movie]
-        movies += movieList.getRandomMovies(3, not:movie)
+        movies += movieList.getRandomMovies(count: 3, not:movie)
         movies.shuffle()
         
-        for (var i=0; i<movies.count; ++i) {
+        for i in 0..<movies.count {
             if movies[i]._title == movie._title {
                 ans = i
                 break
@@ -62,10 +62,10 @@ class QuizController: UIViewController {
         
         txtSynopsis.text = movie._synopsis
         
-        btn0.setTitle(movies[0]._title, forState: UIControlState.Normal)
-        btn1.setTitle(movies[1]._title, forState: UIControlState.Normal)
-        btn2.setTitle(movies[2]._title, forState: UIControlState.Normal)
-        btn3.setTitle(movies[3]._title, forState: UIControlState.Normal)
+        btn0.setTitle(movies[0]._title, for: .normal)
+        btn1.setTitle(movies[1]._title, for: .normal)
+        btn2.setTitle(movies[2]._title, for: .normal)
+        btn3.setTitle(movies[3]._title, for: .normal)
         
         loading = false
         
@@ -78,9 +78,9 @@ class QuizController: UIViewController {
         lblRW.text = "\(counter.👍) out of \(counter.total()) correct answer\(s)"*/
     }
     
-    override func viewDidAppear(animated: Bool) {
-        getOMDbImg(movie)
-        getImageFromURL(movie)
+    override func viewDidAppear(_ animated: Bool) {
+        getOMDbImg(movie: movie)
+        getImageFromURL(movie: movie)
     }
     
     @IBAction func tappedAnswer(sender: UIButton) {
@@ -92,14 +92,14 @@ class QuizController: UIViewController {
                 correct = false
                 counter.wrong()
             }
-            performSegueWithIdentifier("sgAnswer", sender: self)
+            performSegue(withIdentifier: "sgAnswer", sender: self)
             loading = true
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "sgAnswer") {
-            let rC = segue.destinationViewController as! ResultController
+            let rC = segue.destination as! ResultController
             rC.movie = movies[ans]
             rC.correct = correct!
             self.timer.pause()

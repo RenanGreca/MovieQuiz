@@ -22,11 +22,11 @@ class Counter {
     }
     
     func right() {
-        👍++
+        👍 += 1
     }
     
     func wrong() {
-        👎++
+        👎 -= 1
     }
     
     func total() -> Int {

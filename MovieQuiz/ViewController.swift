@@ -18,7 +18,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
 
     var gameCenterEnabled: Bool = false
     var leaderboardIdentifier:String = "besttimes"
-    let localPlayer = GKLocalPlayer.localPlayer()
+    let localPlayer = GKLocalPlayer.local
     
     @IBOutlet weak var btnStart: UIButton!
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         authenticateLocalPlayer()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         counter.reset()
@@ -52,11 +52,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     func authenticateLocalPlayer() {
         self.localPlayer.authenticateHandler = {(viewController, error) -> Void in
             if (viewController != nil) {
-                self.presentViewController(viewController!, animated: true, completion:nil)
+                self.present(viewController!, animated: true, completion:nil)
             } else {
-                if (self.localPlayer.authenticated) {
+                if (self.localPlayer.isAuthenticated) {
                     self.gameCenterEnabled = true
-                    self.localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifier : String?, error : NSError?) -> Void in
+                    self.localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { leaderboardIdentifier, error in
                         if error != nil {
                             print(error!.localizedDescription)
                         } else {
@@ -78,18 +78,18 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             let gameCenterViewController = GKGameCenterViewController()
             gameCenterViewController.gameCenterDelegate = self
             
-            gameCenterViewController.viewState = GKGameCenterViewControllerState.Leaderboards
+            gameCenterViewController.viewState = GKGameCenterViewControllerState.leaderboards
             gameCenterViewController.leaderboardIdentifier = self.leaderboardIdentifier
             
-            self.presentViewController(gameCenterViewController, animated: true, completion: nil)
+            self.present(gameCenterViewController, animated: true, completion: nil)
         } else {
             // Tell the user something useful about the fact that game center isn't enabled on their device
         }
         
     }
 
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func start(sender: AnyObject) {
@@ -99,7 +99,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 return
             }
         }
-        performSegueWithIdentifier("sgQuiz", sender: self)
+        performSegue(withIdentifier: "sgQuiz", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
