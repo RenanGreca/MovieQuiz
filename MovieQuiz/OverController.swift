@@ -14,12 +14,11 @@ class OverController: UIViewController {
 
     @IBOutlet weak var lblCount: UILabel!
     var counter = Counter.Static.instance
-    let timer = Timer.Static.instance
     
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true
-        self.timer.updateTime()
-        lblCount.text = "\(self.timer.label.text!)"
+        TimerManager.updateTime()
+        lblCount.text = "\(TimerManager.label.text!)"
         
         reportScore()
     }
@@ -36,7 +35,7 @@ class OverController: UIViewController {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
-            fbShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
+            fbShare.setInitialText("I got 10 correct answers in \(TimerManager.label.text!) minutes in #MovieQuiz!")
             self.present(fbShare, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Accounts", message: "Please log into a Facebook account to share.", preferredStyle: .alert)
@@ -50,7 +49,7 @@ class OverController: UIViewController {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             
-            tweetShare.setInitialText("I got 10 correct answers in \(self.timer.label.text!) minutes in #MovieQuiz!")
+            tweetShare.setInitialText("I got 10 correct answers in \(TimerManager.label.text!) minutes in #MovieQuiz!")
             self.present(tweetShare, animated: true, completion: nil)
             
         } else {
@@ -65,7 +64,7 @@ class OverController: UIViewController {
     func reportScore() {
         if GKLocalPlayer.local.isAuthenticated {
             let gkScore = GKScore(leaderboardIdentifier: "besttimes")
-            gkScore.value = Int64(self.timer.timeElapsed)
+            gkScore.value = Int64(TimerManager.timeElapsed)
             GKScore.report([gkScore], withCompletionHandler: {error in
                 if (error != nil) {
                     // handle error

@@ -9,44 +9,45 @@
 import Foundation
 import UIKit
 
-class Timer {
-    var timer = Timer()
-    var startTime = TimeInterval()
-    var label = UILabel()
-    var timeElapsed = TimeInterval()
+fileprivate var timer = Timer()
+fileprivate var startTime = TimeInterval()
+
+class TimerManager {
+//    struct Static {
+//        static let instance = Timer()
+//    }
     
-    struct Static {
-        static let instance = Timer()
+    static var timeElapsed = TimeInterval()
+    static var label = UILabel()
+    
+    class func start(label: UILabel) {
+        if (!timer.isValid) {
+            self.label = label
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            startTime = Date.timeIntervalSinceReferenceDate
+        }
     }
     
-    func start(label: UILabel) {
-//        if (!timer.valid) {
-//            self.label = label
-//            let aSelector : Selector = #selector(self.updateTime)
-//            timer = Timer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
-//            startTime = Date.timeIntervalSinceReferenceDate
-//        }
-    }
-    
-    func pause() {
+    class func pause() {
         let currentTime = Date.timeIntervalSinceReferenceDate
-        self.timeElapsed += currentTime - startTime
-//        self.timer.invalidate()
+        timeElapsed += currentTime - startTime
+        timer.invalidate()
     }
     
-    func add(seconds:Int) {
-        self.timeElapsed += TimeInterval(seconds)
+    class func add(seconds:Int) {
+        timeElapsed += TimeInterval(seconds)
     }
     
-    func reset() {
-        self.timeElapsed = TimeInterval()
+    class func reset() {
+        timeElapsed = TimeInterval()
     }
     
-    @objc func updateTime() {
+    @objc
+    class func updateTime() {
         let currentTime = Date.timeIntervalSinceReferenceDate
         
         //Find the difference between current time and start time.
-        var elapsedTime: TimeInterval = currentTime - startTime + self.timeElapsed
+        var elapsedTime: TimeInterval = currentTime - startTime + timeElapsed
         
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)

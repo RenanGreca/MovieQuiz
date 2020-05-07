@@ -16,7 +16,6 @@ class ResultController: UIViewController {
     @IBOutlet weak var imgCheckX: UIImageView!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imgPoster: UIImageView!
-    var timer = Timer.Static.instance
     var movie: Movie!
     var correct: Bool = false
     var counter = Counter.Static.instance
@@ -38,7 +37,7 @@ class ResultController: UIViewController {
         } else {
             navItem.title = "Wrong..."
             imgCheckX.image = UIImage(named: "icon-x")
-            self.timer.add(seconds: 30)
+            TimerManager.add(seconds: 30)
         }
     }
     

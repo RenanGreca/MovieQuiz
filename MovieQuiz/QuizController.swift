@@ -13,7 +13,6 @@ class QuizController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     let movieList = MovieList.Static.instance
     let counter = Counter.Static.instance
-    var timer = Timer.Static.instance
     var movies = Array<Movie>()
     var movie: Movie!
     var buttons = Array<UIButton>()
@@ -44,7 +43,7 @@ class QuizController: UIViewController {
         
         print(self.lblRW.text)
         
-        self.timer.start(label: self.lblRW)
+        TimerManager.start(label: self.lblRW)
 
         movie = movieList.next()
         movies = [movie]
@@ -102,7 +101,7 @@ class QuizController: UIViewController {
             let rC = segue.destination as! ResultController
             rC.movie = movies[ans]
             rC.correct = correct!
-            self.timer.pause()
+            TimerManager.pause()
         }
     }
     
