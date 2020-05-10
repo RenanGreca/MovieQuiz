@@ -45,13 +45,14 @@ class QuizController: UIViewController {
         
         TimerManager.start(label: self.lblRW)
 
-        movie = movieList.next()
+        movie = movieList.next
+        movieList.prepareNext()
         movies = [movie]
         movies += movieList.getRandomMovies(count: 3, not:movie)
         movies.shuffle()
         
         for i in 0..<movies.count {
-            if movies[i]._title == movie._title {
+            if movies[i].title == movie.title {
                 ans = i
                 break
             }
@@ -59,12 +60,12 @@ class QuizController: UIViewController {
         
         //ans = Int(arc4random_uniform(UInt32(movies.count)))
         
-        txtSynopsis.text = movie._synopsis
+        txtSynopsis.text = movie.synopsis
         
-        btn0.setTitle(movies[0]._title, for: .normal)
-        btn1.setTitle(movies[1]._title, for: .normal)
-        btn2.setTitle(movies[2]._title, for: .normal)
-        btn3.setTitle(movies[3]._title, for: .normal)
+        btn0.setTitle(movies[0].title, for: .normal)
+        btn1.setTitle(movies[1].title, for: .normal)
+        btn2.setTitle(movies[2].title, for: .normal)
+        btn3.setTitle(movies[3].title, for: .normal)
         
         loading = false
         
@@ -82,7 +83,7 @@ class QuizController: UIViewController {
         getImageFromURL(movie: movie)
     }
     
-    @IBAction func tappedAnswer(sender: UIButton) {
+    @IBAction func tappedAnswer(_ sender: UIButton) {
         if !loading {
             if sender == buttons[ans] {
                 correct = true

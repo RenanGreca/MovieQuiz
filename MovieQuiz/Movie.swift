@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 
 class Movie {
-    let _title: String
-    let _synopsis: String
-    var _imgURL: String
-    var _itunesURL: String = ""
-    var _itimgURL: String = ""
-    let _imdbID: String
-    let _rating: String
-    var _img: UIImage = UIImage(named: "MovieQuizLogo")!
+    let title: String
+    var synopsis: String = ""
+    var imgURL: String
+    var itunesURL: String = ""
+    var itimgURL: String = ""
+    let imdbID: String
+    let rating: String
+    var img: UIImage = UIImage(named: "MovieQuizLogo")!
     
     init(title: String, synopsis: String, imgURL: String, imdbID: String, rating: String) {
-        _title = title
-        _synopsis = synopsis
-        _imgURL = imgURL
-        _imdbID = "tt\(imdbID)"
-        _rating = rating
+        self.title = title
+        self.synopsis = synopsis
+        self.imgURL = imgURL
+        self.imdbID = "\(imdbID)"
+        self.rating = rating
     }
     
     func print() {
-        Swift.print("\(_title)\n\(_synopsis)\n\(_imgURL)\n\(_itunesURL)")
+        Swift.print("\(title)\n\(synopsis)\n\(imgURL)\n\(itunesURL)")
     }
 }

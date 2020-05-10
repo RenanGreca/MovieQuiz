@@ -9,58 +9,64 @@
 import Foundation
 
 class MovieList {
-    var _movies: Array<Movie> = []
-    var _seenMovies: Array<Movie> = []
+    var movies: Array<Movie> = []
+    var seenMovies: Array<Movie> = []
     var index = 0
+    var next:Movie?
     
     struct Static {
         static let instance = MovieList()
     }
     
     func populate() -> Bool {
-        _movies = fetchMovies(limit: 50)
-        if _movies.count == 0 {
+        movies = fetchMovies(limit: 50)
+        if movies.count == 0 {
             return false
         }
-        _movies.shuffle()
-        fetch()
+        movies.shuffle()
+//        fetch()
         return true
     }
     
     func reset() {
-        _seenMovies = []
-        if _movies.count > 0 {
-            _movies.shuffle()
-            fetch()
+        seenMovies = []
+        if movies.count > 0 {
+            movies.shuffle()
+//            fetch()
         }
         index = 0
     }
     
     func fetch() {
-        DispatchQueue.main.async {
-            getURLsAndImages(movies: self._movies)
-        }
+//        DispatchQueue.global().async {
+////        DispatchQueue.main.async {
+//            getURLsAndImages(movies: self.movies)
+//        }
     }
     
-    func next() -> Movie {
-        if index >= _movies.count {
+    func prepareNext() {
+        if index >= movies.count {
             index = 0
         }
         index += 1
-        return _movies[index]
+        let nextMovie = movies[index]
+        DispatchQueue.global().async {
+            getURLsAndImages(movie: nextMovie)
+            self.next = nextMovie
+        }
     }
     
     func getMovie(index: Int) -> Movie {
-        return _movies[index]
+        return movies[index]
     }
     
     func getRandomMovie() -> Movie {
-        return _movies[0]
+        return movies[0]
     }
     
     func getRandomMovies(count: Int, not:Movie) -> Array<Movie> {
-        if count > _movies.count {
-            return _movies
+        if count > movies.count {
+            return movies
         }
     
         var movies = Array<Movie>()
@@ -69,30 +75,30 @@ class MovieList {
         var r: Int
         
         for _ in 0..<count {
-            if (movies.count >= _movies.count) {
+            if (movies.count >= self.movies.count) {
                 // All elements were exausted, no more random choices available
                 break
             }
             // Repeat while the random element is already in the random list
             repeat {
                 random = true
-                r = Int(arc4random_uniform(UInt32(_movies.count)))
-                movie = _movies[r]
+                r = Int(arc4random_uniform(UInt32(self.movies.count)))
+                movie = self.movies[r]
                 
-                let lMovies = movies.filter( { return $0._title == movie._title } )
+                let lMovies = movies.filter( { return $0.title == movie.title } )
                 
                 /*print(_seenMovies.count)
-                let sMovies = _seenMovies.filter( { return $0._title == movie._title } )
+                let sMovies = seenMovies.filter( { return $0._title == movie._title } )
                 print(sMovies.count)*/
                 
-                if lMovies.count > 0 || /*sMovies.count > 0 ||*/ movie._title == not._title {
+                if lMovies.count > 0 || /*sMovies.count > 0 ||*/ movie.title == not.title {
                     random = false
                 }
             } while (!random)
             movies.append(movie)
         }
         
-        //_seenMovies.append(not)
+        //seenMovies.append(not)
         return movies
     }
 }

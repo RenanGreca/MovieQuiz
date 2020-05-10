@@ -27,11 +27,11 @@ class OverController: UIViewController {
         navigationController?.popToRootViewController(animated: true);
     }
     
-    @IBAction func `return`(sender: AnyObject) {
+    @IBAction func returnToTitle(_ sender: AnyObject) {
         navigationController?.popToRootViewController(animated: true);
     }
     
-    @IBAction func fbBtn(sender: AnyObject) {
+    @IBAction func fbBtn(_ sender: AnyObject) {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
@@ -44,7 +44,7 @@ class OverController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    @IBAction func tweetBtn(sender: AnyObject) {
+    @IBAction func tweetBtn(_ sender: AnyObject) {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)

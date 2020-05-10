@@ -23,10 +23,10 @@ class ResultController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imgPoster.image = movie._img
-        lblMovie.text = movie._title
-        lblRating.text = movie._rating
-        if movie._rating == "Rotten" {
+        imgPoster.image = movie.img
+        lblMovie.text = movie.title
+        lblRating.text = movie.rating
+        if movie.rating == "Rotten" {
             imgFresh.image = UIImage(named: "rotten")
         } else {
             imgFresh.image = UIImage(named: "fresh")
@@ -45,7 +45,7 @@ class ResultController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func next(sender: AnyObject) {
+    @IBAction func next(_ sender: AnyObject) {
         print(counter.👍)
         if counter.👍 >= 10 {
             self.performSegue(withIdentifier: "sgOver", sender: self);
@@ -54,9 +54,9 @@ class ResultController: UIViewController {
         }
     }
     
-    @IBAction func iTunes(sender: AnyObject) {
+    @IBAction func iTunes(_ sender: AnyObject) {
         getStoreURL(movie: movie)
-        UIApplication.shared.openURL(URL(string: movie._itunesURL)!)
+        UIApplication.shared.openURL(URL(string: movie.itunesURL)!)
     }
     
     override func didReceiveMemoryWarning() {

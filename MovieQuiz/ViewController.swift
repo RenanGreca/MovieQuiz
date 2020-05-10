@@ -13,7 +13,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     let movieList = MovieList.Static.instance
     let counter = Counter.Static.instance
-    let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
+//    let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
 
     var gameCenterEnabled: Bool = false
     var leaderboardIdentifier:String = "besttimes"
@@ -27,8 +27,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         self.navigationController!.navigationBar.topItem!.titleView = UIImageView(image: UIImage(named:"MovieQuizLogoHS"))
         
         if !movieList.populate() {
-            alert.show()
+            print("Error aquiring movie list.")
+//            let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
+//            alert.show()
         }
+        movieList.prepareNext()
         
         authenticateLocalPlayer()
     }
@@ -91,14 +94,18 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func start(sender: AnyObject) {
-        if movieList._movies.count == 0 {
+    @IBAction func start(_ sender: UIButton) {
+        if movieList.movies.count == 0 {
             if !movieList.populate() {
-                alert.show()
+                print("Error aquiring movie list.")
+//                let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
+//                alert.show()
                 return
             }
         }
-        performSegue(withIdentifier: "sgQuiz", sender: self)
+        if let _ = movieList.next {
+            performSegue(withIdentifier: "sgQuiz", sender: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
