@@ -19,30 +19,18 @@ func fetchMovies(limit: Int) -> Array<Movie> {
     
     var returnMovies: Array<Movie> = []
 
-    if let data = try? Data(contentsOf: url!) {
-        var json = try? JSON(data:data)
-        
-        if let movies = json?["items"].array {
-            for i in 0..<limit {
-                let movie = movies[i]
-                let imdbID = movie["id"].string!
-                let title = movie["title"].string!
-//                let synopsis = movie["synopsis"].string!
-//                let _ = movie["year"].string!
-//                let cleanSynopsis = synopsis.replaceAll(find: title, with: "_____")
-                
-                var rating = movie["imDbRating"].string!
-//                if let ratings = movie["ratings"].dictionary {
-//                    rating = ratings["critics_rating"]!.string!
-//                }
-                let imgURL = ""// movie["image"].string!
-                
-                let m = Movie(title: title, synopsis: "", imgURL: imgURL, imdbID: imdbID, rating: rating)
-                returnMovies.append(m)
+    if let data = try? Data(contentsOf: url!),
+       let json = try? JSON(data: data),
+       let movies = json["items"].array {
+        var i = 0
+        while i < limit {
+            if let movie = Movie(json: movies[i]) {
+                returnMovies.append(movie)
+                i += 1
             }
         }
     } else {
-        print("Rotten Tomatoes 💩")
+        print("Error fetching API data.")
     }
     
     return returnMovies

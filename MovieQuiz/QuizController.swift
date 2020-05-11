@@ -12,12 +12,10 @@ class QuizController: UIViewController {
     
     @IBOutlet weak var navItem: UINavigationItem!
     let movieList = MovieList.Static.instance
-    let counter = Counter.Static.instance
-    var movies = Array<Movie>()
-    var movie: Movie!
-    var buttons = Array<UIButton>()
+    var movies = [Movie]()
+    var buttons = [UIButton]()
     var ans = 0
-    var correct: Bool?
+    var correct: Bool!
     var loading: Bool!
 
     @IBOutlet weak var txtSynopsis: UITextView!
@@ -41,56 +39,33 @@ class QuizController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
-        print(self.lblRW.text)
-        
-        TimerManager.start(label: self.lblRW)
-
-        movie = movieList.next
+        // Gets movie and starts preparing the next one
+        let movie = movieList.next!
         movieList.prepareNext()
+        
         movies = [movie]
-        movies += movieList.getRandomMovies(count: 3, not:movie)
+        movies += movieList.getRandomMovies(count: 3, avoiding:movie)
         movies.shuffle()
-        
-        for i in 0..<movies.count {
-            if movies[i].title == movie.title {
-                ans = i
-                break
-            }
-        }
-        
-        //ans = Int(arc4random_uniform(UInt32(movies.count)))
+        ans = movies.firstIndex(of: movie)!
         
         txtSynopsis.text = movie.synopsis
-        
         btn0.setTitle(movies[0].title, for: .normal)
         btn1.setTitle(movies[1].title, for: .normal)
         btn2.setTitle(movies[2].title, for: .normal)
         btn3.setTitle(movies[3].title, for: .normal)
         
+        TimerManager.start(label: self.lblRW)
         loading = false
-        
-        /*let s: String
-        if counter.👍==1 {
-            s = ""
-        } else {
-            s = "s"
-        }
-        lblRW.text = "\(counter.👍) out of \(counter.total()) correct answer\(s)"*/
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        getOMDbImg(movie: movie)
-        getImageFromURL(movie: movie)
     }
     
     @IBAction func tappedAnswer(_ sender: UIButton) {
         if !loading {
             if sender == buttons[ans] {
                 correct = true
-                counter.right()
+                Counter.right()
             } else {
                 correct = false
-                counter.wrong()
+                Counter.wrong()
             }
             performSegue(withIdentifier: "sgAnswer", sender: self)
             loading = true
@@ -101,7 +76,7 @@ class QuizController: UIViewController {
         if (segue.identifier == "sgAnswer") {
             let rC = segue.destination as! ResultController
             rC.movie = movies[ans]
-            rC.correct = correct!
+            rC.correct = correct
             TimerManager.pause()
         }
     }

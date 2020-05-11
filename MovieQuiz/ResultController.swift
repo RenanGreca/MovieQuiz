@@ -18,8 +18,6 @@ class ResultController: UIViewController {
     @IBOutlet weak var imgPoster: UIImageView!
     var movie: Movie!
     var correct: Bool = false
-    var counter = Counter.Static.instance
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,8 +44,7 @@ class ResultController: UIViewController {
     }
     
     @IBAction func next(_ sender: AnyObject) {
-        print(counter.👍)
-        if counter.👍 >= 10 {
+        if Counter.rightAnswers >= 10 {
             self.performSegue(withIdentifier: "sgOver", sender: self);
         } else {
             navigationController?.popViewController(animated: true)

@@ -12,7 +12,6 @@ import GameKit
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     let movieList = MovieList.Static.instance
-    let counter = Counter.Static.instance
 //    let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
 
     var gameCenterEnabled: Bool = false
@@ -39,7 +38,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        counter.reset()
+        Counter.reset()
         TimerManager.reset()
         movieList.reset()
     }

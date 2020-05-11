@@ -9,27 +9,23 @@
 import Foundation
 
 class Counter {
-    var 👍 = 0 // right answers
-    var 👎 = 0 // wrong answers
+    static var rightAnswers = 0 // right answers
+    static var wrongAnswers = 0 // wrong answers
     
-    struct Static {
-        static let instance = Counter()
+    class func reset() {
+        rightAnswers = 0
+        wrongAnswers = 0
     }
     
-    func reset() {
-        👍 = 0
-        👎 = 0
+    class func right() {
+        rightAnswers += 1
     }
     
-    func right() {
-        👍 += 1
+    class func wrong() {
+        wrongAnswers -= 1
     }
     
-    func wrong() {
-        👎 -= 1
-    }
-    
-    func total() -> Int {
-        return 👍+👎
+    class func total() -> Int {
+        return rightAnswers+wrongAnswers
     }
 }

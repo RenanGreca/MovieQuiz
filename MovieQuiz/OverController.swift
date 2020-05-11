@@ -13,7 +13,6 @@ import GameKit
 class OverController: UIViewController {
 
     @IBOutlet weak var lblCount: UILabel!
-    var counter = Counter.Static.instance
     
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true

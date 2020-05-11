@@ -9,41 +9,37 @@
 import Foundation
 
 class MovieList {
-    var movies: Array<Movie> = []
-    var seenMovies: Array<Movie> = []
+    var movies: [Movie] = []
+    var seenMovies: [Movie] = []
     var index = 0
-    var next:Movie?
+    var next: Movie?
     
     struct Static {
         static let instance = MovieList()
     }
     
+    /// Fills the `movies` array with data from an API.
+    /// - Returns: `true` if the data retrieval was successful.
     func populate() -> Bool {
         movies = fetchMovies(limit: 50)
         if movies.count == 0 {
             return false
         }
         movies.shuffle()
-//        fetch()
         return true
     }
     
+    
+    /// Resets and reshuffles information for a new round of the game.
     func reset() {
         seenMovies = []
         if movies.count > 0 {
             movies.shuffle()
-//            fetch()
         }
         index = 0
     }
     
-    func fetch() {
-//        DispatchQueue.global().async {
-////        DispatchQueue.main.async {
-//            getURLsAndImages(movies: self.movies)
-//        }
-    }
-    
+    /// Starts loarding information for the next movie that will be shown.
     func prepareNext() {
         if index >= movies.count {
             index = 0
@@ -56,49 +52,12 @@ class MovieList {
         }
     }
     
-    func getMovie(index: Int) -> Movie {
-        return movies[index]
-    }
-    
-    func getRandomMovie() -> Movie {
-        return movies[0]
-    }
-    
-    func getRandomMovies(count: Int, not:Movie) -> Array<Movie> {
-        if count > movies.count {
-            return movies
-        }
-    
-        var movies = Array<Movie>()
-        var movie: Movie
-        var random: Bool
-        var r: Int
-        
-        for _ in 0..<count {
-            if (movies.count >= self.movies.count) {
-                // All elements were exausted, no more random choices available
-                break
-            }
-            // Repeat while the random element is already in the random list
-            repeat {
-                random = true
-                r = Int(arc4random_uniform(UInt32(self.movies.count)))
-                movie = self.movies[r]
-                
-                let lMovies = movies.filter( { return $0.title == movie.title } )
-                
-                /*print(_seenMovies.count)
-                let sMovies = seenMovies.filter( { return $0._title == movie._title } )
-                print(sMovies.count)*/
-                
-                if lMovies.count > 0 || /*sMovies.count > 0 ||*/ movie.title == not.title {
-                    random = false
-                }
-            } while (!random)
-            movies.append(movie)
-        }
-        
-        //seenMovies.append(not)
-        return movies
+    /// Get `count` random movies from the list, while avoiding a specific movie.
+    /// - Parameters:
+    ///   - count: The number of movies we want.
+    ///   - avoiding: The movie to avoid returning.
+    /// - Returns: A `[Movie]` with `count` random movies.
+    func getRandomMovies(count: Int, avoiding:Movie) -> [Movie] {
+        return movies.getRandomElements(count: count, avoiding: avoiding)
     }
 }
