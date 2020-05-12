@@ -1,20 +1,16 @@
 PODS:
-  - SwiftHTTP (3.0.1)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - SwiftHTTP (~> 3.0.1)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
-    - SwiftHTTP
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  SwiftHTTP: e94f1aa8cde58637dcc0100f6349de31a3337fde
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: fe7ea587ff7ada283d3f9d3bd6f79de03b1e5ad1
+PODFILE CHECKSUM: 8ea2ca441bed454f2779f11ce4b7279268e25dcd
 
 COCOAPODS: 1.9.1
