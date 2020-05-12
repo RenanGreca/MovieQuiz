@@ -9,13 +9,9 @@
 import Foundation
 import SwiftyJSON
 
-func fetchMovies(limit: Int) -> Array<Movie> {
-//    let apikey = "asprbevazhnusm6fjwqnk24d"
-    let apikey = "k_x7Ahx727"
-    
+func fetchMovies(limit: Int) -> Array<Movie> {    
     // create the request
-//    let url = URL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=\(apikey)&page_limit=\(limit)")
-    let url = URL(string: "https://imdb-api.com/en/API/MostPopularMovies/\(apikey)")
+    let url = URL(string: "https://imdb-api.com/en/API/MostPopularMovies/\(APIKeys.IMDb)")
     
     var returnMovies: Array<Movie> = []
 
@@ -70,7 +66,7 @@ func getStoreURL(movie: Movie) {
 
 func getOMDbImg(movie: Movie) {
     if (movie.img == UIImage(named: "MovieQuizLogo")) {
-        let url = URL(string: "http://www.omdbapi.com/?i=\(movie.imdbID)&plot=short&r=json&apikey=a30d2863")
+        let url = URL(string: "http://www.omdbapi.com/?i=\(movie.imdbID)&plot=short&r=json&apikey=\(APIKeys.OMDb)")
         let data = try? Data(contentsOf: url!)
         
         if data == nil {
