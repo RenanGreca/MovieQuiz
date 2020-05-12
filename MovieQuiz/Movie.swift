@@ -18,8 +18,7 @@ class Movie: Equatable {
     let title: String
     var synopsis: String = ""
     var imgURL: String = ""
-    var itunesURL: String = ""
-    var itimgURL: String = ""
+    var iTunesURL: String?
     let imdbID: String
     let rating: String
     var img: UIImage = UIImage(named: "MovieQuizLogo")!

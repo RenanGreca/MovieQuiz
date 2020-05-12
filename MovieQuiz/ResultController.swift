@@ -10,12 +10,15 @@ import UIKit
 
 class ResultController: UIViewController {
     
-    @IBOutlet weak var imgFresh: UIImageView!
     @IBOutlet weak var lblRating: UILabel!
     @IBOutlet weak var lblMovie: UILabel!
     @IBOutlet weak var imgCheckX: UIImageView!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imgPoster: UIImageView!
+    
+    @IBOutlet weak var iTunesImage: UIImageView!
+    @IBOutlet weak var iTunesButton: UIButton!
+    
     var movie: Movie!
     var correct: Bool = false
     override func viewDidLoad() {
@@ -24,11 +27,12 @@ class ResultController: UIViewController {
         imgPoster.image = movie.img
         lblMovie.text = movie.title
         lblRating.text = movie.rating
-        if movie.rating == "Rotten" {
-            imgFresh.image = UIImage(named: "rotten")
-        } else {
-            imgFresh.image = UIImage(named: "fresh")
+        
+        if (movie.iTunesURL != "") {
+            self.iTunesImage.isHidden = false
+            self.iTunesButton.isHidden = false
         }
+        
         if correct {
             navItem.title = "Correct!"
             imgCheckX.image = UIImage(named: "icon-check")
@@ -52,8 +56,9 @@ class ResultController: UIViewController {
     }
     
     @IBAction func iTunes(_ sender: AnyObject) {
-        getStoreURL(movie: movie)
-        UIApplication.shared.openURL(URL(string: movie.itunesURL)!)
+        if let url = movie.iTunesURL {
+            UIApplication.shared.openURL(URL(string: url)!)
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,7 +11,6 @@ import UIKit
 class QuizController: UIViewController {
     
     @IBOutlet weak var navItem: UINavigationItem!
-    let movieList = MovieList.Static.instance
     var movies = [Movie]()
     var buttons = [UIButton]()
     var ans = 0
@@ -40,11 +39,11 @@ class QuizController: UIViewController {
         super.viewWillAppear(animated);
         
         // Gets movie and starts preparing the next one
-        let movie = movieList.next!
-        movieList.prepareNext()
+        let movie = MovieList.next!
+        MovieList.prepareNext()
         
         movies = [movie]
-        movies += movieList.getRandomMovies(count: 3, avoiding:movie)
+        movies += MovieList.getRandomMovies(count: 3, avoiding:movie)
         movies.shuffle()
         ans = movies.firstIndex(of: movie)!
         

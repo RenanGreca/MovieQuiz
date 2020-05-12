@@ -11,8 +11,7 @@ import GameKit
 
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
-    let movieList = MovieList.Static.instance
-//    let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
+    //    let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
 
     var gameCenterEnabled: Bool = false
     var leaderboardIdentifier:String = "besttimes"
@@ -25,12 +24,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         
         self.navigationController!.navigationBar.topItem!.titleView = UIImageView(image: UIImage(named:"MovieQuizLogoHS"))
         
-        if !movieList.populate() {
-            print("Error aquiring movie list.")
-//            let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
-//            alert.show()
-        }
-        movieList.prepareNext()
+        self.fetchData()
         
         authenticateLocalPlayer()
     }
@@ -40,7 +34,23 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
 
         Counter.reset()
         TimerManager.reset()
-        movieList.reset()
+        MovieList.reset()
+    }
+    
+    func fetchData() {
+        if !MovieList.populate() {
+            print("Error aquiring movie list.")
+            let alert = UIAlertController(title: "Error",
+                                          message: "Error acquiring movie list. Please check your Internet Connection.",
+                                          preferredStyle: .alert)
+            let retryAction = UIAlertAction(title: "Retry", style: .default) { _ in
+                self.fetchData()
+            }
+            alert.addAction(retryAction)
+            self.present(alert, animated: true)
+        } else {
+            MovieList.prepareNext()
+        }
     }
     
     // MARK GameCenter integration
@@ -94,15 +104,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
 
     @IBAction func start(_ sender: UIButton) {
-        if movieList.movies.count == 0 {
-            if !movieList.populate() {
-                print("Error aquiring movie list.")
-//                let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
-//                alert.show()
-                return
-            }
-        }
-        if let _ = movieList.next {
+//        if MovieList.movies.count == 0 {
+//            if !MovieList.populate() {
+//                print("Error aquiring movie list.")
+////                let alert = UIAlertView(title: "Error", message: "Error aquiring movie list. Please check your Internet Connection.", delegate: nil, cancelButtonTitle: "OK")
+////                alert.show()
+//                return
+//            }
+//        }
+        if MovieList.next != nil {
             performSegue(withIdentifier: "sgQuiz", sender: self)
         }
     }

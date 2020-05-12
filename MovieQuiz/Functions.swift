@@ -7,15 +7,7 @@
 //
 
 import Foundation
-
-extension String{
-    func exclude(find:String) -> String {
-        return self.replacingOccurrences(of: find, with: "")
-    }
-    func replaceAll(find:String, with:String) -> String {
-        return self.replacingOccurrences(of: find, with: with)
-    }
-}
+import UIKit
 
 extension Array where Element: Equatable {
     
@@ -46,4 +38,22 @@ extension Array where Element: Equatable {
         
         return result
     }
+}
+
+extension UINavigationController {
+
+    func setStatusBar(foregroundColor: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        let statusBarView = UIView(frame: statusBarFrame)
+//        statusBarView.style
+        statusBarView.tintColor = foregroundColor
+//        statusBarView.backgroundColor = backgroundColor
+        view.addSubview(statusBarView)
+    }
+
 }

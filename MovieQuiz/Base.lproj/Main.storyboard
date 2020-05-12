@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="BYZ-38-t0r" customClass="ViewController" customModule="MovieQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UC-Fx-YUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="349"/>
+            <point key="canvasLocation" x="1733" y="349"/>
         </scene>
         <!--Right/Wrong-->
         <scene sceneID="qnG-OS-Rm6">
@@ -290,10 +290,11 @@
                                     <action selector="next:" destination="ym9-Jg-rf6" eventType="touchUpInside" id="ZxN-np-Pp8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="icon-x" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-Zj-9eE">
-                                <rect key="frame" x="0.0" y="268" width="320" height="73"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="icon-x" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-Zj-9eE">
+                                <rect key="frame" x="0.0" y="259" width="320" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="3FO-fn-gi6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="DRN-1K-tMb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -317,28 +318,22 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fresh" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-ra-mRQ">
-                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="bzR-No-COs"/>
-                                            <constraint firstAttribute="width" constant="30" id="iZ3-le-YTl"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="bzR-No-COs"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPP-Hq-FQv">
+                                        <rect key="frame" x="100" y="4.5" width="49" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="BPP-Hq-FQv" firstAttribute="centerY" secondItem="fRI-OJ-9jp" secondAttribute="centerY" id="3vs-x4-3rn"/>
                                     <constraint firstAttribute="centerY" secondItem="fRI-OJ-9jp" secondAttribute="centerY" id="8Hm-nh-bXi"/>
                                     <constraint firstAttribute="width" secondItem="fRI-OJ-9jp" secondAttribute="width" id="8xT-cA-qyj"/>
                                     <constraint firstAttribute="centerX" secondItem="fRI-OJ-9jp" secondAttribute="centerX" id="9ii-GE-TuE"/>
                                     <constraint firstAttribute="trailing" secondItem="fRI-OJ-9jp" secondAttribute="trailing" constant="160" id="CCb-0c-ENy"/>
                                     <constraint firstItem="fRI-OJ-9jp" firstAttribute="leading" secondItem="Ftt-QG-ye8" secondAttribute="trailing" constant="5" id="Gb1-u4-pcG"/>
                                     <constraint firstAttribute="centerX" secondItem="Ftt-QG-ye8" secondAttribute="centerX" id="KnN-ay-UVI"/>
-                                    <constraint firstAttribute="centerY" secondItem="6T9-ra-mRQ" secondAttribute="centerY" id="NNe-bo-PRM"/>
-                                    <constraint firstItem="Ftt-QG-ye8" firstAttribute="leading" secondItem="6T9-ra-mRQ" secondAttribute="trailing" constant="5" id="Snn-d1-TTQ"/>
+                                    <constraint firstItem="Ftt-QG-ye8" firstAttribute="leading" secondItem="BPP-Hq-FQv" secondAttribute="trailing" constant="8.5" id="YPv-of-Qa4"/>
                                     <constraint firstAttribute="height" secondItem="Ftt-QG-ye8" secondAttribute="height" id="eqM-34-lG3"/>
                                     <constraint firstItem="fRI-OJ-9jp" firstAttribute="leading" secondItem="RbI-C4-PYb" secondAttribute="leading" constant="8" id="foS-Sb-Pwg"/>
                                     <constraint firstAttribute="height" constant="30" id="iXk-R3-9ZA"/>
@@ -382,7 +377,7 @@
                             <constraint firstAttribute="centerX" secondItem="v2l-Wn-Ryk" secondAttribute="centerX" id="i4T-Qj-QeC"/>
                             <constraint firstItem="v2l-Wn-Ryk" firstAttribute="top" secondItem="gK7-2M-geG" secondAttribute="bottom" constant="8" id="iHb-To-pAd"/>
                             <constraint firstItem="bYx-5i-VBo" firstAttribute="centerX" secondItem="Avg-Rn-ErR" secondAttribute="centerX" id="kb3-53-jqX"/>
-                            <constraint firstItem="QjP-0d-E3z" firstAttribute="top" secondItem="RtQ-Zj-9eE" secondAttribute="bottom" constant="15" id="nyg-7v-nsl"/>
+                            <constraint firstItem="QjP-0d-E3z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RtQ-Zj-9eE" secondAttribute="bottom" constant="15" id="nyg-7v-nsl"/>
                             <constraint firstItem="RbI-C4-PYb" firstAttribute="top" secondItem="v2l-Wn-Ryk" secondAttribute="bottom" constant="8" id="qOZ-tL-zSw"/>
                             <constraint firstItem="bYx-5i-VBo" firstAttribute="width" secondItem="Avg-Rn-ErR" secondAttribute="width" id="raW-OM-4nW"/>
                             <constraint firstItem="QjP-0d-E3z" firstAttribute="height" secondItem="RtQ-Zj-9eE" secondAttribute="height" id="tow-aT-W2m"/>
@@ -403,8 +398,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Right/Wrong" id="r88-Z9-rQn"/>
                     <connections>
+                        <outlet property="iTunesButton" destination="Avg-Rn-ErR" id="JOH-Gi-ppO"/>
+                        <outlet property="iTunesImage" destination="bYx-5i-VBo" id="s79-dX-YOd"/>
                         <outlet property="imgCheckX" destination="RtQ-Zj-9eE" id="ZCy-R2-H3H"/>
-                        <outlet property="imgFresh" destination="6T9-ra-mRQ" id="reG-pD-fcE"/>
                         <outlet property="imgPoster" destination="gK7-2M-geG" id="WIw-52-fV4"/>
                         <outlet property="lblMovie" destination="v2l-Wn-Ryk" id="NI7-rb-1MD"/>
                         <outlet property="lblRating" destination="fRI-OJ-9jp" id="c78-qo-Df1"/>
@@ -651,6 +647,7 @@ MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, plea
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yBz-Lg-wsp" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NKb-5U-igx">
@@ -678,7 +675,6 @@ MovieQuiz is open-source and can be viewed on GitHub. If you find any bugs, plea
         <image name="MovieQuizLogo" width="224" height="248"/>
         <image name="bepid_transparent white small" width="230" height="100"/>
         <image name="facebook" width="170" height="170"/>
-        <image name="fresh" width="103" height="109"/>
         <image name="icon-x" width="256" height="256"/>
         <image name="iconeSobre" width="22" height="22"/>
         <image name="itunesblack" width="166" height="61"/>
