@@ -18,6 +18,9 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+# API Keys file; replace with your own accordingly
+MovieQuiz/APIKeys.swift
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
